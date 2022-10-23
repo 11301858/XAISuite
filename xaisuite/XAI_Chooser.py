@@ -31,6 +31,9 @@ from omnixai.preprocessing.tabular import TabularTransform
 from omnixai.explainers.tabular import TabularExplainer
 from omnixai.visualization.dashboard import Dashboard
 
+#For documentation
+from typing import Union
+
 def load_data_CSV(data:str, target:str, cut: Union[str, list] = None) -> Tabular: # Returns tabular data
     '''A function that creates a omnixai.data.tabular.Tabular object instance representing a particular dataset.
     Parameters:
