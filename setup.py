@@ -11,5 +11,5 @@ setup(name='XAISuite',
       install_requires=[
         "omnixai>=1.2"
       ],
-      packages=['code'],
+       packages=find_namespace_packages(include="code.*"),
       )
