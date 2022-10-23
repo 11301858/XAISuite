@@ -11,5 +11,5 @@ setup(name='XAISuite',
       install_requires=[
         "omnixai>=1.2"
       ],
-      py_modules=['XAI_Chooser'],
+      packages=['code'],
       )
