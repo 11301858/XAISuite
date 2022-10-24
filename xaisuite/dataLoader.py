@@ -1,4 +1,4 @@
-from imports import*
+from . import imports
 
 
 def load_data_CSV(data:str, target:str, cut: Union[str, list] = None) -> Tabular: # Returns tabular data
