@@ -1,4 +1,4 @@
-from . import imports
+from .imports import*
 
 def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, verbose:bool = False): # Returns the model function
     '''A function that attempts to train and explain a particular sklearn model.
