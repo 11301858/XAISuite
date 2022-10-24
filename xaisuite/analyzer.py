@@ -8,4 +8,3 @@ def analyze_explanations(filename:str): #Analyze the generated explanations in a
     Returns:
     Nothing
     '''
-   return
