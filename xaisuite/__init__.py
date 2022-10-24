@@ -44,6 +44,6 @@ from omnixai.visualization.dashboard import Dashboard
 from typing import Union
 
 #Package Modules
-from .dataLoader import dataLoader
-from .xaichooser import xaichooser
-from .analyzer import analyzer
+from .dataLoader import load_data_CSV, load_data_sklearn
+from .xaichooser import train_and_explainModel
+from .analyzer import analyze_explanations
