@@ -8,3 +8,10 @@ def analyze_explanations(filename:str): #Analyze the generated explanations in a
     Returns:
     Nothing
     '''
+  with open(filename):
+    reader = csv.reader(filename)
+    rows = list(reader)
+    
+  importance_list = list(zip(rows[1],rows[3]))
+  
+  plt.plot(importance_list)
