@@ -1,9 +1,3 @@
-<p align="center">
-    <br>
-    <img src="" width="400"/>
-    <br>
-<p>
-
 # XAISuite: Training and Explaining Machine Learning Models
 <div align="center">
   <a href="#">
@@ -15,8 +9,8 @@
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Getting Started](#getting-started)
-4. [How to Contribute](https://opensource.salesforce.com/OmniXAI/latest/omnixai.html#how-to-contribute)
-5. [Technical Report and Citing XAISuite](#technical-report-and-citing-xaisuite)
+4. [How to Contribute]()
+5. [Technical Report and Citing XAISuite]()
 
 
 ## Introduction
@@ -42,23 +36,12 @@ To add a new explanation method/feature into the library, please follow the temp
 [documentation]().
 
 ## Technical Report and Citing XAISuite
-You can find more details in our research paper: [www.google.com)
+A research paper has not been published yet. Until then, cite "Shreyan Mitra - XAISuite (paper pending)"
 
-If you're using XAISuite in your research or applications, please cite using this BibTeX:
-```
-@article{11301858-XAISuite,
-  author    = {Shreyan Mitra},
-  title     = {XAISuite},
-  year      = {2022},
-  doi       = {},
-  url       = {},
-  archivePrefix = {},
-  eprint    = {},
-}
-```
+
 
 ## Contact Us
-If you have any questions, comments or suggestions, please do not hesitate to contact us at <>.
+If you have any questions, comments or suggestions, please do not hesitate to contact Professor Gilpin at UC Santa Cruz.
 
 ## License
-[BSD 3-Clause License](LICENSE)
+
