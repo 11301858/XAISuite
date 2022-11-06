@@ -8,28 +8,45 @@ def compare_explanations(filenames:list): #Analyze the generated explanations in
     Returns:
     Nothing
     '''
+  explainers = []
+  features = []
   for filename in filenames:
-    try: 
-      df = pd.read_csv(filename)
+      try: 
+        df = pd.read_csv(filename)
 
-      for i in range(len(df['features'])):
-          df['features'][i] = ast.literal_eval(df['features'][i])
+        for i in range(len(df['features'])):
+            df['features'][i] = ast.literal_eval(df['features'][i])
 
-      for i in range(len(df['scores'])):
-          df['scores'][i] = ast.literal_eval(df['scores'][i])
+        for i in range(len(df['scores'])):
+            df['scores'][i] = ast.literal_eval(df['scores'][i])
 
-      features = df['features']
-      scores = df['scores']
-      explainer = filename.split()[0]
+        features = df['features']
+        scores = df['scores']
+        explainer = filename.split()[0]
+        explainers.append(explainer)
 
-      for feature in features[0]: #Very inefficient, but works
-          vars()[feature + "List"] = []
-          for i in range(len(df['features'])):
-              eval(feature + "List").append(scores[i][features[i].index(feature)])
-          plt.plot(eval(feature + "List"))
+        for feature in features[0]:
+            vars()[feature + explainer + "List"] = []
+            for i in range(len(df['features'])):
+                eval(feature + explainer + "List").append(scores[i][features[i].index(feature)])
+
+        vars()[explainer + "maxScore"] = []
+        for score in scores:
+            eval(explainer + "maxScore").append(max(score))   
+      except:
+        print("An error occurred while analyzing the graph.")
+
+  for feature in features[0]:
+      for explainer in explainers:
+          plt.plot(eval(feature + explainer + "List"))
           plt.xlabel("Instance #")
           plt.ylabel("Importance Score")
-          plt.title(feature + "List" + "-" + explainer)
-          plt.show()
-    except:
-      print("An error occurred while analyzing the graph.")
+      plt.title("Change in importance of " + feature + " over instance number " + "- " + ' '.join([str(elem) for elem in explainers]))
+      plt.show()
+
+  for explainer in explainers:
+      plt.plot(eval(explainer + "maxScore"))
+      plt.xlabel("Instance #")
+      plt.ylabel("Importance Score")
+  plt.title("Change in importance of most important feature over instance number " + "- " + ' '.join([str(elem) for elem in explainers]))
+  plt.show()  
