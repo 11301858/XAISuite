@@ -9,7 +9,7 @@ def compare_explanations(filenames:list): #Analyze the generated explanations in
     Nothing
     '''
   explainers = []
-  features = []
+  features = [] #All files should have same features
   for filename in filenames:
       try: 
         df = pd.read_csv(filename)
@@ -50,3 +50,14 @@ def compare_explanations(filenames:list): #Analyze the generated explanations in
       plt.ylabel("Importance Score")
   plt.title("Change in importance of most important feature over instance number " + "- " + ' '.join([str(elem) for elem in explainers]))
   plt.show()  
+  
+
+  for feature in features[0]:
+    feature_explainer_lists = []
+    for explainer in explainers:
+        feature_explainer_lists.append(eval(feature + explainer + "List"))
+    correlation = np.corrcoef([x for x in feature_explainer_lists])
+    if(len(explainers) == 2):
+        print ("Correlation between " + ' and '.join([str(elem) for elem in explainers]) + " for feature " + feature + ": " + str(correlation[1,0]))
+    else:
+        print (correlation)
