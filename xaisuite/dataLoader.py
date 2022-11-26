@@ -14,7 +14,7 @@ def load_data_CSV(data:str, target:str, cut: Union[str, list] = None) -> Tabular
     try:
         df = pd.read_csv(data) #We read the dataset onto a dataframes object
         if cut is not None:
-          df.drop([cut], axis = 1, index = None, columns = None, level = None, inplace = True, errors = 'raise') #Remove columns the user doesn't want to include
+          df.drop(cut, axis = 1, index = None, columns = None, level = None, inplace = True, errors = 'raise') #Remove columns the user doesn't want to include
         tabular_data = Tabular(df, target_column=target) #Create a Tabular object (needed for future training and explaining) and specify the target column. Omnixai does not allow multiple targets, so datasets containing 2 or more targets need to be passed twice through the program, with one of the targets being cut. 
         return tabular_data #Return data through a Tabular object
     except:
