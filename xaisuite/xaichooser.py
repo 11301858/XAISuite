@@ -51,7 +51,8 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     returnList.append(modeler)
     
     if(verbose): #Useful debugging data
-
+        
+        print(returnList)
         comparison_data = pd.DataFrame(data = list(zip(modeler.predict(x_test), y_test, [a_i - b_i for a_i, b_i in zip(modeler.predict(x_test), y_test)])), columns = [model + ' Predicted ' + tabular_data.target_column, 'Actual ' + tabular_data.target_column, "Difference"]) 
         print("LEARNING FROM DATA...\n ") #Redundant title to separate output from other possible debugging messages
         print(comparison_data) #Print results of model training with Actual Target and Predicted Target
