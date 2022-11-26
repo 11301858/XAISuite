@@ -1,6 +1,6 @@
 from .imports import*
 
-def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, verbose:bool = False): # Returns the model function
+def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, verbose:bool = False): # Returns the model function and scaler (if applicable)
     '''A function that attempts to train and explain a particular sklearn model.
     Parameters:
     model:str | Name of Model
@@ -12,8 +12,11 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     
     Returns:
     The learning model
+    The scaler (if applicable) if user wants to predict more values
     '''
    
+    returnList = []
+    
     try:
       modeler= eval(model + "()") #Create model function from provided model name. This will not work if model is not part of sklearn library or is unsupervised.
     except:
@@ -37,11 +40,15 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
         scaler = StandardScaler()
 
         x_train = scaler.fit_transform(x_train)
+        
+        returnList.append(scaler)
 
         x_test = scaler.transform(x_test)
 
    
     modeler.fit(x_train, y_train) #Train model
+    
+    returnList.append(modeler)
     
     if(verbose): #Useful debugging data
 
@@ -59,7 +66,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
 
     if (len(x_ai) == 0): #List of explanatory methods is blank
       print("NO EXPLANATIONS REQUESTED BY USER") #Print that no explanations were requested by user
-      return modeler #Return the trained model for future use by user
+      return returnList #Return the trained model for future use by user
         
     # Convert the transformed data back to Tabular instances
     train_data = transformer.invert(x_train)
@@ -125,5 +132,5 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     except Exception as e:
       print("EXPLANATIONS FAILED - " + str(e)) #Something went wrong
 
-    return modeler #In the end, return trained model for future use by user
+    return returnList #In the end, return trained model for future use by user
 
