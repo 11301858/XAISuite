@@ -34,7 +34,7 @@ def compare_explanations(filenames:list): #Analyze the generated explanations in
         for score in scores:
             eval(explainer + "maxScore").append(max(score))   
       except Exception as e:
-        print("An error occurred while analyzing the graph. " + e)
+        print("An error occurred while analyzing the graph. " + str(e))
 
   for feature in features[0]:
       for explainer in explainers:
