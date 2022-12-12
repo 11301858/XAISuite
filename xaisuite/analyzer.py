@@ -15,10 +15,10 @@ def compare_explanations(filenames:list): #Analyze the generated explanations in
         df = pd.read_csv(filename)
 
         for i in range(len(df['features'])):
-            df['features'][i] = ast.literal_eval(df['features'][i])
+            df['features'][i] = ast.literal_eval(str(df['features'][i]))
 
         for i in range(len(df['scores'])):
-            df['scores'][i] = ast.literal_eval(df['scores'][i])
+            df['scores'][i] = ast.literal_eval(str(df['scores'][i]))
 
         features = df['features']
         scores = df['scores']
