@@ -115,7 +115,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
 
             CSVFile = x_ai[i] + " ImportanceScores - " + model + " " + tabular_data.target_column + ".csv"
 
-            with open(CSVFile, 'a', newline='') as output_file:
+            with open(CSVFile, 'w', newline='') as output_file:
                 dict_writer = csv.DictWriter(output_file, keys)
                 dict_writer.writeheader()
                 dict_writer.writerows(local_explanations[x_ai[i]].get_explanations())
