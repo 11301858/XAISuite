@@ -17,12 +17,14 @@ def compare_explanations(filenames:list, verbose = False): #Analyze the generate
         for i in range(len(df['features'])):
             if(verbose):
                 print (df['features'][i])
-            df['features'][i] = ast.literal_eval(df['features'][i])
+            #df['features'][i] = ast.literal_eval(df['features'][i])
+            df.loc[:, ('features', i)] = ast.literal_eval(df['features'][i])
 
         for i in range(len(df['scores'])):
             if(verbose):
                 print (df['features'][i])
-            df['scores'][i] = ast.literal_eval(df['scores'][i])
+            #df['scores'][i] = ast.literal_eval(df['scores'][i])
+            df.loc[:, ('scores', i)] = ast.literal_eval(df['scores'][i])
 
         features = df['features']
         scores = df['scores']
