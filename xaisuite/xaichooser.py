@@ -120,13 +120,15 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
                 dict_writer.writeheader()
                 dict_writer.writerows(local_explanations[x_ai[i]].get_explanations())
 
-            #Now, show explanation graphs for requested instances
-            if (not indexList): #If no requested instances provided
-              indexList = range(0,len(test_instances)) #Show all instances
-            for index in indexList:
-              local_explanations[x_ai[i]].ipython_plot(index) #Otherwise, show requested instances
+            #Now, show explanation graphs for requested instances (only verbose = True)
+            if (verbose):
+                if (not indexList): #If no requested instances provided
+                  indexList = range(0,len(test_instances)) #Show all instances
+                for index in indexList:
+                  local_explanations[x_ai[i]].ipython_plot(index) #Otherwise, show requested instances
           else: #Explanatory method is global (for the entire dataset)
               try:
+                 if(verbose):
                   global_explanations[x_ai[i]].ipython_plot() #Show explanation graph
               except:
                   raise ValueError(x_ai[i] + " is not a valid explanatory method or was not requested.") #If we get to this line, explanation method is not valid because it is not present in either local explanations or global explanations dictionaries
