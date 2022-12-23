@@ -20,7 +20,10 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     returnList = []
     
     try:
-      modeler= eval(model + "()") #Create model function from provided model name. This will not work if model is not part of sklearn library or is unsupervised.
+      if (model == "SVC" or model == "NuSVC"):
+        modeler = eval(model + "(probabaility = True)")
+      else:
+        modeler= eval(model + "()") #Create model function from provided model name. This will not work if model is not part of sklearn library or is unsupervised.
     except:
       print("Provided model name is incorrect or is not part of sklearn library. Only supervised learning models in sklearn are supported. Refer to models by their associated functions. For example, if you want to use support vector regression, pass in \"SVR\"")
       return None
