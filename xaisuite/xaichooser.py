@@ -95,7 +95,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
         model=modeler,
         preprocess= lambda z: transformer.transform(z),
         params = {
-            "shap": {"link": "identity"} #While link = "logit" is better for classification, it can lead to division by zero
+            "shap": {"link": "identity"}, #While link = "logit" is better for classification, it can lead to division by zero
             "pdp": {"features": (tabular_data.to_pd().drop([tabular_data.target_column], axis=1)).columns}
         }
     )
