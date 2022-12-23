@@ -1,6 +1,6 @@
 from .imports import*
 
-def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, verbose:bool = False): # Returns the model function and scaler (if applicable)
+def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, scaleType:str = "StandardScaler", verbose:bool = False): # Returns the model function and scaler (if applicable)
     '''A function that attempts to train and explain a particular sklearn model.
     Parameters:
     model:str | Name of Model
@@ -37,7 +37,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
 
     #Scale data
     if (scale):
-        scaler = StandardScaler()
+        scaler = eval(scaleType + "()")
 
         x_train = scaler.fit_transform(x_train)
         
