@@ -27,7 +27,7 @@ from sklearn.base import is_classifier, is_regressor
 
 #OmniXAI Explanatory Models and Visualization
 from omnixai.data.tabular import Tabular
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import*
 from omnixai.preprocessing.base import Identity
 from omnixai.preprocessing.tabular import TabularTransform
 from omnixai.explainers.tabular import TabularExplainer
