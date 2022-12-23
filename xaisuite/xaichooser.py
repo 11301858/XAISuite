@@ -1,6 +1,6 @@
 from .imports import*
 
-def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, scaleType:str = "StandardScaler", verbose:bool = False): # Returns the model function and scaler (if applicable)
+def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, scaleType:str = "StandardScaler", addendum:str = "", verbose:bool = False): # Returns the model function and scaler (if applicable)
     '''A function that attempts to train and explain a particular sklearn model.
     Parameters:
     model:str | Name of Model
@@ -8,6 +8,8 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     x_ai:list | List of explanatory models to be used
     indexList:list = [] | Specific test data instance to be explained, by default empty (indicating all instances should be explained)
     scale:bool = True | Whether data should be scaled before training
+    scaleType:str = "StandardScaler" | Default Scaler type. Example: Use "MinMaxScaler" for MultinomialNB model.
+    addendum:str = "" | Added string to explanation files in case multiple models are being trained and explained within the same directory, to prevent overwriting.
     verbose:bool = False | Whether debugging information should be printed
     
     Returns:
@@ -97,15 +99,16 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     global_explanations = explainers.explain_global(
     params={"pdp": {"features": (tabular_data.to_pd().drop([tabular_data.target_column], axis=1)).columns}}
     )
-    print("GENERATING EXPLANATIONS FOR MODEL...\n")
     if (verbose):
+      print("GENERATING EXPLANATIONS FOR MODEL...\n")
       for k,v in local_explanations.items(): #For debugging, print dictionary containing local explanations
         print(k, v.get_explanations()) 
 
     
     try:
       for i in range (len(x_ai)): #For each explanatory method requested by user
-          print(x_ai[i].capitalize() + " Results:") #Print name of explanatory method as title
+          if(verbose):
+            print(x_ai[i].upper() + " Results:") #Print name of explanatory method as title
           if (x_ai[i] in local_explanations.keys()): #If the explanatory method is local (it explains one instance at a time)
             if (verbose):
                 print(local_explanations[x_ai[i]].get_explanations()) #Print explanations if debugging
@@ -113,7 +116,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
             #Store explanations in CSV file
             keys = local_explanations[x_ai[i]].get_explanations()[0].keys() 
 
-            CSVFile = x_ai[i] + " ImportanceScores - " + model + " " + tabular_data.target_column + ".csv"
+            CSVFile = x_ai[i] + " ImportanceScores - " + model + " " + tabular_data.target_column + addendum + ".csv"
 
             with open(CSVFile, 'w', newline='') as output_file:
                 dict_writer = csv.DictWriter(output_file, keys)
@@ -135,5 +138,5 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     except Exception as e:
       print("EXPLANATIONS FAILED - " + str(e)) #Something went wrong
 
-    return returnList #In the end, return trained model for future use by user
+    return returnList #In the end, return trained model and scaler for future use by user
 
