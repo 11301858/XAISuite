@@ -24,8 +24,8 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
       modeler= eval(model + "( **modelSpecificArgs )") #Create model function from provided model name. This will not work if model is not part of sklearn library or is unsupervised.
     except Exception as e:
       print("Provided model name is incorrect or is not part of sklearn library. Only supervised learning models in sklearn are supported. Refer to models by their associated functions. For example, if you want to use support vector regression, pass in \"SVR\". \n Error message: " + str(e))
-      log = open("Failed_Models.txt", 'w', newline = '\n')
-      log.write(model + ": " + e + "\n") 
+      log = open("Failed_Models.txt", 'a', newline = '\n')
+      log.write(model + ": " + str(e) + "\n") 
       return None
     
 
@@ -51,7 +51,13 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
         x_test = scaler.transform(x_test)
 
    
-    modeler.fit(x_train, y_train) #Train model
+    try:
+        modeler.fit(x_train, y_train) #Train model
+    except Exception as e:
+        print("Provided model could not be fit to data. Error message: " + str(e))
+        log = open("Failed_Models.txt", 'a', newline = '\n')
+        log.write(model + ": " + str(e) + "\n") 
+        return None
     
     returnList.append(modeler)
     
