@@ -97,7 +97,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     
     # Generate explanations
     test_instances = test_data #[0:5] For first 5 instances, disabled
-    local_explanations = explainers.explain(X=test_instances, params = {"shap": {"link": "identity"}}), #While link = "logit" is better for classification, it can lead to division by zero
+    local_explanations = explainers.explain(X=test_instances)
     global_explanations = explainers.explain_global(params = {"pdp": {"features": (tabular_data.to_pd().drop([tabular_data.target_column], axis=1)).columns}})
     if (verbose):
       print("GENERATING EXPLANATIONS FOR MODEL...\n")
