@@ -92,6 +92,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
         data=train_data,
         model=modeler,
         preprocess= lambda z: transformer.transform(z),
+        params = {"shap": {"link": "identity"}}
     )
     
     # Generate explanations
