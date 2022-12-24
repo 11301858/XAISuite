@@ -1,6 +1,6 @@
 from .imports import*
 
-def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, scaleType:str = "StandardScaler", addendum:str = "", verbose:bool = False): # Returns the model function and scaler (if applicable)
+def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, scaleType:str = "StandardScaler", addendum:str = "", verbose:bool = False, **modelSpecificArgs): # Returns the model function and scaler (if applicable)
     '''A function that attempts to train and explain a particular sklearn model.
     Parameters:
     model:str | Name of Model
@@ -11,6 +11,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     scaleType:str = "StandardScaler" | Default Scaler type. Example: Use "MinMaxScaler" for MultinomialNB model.
     addendum:str = "" | Added string to explanation files in case multiple models are being trained and explained within the same directory, to prevent overwriting.
     verbose:bool = False | Whether debugging information should be printed
+    **modelSpecificArgs | Specific arguments to pass on to the model function
     
     Returns:
     The learning model
@@ -20,10 +21,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     returnList = []
     
     try:
-      if (model == "SVC" or model == "NuSVC"):
-        modeler = eval(model + "(probability = True)")
-      else:
-        modeler= eval(model + "()") #Create model function from provided model name. This will not work if model is not part of sklearn library or is unsupervised.
+      modeler= eval(model + "(" + **modelSpecificArgs + ")") #Create model function from provided model name. This will not work if model is not part of sklearn library or is unsupervised.
     except Exception as e:
       print("Provided model name is incorrect or is not part of sklearn library. Only supervised learning models in sklearn are supported. Refer to models by their associated functions. For example, if you want to use support vector regression, pass in \"SVR\". \n Error message: " + str(e))
       return None
