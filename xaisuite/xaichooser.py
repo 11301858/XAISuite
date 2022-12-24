@@ -21,7 +21,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     
     try:
       if (model == "SVC" or model == "NuSVC"):
-        modeler = eval(model + "(probabaility = True)")
+        modeler = eval(model + "(probability = True)")
       else:
         modeler= eval(model + "()") #Create model function from provided model name. This will not work if model is not part of sklearn library or is unsupervised.
     except Exception as e:
