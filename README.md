@@ -9,7 +9,7 @@
   <a href="#">
   <img src="https://img.shields.io/badge/Python-3.7, 3.8, 3.9, 3.10-blue">
   </a>
-  <!--
+  <!-- Some more badges to display, upon release
   <a href="https://pypi.python.org/pypi/omnixai">
   <img alt="PyPI" src="https://img.shields.io/pypi/v/omnixai.svg"/>
   </a>
@@ -35,12 +35,14 @@
 
 ## Introduction
 
-XAISuite (E<u><b>x</b></u>planatory <u><b>A</b></u>rtificial <u><b>I</b></u>ntelligence <u><b>Suite</b></u> is a library for training and explaining machine learning models in Python. You can now train and explain a model using just one line of code and even compare the results of different explainers!
+XAISuite (E<u><b>x</b></u>planatory <u><b>A</b></u>rtificial <u><b>I</b></u>ntelligence <u><b>Suite</b></u> is a library for training and explaining machine learning models for single-output tabular datasets in Python. It provides a unified interface for training any model using just a line of code and easily comparing the results of different explainers!
+
+
 
 
 
 ## Installation
-You can install XAI Suit through Github:
+You can install XAI Suite through Github:
 !pip install "git+https://github.com/11301858/XAISuite.git"
 
 ## Getting Started
