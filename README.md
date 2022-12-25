@@ -35,7 +35,7 @@
 
 ## Introduction
 
-XAISuite (E<u><b>x</b></u>planatory <u><b>A</b></u>rtificial <u><b>I</b></u>ntelligence <u><b>Suite</b></u> is a library for training and explaining machine learning models for single-output tabular datasets in Python. It provides a unified interface for training any model using just a line of code and easily comparing the results of different explainers!
+XAISuite (E<u><b>x</b></u>planatory <u><b>A</b></u>rtificial <u><b>I</b></u>ntelligence <u><b>Suite</b></u> is a library for training and explaining machine learning models for tabular datasets in Python. It provides a unified interface for training any model using just a line of code and easily comparing the results of different explainers!
 
 
 
