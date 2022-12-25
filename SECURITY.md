@@ -1,6 +1,6 @@
 ## Security
 
-Please report any security issue to [xaisuite@gmail.com](mailto:xaisuite@gmail.com)
+Please report any security issue to [shreyan.m.mitra@gmail.com](mailto:shreyan.m.mitra@gmail.com)
 as soon as it is discovered. This library limits its runtime dependencies in
 order to reduce the total cost of ownership as much as can be, but all consumers
 should remain vigilant and have their security stakeholders review all third-party
