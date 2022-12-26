@@ -9,16 +9,20 @@
   <a href="#">
   <img src="https://img.shields.io/badge/Python-3.7, 3.8, 3.9, 3.10-blue">
   </a>
-  <!-- Some more badges to display, upon release
-  <a href="https://pypi.python.org/pypi/omnixai">
-  <img alt="PyPI" src="https://img.shields.io/pypi/v/omnixai.svg"/>
+  
+  <a href="https://pypi.python.org/pypi/XAISuite">
+  <img alt="PyPI" src="https://img.shields.io/pypi/v/XAISuite"/>
   </a>
+  
+  <a href="https://pepy.tech/project/XAISuite">
+  <img alt="Downloads" src="https://pepy.tech/badge/XAISuite">
+  </a>
+  
+  <!-- Some more badges to display, upon release
   <a href="https://opensource.salesforce.com/OmniXAI">
   <img alt="Documentation" src="https://github.com/salesforce/OmniXAI/actions/workflows/docs.yml/badge.svg"/>
   </a>
-  <a href="https://pepy.tech/project/omnixai">
-  <img alt="Downloads" src="https://pepy.tech/badge/omnixai">
-  </a>
+  
   <a href="https://arxiv.org/abs/2206.01612">
   <img alt="DOI" src="https://zenodo.org/badge/DOI/10.48550/ARXIV.2206.01612.svg"/>
   </a>
@@ -42,7 +46,8 @@ XAISuite (E<u><b>x</b></u>planatory <u><b>A</b></u>rtificial <u><b>I</b></u>ntel
 
 
 ## Installation
-You can install XAI Suite through PyPI:
+You can install ``XAI Suite`` through PyPI:
+
 ``
 pip install XAISuite
 ``
