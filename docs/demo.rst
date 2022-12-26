@@ -1,7 +1,8 @@
-#XAISuite
+XAISuite
+*********
 
 .. toctree::
    :maxdepth: 2
    :glob:
 
-   demo
+   
