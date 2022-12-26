@@ -1,4 +1,4 @@
-XAISuite
+XAISuite 
 *********
 
 .. automodule:: xaisuite
