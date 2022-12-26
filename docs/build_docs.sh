@@ -63,6 +63,7 @@ for version in $(git tag --list 'v[0-9]*'); do
     rm -rf "${DIRNAME}/_build/html/${current_version}/.doctrees"
     pip3 uninstall -y xaisuite
     git reset --hard
+    git fetch
     git checkout "${GIT_BRANCH}" --
 done
 
