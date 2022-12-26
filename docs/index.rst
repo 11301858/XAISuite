@@ -1,4 +1,5 @@
-#XAISuite
+XAISuite
+*********
 
 
 .. toctree::
