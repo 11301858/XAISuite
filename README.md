@@ -70,7 +70,8 @@ A research paper has not been published yet. Until then, cite "Shreyan Mitra - X
 
 
 ## Contact Us
-If you have any questions, comments or suggestions, please do not hesitate to contact Professor Gilpin at UC Santa Cruz.
+If you have any questions, comments or suggestions, please do not hesitate to contact us at shreyan.m.mitra@gmail.com
 
 ## License
 
+[BSD 3-Clause License](LICENSE)
