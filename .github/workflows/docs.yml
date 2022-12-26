@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-18.04
 
     steps:
@@ -29,7 +28,7 @@ jobs:
         sudo apt-get install pandoc
     - name: Build Sphinx docs
       run: |
-        bash docs/build_docs.sh  
+        docs/build_docs.sh  
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       if: ${{ github.ref == 'refs/heads/main' || github.event_name == 'release' }}
