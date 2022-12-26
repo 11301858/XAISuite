@@ -43,7 +43,9 @@ XAISuite (E<u><b>x</b></u>planatory <u><b>A</b></u>rtificial <u><b>I</b></u>ntel
 
 ## Installation
 You can install XAI Suite through PyPI:
+``
 pip install XAISuite
+``
 
 ## Getting Started
 
