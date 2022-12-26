@@ -2,4 +2,4 @@
    :maxdepth: 2
    :glob:
 
-   demo/*
+   demo
