@@ -5,4 +5,5 @@ pandoc
 sphinx
 sphinx_autodoc_typehints
 sphinx_rtd_theme
-omnixai
+dash
+dash-bootstrap-components
