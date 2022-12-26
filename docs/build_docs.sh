@@ -56,6 +56,7 @@ for version in $(git tag --list 'v[0-9]*'); do
     for f in $(git diff --name-only --diff-filter=A "tags/${version}" "${DIRNAME}/*.rst"); do
         git rm "$f"
     done
+    git fetch
     git checkout "tags/${version}" -- "${checkout_files[@]}"
     export current_version=${version}
     pip3 install ".[all]"
