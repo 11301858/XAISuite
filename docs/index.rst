@@ -71,5 +71,5 @@ License
    :maxdepth: 4
    :caption: Contents:
 
-   omnixai
-   tutorials
+   xaisuite
+   demo
