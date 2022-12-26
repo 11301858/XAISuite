@@ -15,7 +15,7 @@
   </a>
   
   <a href="https://pepy.tech/project/XAISuite">
-  <img alt="Downloads" src="https://pepy.tech/badge/XAISuite">
+  <img alt="Downloads" src="https://img.shields.io/github/downloads/11301858/XAISuite/total">
   </a>
   
   <!-- Some more badges to display, upon release
