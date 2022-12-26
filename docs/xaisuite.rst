@@ -1,4 +1,5 @@
-#XAISuite
+XAISuite
+*********
 
 .. automodule:: xaisuite
    :members:
