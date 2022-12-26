@@ -1,6 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
+before_install:
+  - chmod +x build.sh
+
 # Change to root directory of repo
 DIRNAME=$(cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
 cd "${DIRNAME}/.."
