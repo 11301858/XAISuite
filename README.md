@@ -33,8 +33,8 @@
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Getting Started](#getting-started)
-4. [How to Contribute]()
-5. [Technical Report and Citing XAISuite]()
+4. [How to Contribute](#how-to-contribute)
+5. [Technical Report and Citing XAISuite](#technical-report-and-citing-xai-suite)
 
 
 ## Introduction
@@ -62,7 +62,7 @@ For example code and an introduction to the library, see the Demo Folder.
 We welcome the contribution from the open-source community to improve the library!
 
 To add a new explanation method/feature into the library, please follow the template and steps demonstrated in this 
-[documentation]().
+[documentation](https://11301858.github.io/XAISuite/v0.6.0-beta/index.html).
 
 ## Technical Report and Citing XAISuite
 A research paper has not been published yet. Until then, cite "Shreyan Mitra - XAISuite (paper pending)"
