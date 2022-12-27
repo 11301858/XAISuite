@@ -110,3 +110,11 @@ Modules
    :members:
    :undoc-members:
    :show-inheritance:
+
+.. toctree::
+   :maxdepth: 4
+   :caption: Contents:
+
+   xaichooser
+   dataLoader
+   analyzer
