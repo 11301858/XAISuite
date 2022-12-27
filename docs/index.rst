@@ -8,7 +8,7 @@
 
 XAISuite: Training and Explaining Machine Learning Models
 =========================================================
-Welcome to XAISuite's documentation. The contents are below:
+Welcome to XAISuite's documentation!
 
 .. toctree::
    :maxdepth: 4
