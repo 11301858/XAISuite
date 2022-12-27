@@ -18,11 +18,11 @@
   <img alt="Downloads" src="https://img.shields.io/github/downloads/11301858/XAISuite/total">
   </a>
   
-  <!-- Some more badges to display, upon release
   <a href="https://opensource.salesforce.com/OmniXAI">
-  <img alt="Documentation" src="https://github.com/salesforce/OmniXAI/actions/workflows/docs.yml/badge.svg"/>
+  <img alt="Documentation" src="https://github.com/11301858/XAISuite/actions/workflows/docs.yml/badge.svg"/>
   </a>
   
+  <!-- Some more badges to display, upon release
   <a href="https://arxiv.org/abs/2206.01612">
   <img alt="DOI" src="https://zenodo.org/badge/DOI/10.48550/ARXIV.2206.01612.svg"/>
   </a>
