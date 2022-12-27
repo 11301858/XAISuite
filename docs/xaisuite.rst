@@ -68,8 +68,7 @@ We welcome the contribution from the open-source community to improve
 the library!
 
 To add a new functionality into the library, please follow the template
-and steps demonstrated in this
-`documentation <https://11301858.github.io/XAISuite/v0.6.0-beta/index.html>`__.
+and steps demonstrated in our documentation.
 Note that, for the time being, XAISuite only supports tabular datasets
 and image datasets in tabular form.
 
@@ -103,6 +102,8 @@ License
 
 This work is licensed under a `BSD 3-Clause License <LICENSE>`__.
 
+Modules
+-------
 
 .. automodule:: xaisuite
    :imported-members:
@@ -110,18 +111,7 @@ This work is licensed under a `BSD 3-Clause License <LICENSE>`__.
    :undoc-members:
    :show-inheritance:
 
-.. toctree::
-   :maxdepth: 4
-
-   xaisuite.xaichooser
-   
-.. toctree::
-   :maxdepth: 4
-
-   xaisuite.data_Loader
-   
-.. toctree::
-   :maxdepth: 4
-
-   xaisuite.analyzer
-  
+.. autosummary::
+   xaichooser
+   data_Loader
+   analyzer
