@@ -51,6 +51,8 @@ pip3 uninstall -y xaisuite
 versions=()
 checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "setup.py")
 for version in $(git tag --list 'v[0-9]*'); do
+    if [${version} == "v0.6.0-beta"]; then
+      continue
     versions+=("$version")
     git fetch
     git checkout -b "${version}_local_docs_only"
