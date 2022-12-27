@@ -18,7 +18,7 @@
   <img alt="Downloads" src="https://pepy.tech/badge/xaisuite">
   </a>
   
-  <a href="https://opensource.salesforce.com/OmniXAI">
+  <a href="https://github.com/11301858/XAISuite">
   <img alt="Documentation" src="https://github.com/11301858/XAISuite/actions/workflows/docs.yml/badge.svg"/>
   </a>
   
