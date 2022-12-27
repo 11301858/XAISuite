@@ -15,7 +15,7 @@
   </a>
   
   <a href="https://pepy.tech/project/XAISuite">
-  <img alt="Downloads" src="https://static.pepy.tech/personalized-badge/xaisuite?period=month&units=international_system&left_color=black&right_color=orange&left_text=Downloads">
+  <img alt="Downloads" src="https://pepy.tech/badge/xaisuite">
   </a>
   
   <a href="https://opensource.salesforce.com/OmniXAI">
