@@ -1,4 +1,4 @@
-ame: docs 
+name: docs 
 
 on:
   push:
