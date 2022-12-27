@@ -58,6 +58,7 @@ for version in $(git tag --list 'v[0-9]*'); do
         git fetch
         git rm "$f"
     done
+    git rm -r --cached .
     git add .
     git fetch
     git checkout "tags/${version}" -- "${checkout_files[@]}"
