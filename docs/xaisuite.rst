@@ -104,7 +104,7 @@ License
 This work is licensed under a `BSD 3-Clause License <LICENSE>`__.
 
 
-.. automodule:: XAISuite
+.. automodule:: xaisuite
    :members:
    :undoc-members:
    :show-inheritance:
