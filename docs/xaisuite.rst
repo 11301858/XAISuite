@@ -110,11 +110,18 @@ This work is licensed under a `BSD 3-Clause License <LICENSE>`__.
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: xaisuite.xaichooser
-   :members:
-   
-.. automodule:: xaisuite.dataLoader
-   :members:
+.. toctree::
+   :maxdepth: 4
 
-.. automodule:: xaisuite.analyzer
-   :members:
+   xaisuite.xaichooser
+   
+.. toctree::
+   :maxdepth: 4
+
+   xaisuite.data_Loader
+   
+.. toctree::
+   :maxdepth: 4
+
+   xaisuite.analyzer
+  
