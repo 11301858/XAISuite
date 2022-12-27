@@ -1,7 +1,7 @@
 from .imports import*
 
 def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, scaleType:str = "StandardScaler", addendum:str = "", verbose:bool = False, **modelSpecificArgs): # Returns the model function and scaler (if applicable)
-    '''A function that attempts to train and explain a particular sklearn model.
+    ''' A function that attempts to train and explain a particular sklearn model.
     Parameters:
     model:str | Name of Model
     tabular_data:Tabular | Tabular object representing data set to be used in training
