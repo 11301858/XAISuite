@@ -113,5 +113,5 @@ Modules
 
 .. autosummary::
    xaichooser
-   data_Loader
+   dataLoader
    analyzer
