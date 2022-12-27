@@ -105,6 +105,16 @@ This work is licensed under a `BSD 3-Clause License <LICENSE>`__.
 
 
 .. automodule:: xaisuite
+   :imported-members:
    :members:
    :undoc-members:
    :show-inheritance:
+
+.. automodule:: xaisuite.xaichooser
+   :members:
+   
+.. automodule:: xaisuite.dataLoader
+   :members:
+
+.. automodule:: xaisuite.analyzer
+   :members:
