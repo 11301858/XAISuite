@@ -47,7 +47,7 @@ explanation generation. Each of these steps are delved into more detail in our [
 
 ![Screen_Shot_2022-12-27_at_12 10 36_AM-removebg-preview](https://user-images.githubusercontent.com/66180831/209634297-296fa5d8-4429-434c-afaa-7500d776cd75.png)
 
-XAISuite was created as a helper library to ![this paper](insert link), which studied the difference in SHAP and LIME explanations for different models on tabular datasets.
+XAISuite was created as a helper library to [this paper](insert link), which studied the difference in SHAP and LIME explanations for different models on tabular datasets.
 
 ## Installation
 You can install the ``XAI Suite`` through PyPI:
@@ -60,7 +60,7 @@ pip install XAISuite
 
 For example code and an introduction to the library, see the Demo Folder. 
 
-If you are looking for a model or dataset to use, ![sklearn](https://scikit-learn.org/stable/) has several cool options.
+If you are looking for a model or dataset to use, [sklearn](https://scikit-learn.org/stable/) has several cool options.
 
 
 ## How to Contribute
