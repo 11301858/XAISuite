@@ -10,9 +10,7 @@ XAISuite: Training and Explaining Machine Learning Models
 =========================================================
 Welcome to XAISuite's documentation!
 
-But first, let's get past the formalities.
-
-Here's a brief overview of this project. We'd love for you to get to know us better. However, if you want to go straight to the documentation, scroll to the bottom of the page or use the menu on the left sidebar. Good luck!
+But first, let's get past the formalities. Here's a brief overview of this project.
 
 1. `Introduction <#introduction>`__
 2. `Installation <#installation>`__
@@ -106,9 +104,8 @@ This work is licensed under a `BSD 3-Clause License <LICENSE>`__.
 
 Documentation
 ------------
-Finally. 
 
-Here's what you were actually looking for! Click the following link for access to the tutorial and XAISuite documentation.
+Finally, what you were really looking for! Click the following link for access to the tutorial and XAISuite documentation.
 
 .. toctree::
    :maxdepth: 4
