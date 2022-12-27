@@ -1,4 +1,4 @@
-XAISuite
+Demo
 *********
 
 .. toctree::
