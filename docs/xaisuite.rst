@@ -9,7 +9,6 @@
 XAISuite: Training and Explaining Machine Learning Models
 =========================================================
 
-.. container::
 
 Table of Contents
 -----------------
