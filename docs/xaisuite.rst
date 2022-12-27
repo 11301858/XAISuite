@@ -110,8 +110,3 @@ Modules
    :members:
    :undoc-members:
    :show-inheritance:
-
-.. autosummary::
-   xaichooser
-   dataLoader
-   analyzer
