@@ -52,8 +52,10 @@ versions=()
 checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "setup.py")
 for version in $(git tag --list 'v[0-9]*'); do
     versions+=("$version")
+    git fetch
     git checkout -b "${version}_local_docs_only"
     for f in $(git diff --name-only --diff-filter=A "tags/${version}" "${DIRNAME}/*.rst"); do
+        git fetch
         git rm "$f"
     done
     git fetch
