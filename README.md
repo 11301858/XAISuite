@@ -73,7 +73,7 @@ To add a new functionality into the library, please follow the template and step
 ## Technical Report and Citing XAISuite
 A paper proposing and using XAISuite to compare explanatory methods is still in pre-publication. Use the following BibTex to cite XAISuite:
 
-``
+```
 @article{mitra2022-xaisuite,
   author    = {Shreyan Mitra and Leilani Gilpin},
   title     = {Comparison of SHAP and LIME Explanations for Supervised
@@ -84,7 +84,7 @@ Machine Learning Models Trained on Tabular Datasets},
   archivePrefix = {},
   eprint    = {},
 }
-``
+```
 
 
 ## Contact Us
