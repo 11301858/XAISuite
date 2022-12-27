@@ -105,7 +105,7 @@ This work is licensed under a `BSD 3-Clause License <LICENSE>`__.
 Documentation
 ------------
 
-Finally, what you were really looking for! Click the following link for access to the tutorial and XAISuite documentation.
+Finally, what you were really looking for! Click the following links for access to the tutorial and XAISuite documentation.
 
 .. toctree::
    :maxdepth: 4
