@@ -104,4 +104,4 @@ while read -r filename; do
 </html>
 EOF
 done < <(cd "${DIRNAME}/_build/html/$stable_version" && find . -name "*.html")
-echo "Finished writing to _build/html."
+echo "Finished writing to _build/html." 
