@@ -1,19 +1,13 @@
 Modules in XAISuite
 --------------------
 
-.. automodule:: xaisuite.xaichooser
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   
-.. automodule:: xaisuite.dataLoader
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   
-.. automodule:: xaisuite.analyzer
+.. automodule:: xaisuite
    :members:
    :undoc-members:
    :show-inheritance:
 
+.. autosummary::
+   dataLoader
+   train_and_explainModel
+   analyzer
    
