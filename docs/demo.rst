@@ -11,5 +11,5 @@ Basics
 .. toctree::
    :maxdepth: 2
    :glob:
-
-   XAISuite_Overview.ipynb
+   
+   XAISuite_Overview
