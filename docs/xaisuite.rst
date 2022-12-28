@@ -1,16 +1,22 @@
 Modules in XAISuite
 --------------------
 
-.. automodule:: xaisuite
+.. automodule:: xaichooser
    :imported-members:
    :members:
    :undoc-members:
    :show-inheritance:
    
-.. toctree::
-   :maxdepth: 1
-   :caption: Contents:
+.. automodule:: dataLoader
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   
+.. automodule:: analyzer
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
-   xaichooser
-   dataLoader
-   analyzer
+   
