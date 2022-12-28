@@ -30,5 +30,5 @@ analyzer Documentation
 .. automodule:: xaisuite.analyzer
    :members:
    :undoc-members:
-   :show-inheritance:
+   :show-inheritance: 
    
