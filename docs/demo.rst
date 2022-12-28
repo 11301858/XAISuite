@@ -6,10 +6,4 @@ Tutorials & Example Code
    :undoc-members:
    :show-inheritance:
 
-Basics
----------------------
-.. toctree::
-   :maxdepth: 2
-   :glob:
-   
-   XAISuite_Overview
+
