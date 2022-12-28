@@ -113,3 +113,10 @@ Finally, what you were really looking for! Click the following links for access 
 
    xaisuite
    demo
+   
+Indices and Tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
