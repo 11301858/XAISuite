@@ -109,7 +109,6 @@ Finally, what you were really looking for! Click the following links for access 
 
 .. toctree::
    :maxdepth: 4
-   :caption: Contents:
 
    xaisuite
    demo
