@@ -3,13 +3,13 @@ from .imports import*
 
 def load_data_CSV(data:str, target:str, cut: Union[str, list] = None) -> Tabular: # Returns tabular data
     '''A function that creates a omnixai.data.tabular.Tabular object instance representing a particular dataset.
-    Parameters:
-    data:str | Pathname for the CSV file where the dataset is found.
-    target:str | Target variable used for training data
-    cut: Union[str, list] = None | Variables that should be ignored in training
     
-    Returns:
-    tabular_data: Tabular | Tabular object instance representing 'data'
+    :param str data: Pathname for the CSV file where the dataset is found.
+    :param str target: Target variable used for training data
+    :param Union[str, list] cut: Variables that should be ignored in training. By default, None.
+    :return: Tabular object instance representing 'data'
+    :rtype: Tabular
+    :raises ValueError: if data cannot be loaded
     '''
     try:
         df = pd.read_csv(data) #We read the dataset onto a dataframes object
@@ -23,13 +23,13 @@ def load_data_CSV(data:str, target:str, cut: Union[str, list] = None) -> Tabular
 
 def load_data_sklearn(datastore:dict, target:str, cut: Union[str, list] = None) -> Tabular: # Returns tabular data
     '''A function that creates a omnixai.data.tabular.Tabular object instance representing a particular sklearn dataset for demoing.
-    Parameters:
-    datastore:dict | A dictionary object containing the data
-    target:str | Target variable used for training data
-    cut: Union[str, list] = None | Variables that should be ignored in training
-    
-    Returns:
-    tabular_data: Tabular | Tabular object instance representing 'data'
+ 
+    :param dict datastore: A dictionary object containing the data
+    :param str target: Target variable used for training data
+    :param Union[str, list] cut: Variables that should be ignored in training. By default, None
+    :return: Tabular object instance representing 'data'
+    :rtype: Tabular
+    :raises ValueError: if data cannot be loaded
     '''
     try:
         df = pd.DataFrame(data=datastore.data, columns=datastore.feature_names) #We read the dataset (exluding target) onto a dataframes object
