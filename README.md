@@ -67,8 +67,7 @@ If you are looking for a model or dataset to use, [sklearn](https://scikit-learn
 
 We welcome the contribution from the open-source community to improve the library!
 
-To add a new functionality into the library, please follow the template and steps demonstrated in this 
-[documentation](https://11301858.github.io/XAISuite/v0.6.0-beta/index.html). Note that, for the time being, XAISuite only supports tabular datasets and image datasets in tabular form.
+To add a new functionality into the library or point out a flaw, please create a new issue on Github. We'll try to look into your requests as soon as we can.
 
 ## Technical Report and Citing XAISuite
 A paper proposing and using XAISuite to compare explanatory methods is still in pre-publication. Use the following BibTex to cite XAISuite:
