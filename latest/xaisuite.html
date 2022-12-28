@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modules in XAISuite &mdash; XAISuite  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorials &amp; Example Code" href="demo.html" />
+    <link rel="prev" title="XAISuite: Training and Explaining Machine Learning Models" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> XAISuite
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modules in XAISuite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#module-xaisuite.dataLoader">dataLoader Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#xaisuite.dataLoader.load_data_CSV"><code class="docutils literal notranslate"><span class="pre">load_data_CSV()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xaisuite.dataLoader.load_data_sklearn"><code class="docutils literal notranslate"><span class="pre">load_data_sklearn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-xaisuite.xaichooser">xaichooser Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#xaisuite.xaichooser.train_and_explainModel"><code class="docutils literal notranslate"><span class="pre">train_and_explainModel()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-xaisuite.analyzer">analyzer Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#xaisuite.analyzer.compare_explanations"><code class="docutils literal notranslate"><span class="pre">compare_explanations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">Tutorials &amp; Example Code</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">XAISuite</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Modules in XAISuite</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/xaisuite.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="module-xaisuite">
+<span id="modules-in-xaisuite"></span><h1>Modules in XAISuite<a class="headerlink" href="#module-xaisuite" title="Permalink to this heading"></a></h1>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#module-xaisuite.dataLoader" title="xaisuite.dataLoader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dataLoader</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#module-xaisuite.xaichooser" title="xaisuite.xaichooser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xaichooser</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#module-xaisuite.analyzer" title="xaisuite.analyzer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyzer</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-xaisuite.dataLoader">
+<span id="dataloader-documentation"></span><h1>dataLoader Documentation<a class="headerlink" href="#module-xaisuite.dataLoader" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="xaisuite.dataLoader.load_data_CSV">
+<span class="sig-prename descclassname"><span class="pre">xaisuite.dataLoader.</span></span><span class="sig-name descname"><span class="pre">load_data_CSV</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xaisuite.dataLoader.load_data_CSV" title="Permalink to this definition"></a></dt>
+<dd><p>A function that creates a omnixai.data.tabular.Tabular object instance representing a particular dataset.
+Parameters:
+<a class="reference external" href="data:str">data:str</a> | Pathname for the CSV file where the dataset is found.
+target:str | Target variable used for training data
+cut: Union[str, list] = None | Variables that should be ignored in training</p>
+<p>Returns:
+tabular_data: Tabular | Tabular object instance representing ‘data’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Tabular</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="xaisuite.dataLoader.load_data_sklearn">
+<span class="sig-prename descclassname"><span class="pre">xaisuite.dataLoader.</span></span><span class="sig-name descname"><span class="pre">load_data_sklearn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xaisuite.dataLoader.load_data_sklearn" title="Permalink to this definition"></a></dt>
+<dd><p>A function that creates a omnixai.data.tabular.Tabular object instance representing a particular sklearn dataset for demoing.
+Parameters:
+datastore:dict | A dictionary object containing the data
+target:str | Target variable used for training data
+cut: Union[str, list] = None | Variables that should be ignored in training</p>
+<p>Returns:
+tabular_data: Tabular | Tabular object instance representing ‘data’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Tabular</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-xaisuite.xaichooser">
+<span id="xaichooser-documentation"></span><h1>xaichooser Documentation<a class="headerlink" href="#module-xaisuite.xaichooser" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="xaisuite.xaichooser.train_and_explainModel">
+<span class="sig-prename descclassname"><span class="pre">xaisuite.xaichooser.</span></span><span class="sig-name descname"><span class="pre">train_and_explainModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tabular_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_ai</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indexList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaleType</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'StandardScaler'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addendum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">modelSpecificArgs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xaisuite.xaichooser.train_and_explainModel" title="Permalink to this definition"></a></dt>
+<dd><p>A function that attempts to train and explain a particular sklearn model.
+Parameters:
+model:str | Name of Model
+tabular_data:Tabular | Tabular object representing data set to be used in training
+x_ai:list | List of explanatory models to be used
+indexList:list = [] | Specific test data instance to be explained, by default empty (indicating all instances should be explained)
+scale:bool = True | Whether data should be scaled before training
+scaleType:str = “StandardScaler” | Default Scaler type. Example: Use “MinMaxScaler” for MultinomialNB model.
+addendum:str = “” | Added string to explanation files in case multiple models are being trained and explained within the same directory, to prevent overwriting.
+verbose:bool = False | Whether debugging information should be printed
+<code class="docutils literal notranslate"><span class="pre">**modelSpecificArgs</span></code> | Specific arguments to pass on to the model function</p>
+<p>Returns:
+The learning model
+The scaler (if applicable) if user wants to predict more values</p>
+</dd></dl>
+
+</section>
+<section id="module-xaisuite.analyzer">
+<span id="analyzer-documentation"></span><h1>analyzer Documentation<a class="headerlink" href="#module-xaisuite.analyzer" title="Permalink to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="xaisuite.analyzer.compare_explanations">
+<span class="sig-prename descclassname"><span class="pre">xaisuite.analyzer.</span></span><span class="sig-name descname"><span class="pre">compare_explanations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xaisuite.analyzer.compare_explanations" title="Permalink to this definition"></a></dt>
+<dd><p>A function that analyzes and compares the explanations generated by train_and_explainModel.
+Parameters:
+filenames:list | File names with explanations (of the form “Explainer ImportanceScores - Model Target.csv”)</p>
+<p>Returns:
+Nothing</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="XAISuite: Training and Explaining Machine Learning Models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="demo.html" class="btn btn-neutral float-right" title="Tutorials &amp; Example Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Shreyan Mitra.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Versions</span>
+      latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Versions</dt>
+        
+           <strong> 
+          <dd><a href="">latest</a></dd>
+           </strong> 
+        
+          
+          <dd><a href="">v0.6.3-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.6.1-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.6.0-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.3.0-alpha</a></dd>
+          
+        
+      </dl>
+      
+    </div>
+  </div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
