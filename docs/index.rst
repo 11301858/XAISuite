@@ -94,7 +94,7 @@ Contact Us
 ----------
 
 If you have any questions, comments or suggestions, please do not
-hesitate to contact us at shreyan.m.mitra@gmail.com
+hesitate to contact us at xaisuite@gmail.com
 
 License
 -------
