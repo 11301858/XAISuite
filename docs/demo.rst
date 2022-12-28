@@ -5,11 +5,3 @@ Tutorials & Example Code
    :members:
    :undoc-members:
    :show-inheritance:
-
-Basics
----------------------
-.. toctree::
-   :maxdepth: 2
-   :glob:
-
-   demo
