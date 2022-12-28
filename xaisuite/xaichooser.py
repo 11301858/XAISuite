@@ -2,20 +2,19 @@ from .imports import*
 
 def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList:list = [], scale:bool = True, scaleType:str = "StandardScaler", addendum:str = "", verbose:bool = False, **modelSpecificArgs): # Returns the model function and scaler (if applicable)
     ''' A function that attempts to train and explain a particular sklearn model.
-    Parameters:
-    model:str | Name of Model
-    tabular_data:Tabular | Tabular object representing data set to be used in training
-    x_ai:list | List of explanatory models to be used
-    indexList:list = [] | Specific test data instance to be explained, by default empty (indicating all instances should be explained)
-    scale:bool = True | Whether data should be scaled before training
-    scaleType:str = "StandardScaler" | Default Scaler type. Example: Use "MinMaxScaler" for MultinomialNB model.
-    addendum:str = "" | Added string to explanation files in case multiple models are being trained and explained within the same directory, to prevent overwriting.
-    verbose:bool = False | Whether debugging information should be printed
-    ``**modelSpecificArgs`` | Specific arguments to pass on to the model function
     
-    Returns:
-    The learning model
-    The scaler (if applicable) if user wants to predict more values
+    :param str model: Name of Model
+    :param Tabular tabular_data: Tabular object representing data set to be used in training
+    :param list x_ai: List of explanatory models to be used
+    :param list indexList: Specific test data instance to be explained, by default empty (indicating all instances should be explained)
+    :param bool scale: Whether data should be scaled before training, by default True
+    :param str scaleType: Default Scaler type is "StandardScaler". Example: Use "MinMaxScaler" for MultinomialNB model.
+    :param str addendum: Added string to explanation files in case multiple models are being trained and explained within the same directory, to prevent overwriting. By default, empty string.
+    :param bool verbose: Whether debugging information should be printed, by default False
+    :param ``**modelSpecificArgs``: Specific arguments to pass on to the model function
+    
+    :return: The learning model and The scaler (if applicable) if user wants to predict more values. In List format
+    :rtype: list  
     '''
    
     returnList = []
