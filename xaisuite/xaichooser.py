@@ -11,7 +11,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list, indexList
     scaleType:str = "StandardScaler" | Default Scaler type. Example: Use "MinMaxScaler" for MultinomialNB model.
     addendum:str = "" | Added string to explanation files in case multiple models are being trained and explained within the same directory, to prevent overwriting.
     verbose:bool = False | Whether debugging information should be printed
-    **modelSpecificArgs | Specific arguments to pass on to the model function
+    ``**modelSpecificArgs`` | Specific arguments to pass on to the model function
     
     Returns:
     The learning model
