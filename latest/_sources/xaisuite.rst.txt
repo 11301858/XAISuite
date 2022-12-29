@@ -6,6 +6,12 @@ Modules in XAISuite
    :undoc-members:
    :show-inheritance:
 
+.. autosummary::
+   dataLoader
+   xaichooser
+   analyzer
+   
+
 .. automodule:: xaisuite.dataLoader
    :members:
    :undoc-members:
@@ -21,3 +27,4 @@ Modules in XAISuite
    :members:
    :undoc-members:
    :show-inheritance: 
+   
