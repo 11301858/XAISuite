@@ -5,9 +5,3 @@ Tutorials & Example Code
    :members:
    :undoc-members:
    :show-inheritance:
-   
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents
-
-   demo/XAISuite_Overview
