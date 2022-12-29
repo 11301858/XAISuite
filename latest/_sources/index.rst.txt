@@ -99,7 +99,7 @@ hesitate to contact us at xaisuite@gmail.com
 License
 -------
 
-All rights reserved.
+This work is licensed under a [BSD 3-Clause License](LICENSE). 
 
 
 Documentation
