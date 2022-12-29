@@ -6,6 +6,7 @@ import csv
 from pathlib import Path
 import matplotlib.pyplot as plt
 import ast
+import numpy as np
 
 #Machine Learning Models and Training
 from sklearn.model_selection import train_test_split
