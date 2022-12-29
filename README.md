@@ -91,4 +91,4 @@ If you have any questions, comments or suggestions, please do not hesitate to co
 
 ## License
 
-All rights reserved.
+This This work is licensed under a [BSD 3-Clause License](LICENSE). 
