@@ -15,7 +15,7 @@
   </a>
   
   <a href="https://pepy.tech/project/XAISuite">
-  <img alt="Downloads" src="https://static.pepy.tech/badge/xaisuite"> 
+  <img alt="Downloads" src="https://static.pepy.tech/badge/xaisuite">  
   </a>
   
   <a href="https://github.com/11301858/XAISuite">
