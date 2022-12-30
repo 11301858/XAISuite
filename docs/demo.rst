@@ -1,7 +1,7 @@
 Tutorials & Example Code
 ========================
 
-.. automodule:: demo.XAISuite_Overview
+.. automodule:: demo
    :members:
    :undoc-members:
    :show-inheritance:
