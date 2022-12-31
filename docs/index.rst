@@ -111,7 +111,7 @@ Finally, what you were really looking for! Click the following links for access 
    :maxdepth: 4
 
    xaisuite
-   demo
+   demo/XAISuite_Overview.ipynb
    
 Indices and Tables
 ==================
