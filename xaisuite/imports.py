@@ -64,4 +64,4 @@ from omnixai.explainers.tabular import TabularExplainer
 from omnixai.visualization.dashboard import Dashboard
 
 #For documentation
-from typing import Union
+from typing import Union, Dict
