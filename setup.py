@@ -10,8 +10,8 @@ setup(name='XAISuite',
       author = "Shreyan Mitra",
       install_requires=[
         "omnixai>=1.2"
-        "dash"
-        "dash_bootstrap_components"
+        "dash>=2.7.1"
+        "dash_bootstrap_components>=1.3.0"
       ],
        packages=["xaisuite", "demo"],
       )
