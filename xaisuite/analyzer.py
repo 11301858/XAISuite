@@ -30,9 +30,9 @@ def compare_explanations(filenames:list, verbose = False): #Analyze the generate
         explainers.append(explainer)
 
         for feature in features[0]:
-            vars()[feature + explainer + "List"] = []
+            vars()[feature.replace(' ', '') + explainer + "List"] = []
             for i in range(len(df['features'])):
-                eval(feature + explainer + "List").append(scores[i][features[i].index(feature)])
+                eval(feature.replace(' ', '') + explainer + "List").append(scores[i][features[i].index(feature)])
 
         vars()[explainer + "maxScore"] = []
         for score in scores:
@@ -42,7 +42,7 @@ def compare_explanations(filenames:list, verbose = False): #Analyze the generate
 
   for feature in features[0]:
       for explainer in explainers:
-          plt.plot(eval(feature + explainer + "List"))
+          plt.plot(eval(feature.replace(' ', '') + explainer + "List"))
           plt.xlabel("Instance #")
           plt.ylabel("Importance Score")
       plt.title("Change in importance of " + feature + " over instance number " + "- " + ' '.join([str(elem) for elem in explainers]))
@@ -59,7 +59,7 @@ def compare_explanations(filenames:list, verbose = False): #Analyze the generate
   for feature in features[0]:
     feature_explainer_lists = []
     for explainer in explainers:
-        feature_explainer_lists.append(eval(feature + explainer + "List"))
+        feature_explainer_lists.append(eval(feature.replace(' ', '') + explainer + "List"))
     correlation = np.corrcoef([x for x in feature_explainer_lists])
     if(len(explainers) == 2):
         print ("Correlation between " + ' and '.join([str(elem) for elem in explainers]) + " for feature " + feature + ": " + str(correlation[1,0]))
