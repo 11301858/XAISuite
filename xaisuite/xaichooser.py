@@ -20,7 +20,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list = [], inde
     returnList = []
     
     try:
-      assert model in acceptedModels.keys()
+      assert model in acceptedModels.keys(), "Model is not accepted."
       exec('from ' + acceptedModels.get(model) + ' import*')
       modeler= eval(model + "( **modelSpecificArgs )") #Create model function from provided model name. This will not work if model is not part of sklearn library or is unsupervised.
     except Exception as e:
