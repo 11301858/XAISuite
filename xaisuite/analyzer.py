@@ -30,11 +30,11 @@ def compare_explanations(filenames:list, verbose = False): #Analyze the generate
         explainers.append(explainer)
 
         for feature in features[0]:
-            vars()[feature.replace(' ', '').replace('(', '').replace(')', '') + explainer + "List"] = []
+            global vars()[feature.replace(' ', '').replace('(', '').replace(')', '') + explainer + "List"] = []
             for i in range(len(df['features'])):
                 eval(feature.replace(' ', '').replace('(', '').replace(')', '') + explainer + "List").append(scores[i][features[i].index(feature)])
 
-        vars()[explainer + "maxScore"] = []
+        global vars()[explainer + "maxScore"] = []
         for score in scores:
             eval(explainer + "maxScore").append(max(score))   
       except Exception as e:
