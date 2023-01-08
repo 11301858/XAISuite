@@ -44,7 +44,7 @@ def compare_explanations(filenames:list, verbose = False): #Analyze the generate
       for explainer in explainers:
           if(verbose):
             print(feature.replace(' ', '').replace('(', '').replace(')', '') + explainer + "List")
-          plt.plot(eval(feature.replace(' ', '').replace('(', '').replace(')', '') + explainer + "List"))
+          plt.plot(eval(feature.replace(' ', '').replace('(', '').replace(')', '') + explainer + "List")) 
           plt.xlabel("Instance #")
           plt.ylabel("Importance Score")
       plt.title("Change in importance of " + feature + " over instance number " + "- " + ' '.join([str(elem) for elem in explainers]))
