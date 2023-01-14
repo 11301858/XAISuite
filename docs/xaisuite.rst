@@ -8,7 +8,7 @@ Modules in XAISuite
 
 .. autosummary::
    dataLoader
-   xaichooser
+   hub
    analyzer
    
 
@@ -18,7 +18,7 @@ Modules in XAISuite
    :show-inheritance:
 
 
-.. automodule:: xaisuite.xaichooser
+.. automodule:: xaisuite.hub
    :members:
    :undoc-members:
    :show-inheritance:
