@@ -7,6 +7,7 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
     :param ``**addendumkwargs``: Any additional columns to be added to analysis. Each new parameter should be of the form addendumName = [addendumList]]
     :return: None
     '''
+  print("There are " + len(filenames) + " files.")
   corrList = []
   model = filenames[0].split()[3] #All files should have the same model
   try:
