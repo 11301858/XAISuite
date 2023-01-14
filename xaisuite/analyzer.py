@@ -31,7 +31,8 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
         with open('featuresvsmodel.csv', 'w', newline='') as file:
           writer = csv.writer(file)
           writer.writerow(["Model"] + df['features'][0])
-        data = pd.read_csv("featuresvsmodel.csv", index_col = 0)
+        data = pd.read_csv("featuresvsmodel.csv")
+        data.set_index('Model')
       finally:
         data.loc[len(data.index)] = [model] + corrList
         print("List of correlations is \n" + str(data.head()))
