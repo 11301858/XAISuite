@@ -23,6 +23,7 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
       print("Average correlation is " + statistics.fmean(corrList))
     
     if len(filenames) == 2:
+      print("Printing in-depth information since 2 explainers are provided.")
       try:
         data = pd.read_csv("featuresvsmodel.csv")
       except Exception as e:
