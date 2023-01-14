@@ -90,7 +90,7 @@ def compare_explanationssinglef(filenames:list, feature:str, verbose = False, **
   #plt.show()
   for key, value in addendumkwargs.items():
     data[key] = value
-  data.plot()
+  data.plot(title = feature)
   data.to_csv(feature + " " + model + ' .csv')
   return data.corr() if len(filenames) != 2 else data.corr()[explainers[0]][explainers[1]]
     
