@@ -13,7 +13,7 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list = [], inde
     :param bool verbose: Whether debugging information should be printed, by default False
     :param ``**modelSpecificArgs``: Specific arguments to pass on to the model function
     
-    :return: The learning model and The scaler (if applicable) if user wants to predict more values. In List format
+    :return: The learning model, a table of predictions, and the scaler (if applicable) if user wants to predict more values. In List format
     :rtype: list  
     '''
    
@@ -62,10 +62,13 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list = [], inde
     
     returnList.append(modeler)
     
+    comparison_data = pd.DataFrame(data = list(zip(modeler.predict(x_test), y_test, [a_i - b_i for a_i, b_i in zip(modeler.predict(x_test), y_test)])), columns = [model + ' Predicted ' + tabular_data.target_column, 'Actual ' + tabular_data.target_column, "Difference"]) 
+    
+    returnList.append(comparison_data)
+    
     if(verbose): #Useful debugging data
         
         print(returnList)
-        comparison_data = pd.DataFrame(data = list(zip(modeler.predict(x_test), y_test, [a_i - b_i for a_i, b_i in zip(modeler.predict(x_test), y_test)])), columns = [model + ' Predicted ' + tabular_data.target_column, 'Actual ' + tabular_data.target_column, "Difference"]) 
         print("LEARNING FROM DATA...\n ") #Redundant title to separate output from other possible debugging messages
         print(comparison_data) #Print results of model training with Actual Target and Predicted Target
         filepath = Path('modelresults.csv')  
