@@ -52,6 +52,7 @@ def compare_explanationssinglef(filenames:list, feature:str, verbose = False, **
     '''
   explainers = []
   features = [] #All files should have same features
+  model = filenames[0].split()[3] #All files should have the same model
   data = pd.DataFrame()
   for filename in filenames:
     try: 
