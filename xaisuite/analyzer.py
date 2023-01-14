@@ -7,7 +7,7 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
     :param ``**addendumkwargs``: Any additional columns to be added to analysis. Each new parameter should be of the form addendumName = [addendumList]]
     :return: None
     '''
-  print("There are " + len(filenames) + " files.")
+  print("There are " + str(len(filenames)) + " files.")
   corrList = []
   model = filenames[0].split()[3] #All files should have the same model
   try:
@@ -21,7 +21,7 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
     
     if len(filenames) == 2:
       import statistics
-      print("Average correlation is " + statistics.fmean(corrList))
+      print("Average correlation is " + str(statistics.fmean(corrList)))
     
     if len(filenames) == 2:
       print("Printing in-depth information since 2 explainers are provided.")
