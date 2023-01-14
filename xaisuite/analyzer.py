@@ -7,11 +7,17 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
     :param ``**addendumkwargs``: Any additional columns to be added to analysis. Each new parameter should be of the form addendumName = [addendumList]]
     :return: None
     '''
+  corr = 0.0
   try:
     df = pd.read_csv(filenames[0])
     df['features'][0] = ast.literal_eval(df['features'][0])
     for feature in df['features'][0]:
-        compare_explanationssinglef(filenames, feature, verbose, **addendumkwargs)
+        if len(filenames) != 2:
+          compare_explanationssinglef(filenames, feature, verbose, **addendumkwargs)
+        else:
+          corr += compare_explanationssinglef(filenames, feature, verbose, **addendumkwargs)
+    corr /= len(df['features'][0])
+    print("Average correlation is " + corr)
   except Exception as e:
     print("An error occurred while analyzing the graph. " + str(e))
   
@@ -22,11 +28,20 @@ def compare_explanationssinglef(filenames:list, feature:str, verbose = False, **
     :param list filenames: File names with explanations (of the form "Explainer ImportanceScores - Model Target.csv")
     :param str feature: Feature whose importance scores are to be compared
     :param ``**addendumkwargs``: Any additional columns to be added to analysis. Each new parameter should be of the form addendumName = [addendumList]]
-    :return: None
+    :return: Correlation between different explainer files
     '''
   explainers = []
   features = [] #All files should have same features
+  model = filenames[0].split()[3] #All files should have the same model
   data = pd.DataFrame()
+  featurevsmodel = pd.DataFrame()
+  if len(filenames) == 2:
+    try:
+      featurevsmodel = pd.read_csv("featurevsmodel.csv")
+    except Exception as e:
+      with open("featurevsmodel.csv", "a") as file:
+        pass
+      featurevsmodel = pd.read_csv("featurevsmodel.csv")
   for filename in filenames:
     try: 
         df = pd.read_csv(filename)
@@ -62,11 +77,12 @@ def compare_explanationssinglef(filenames:list, feature:str, verbose = False, **
   plt.matshow(data.corr())
   plt.show()
   for key, value in addendumkwargs.items():
-    if key != "model":
-      data[key] = value
+    data[key] = value
   data.plot()
-  if "model" in addendumkwargs.items():
-    data.to_csv(feature + " " + kwargs[model] + ' .csv')
+  data.to_csv(feature + " " + model + ' .csv')
+  if len(filenames) == 2:
+    featurevsmodel[feature][model] = data.corr()[explainers[0]][explainers[1]]
+  return data.corr() if len(filenames) != 2 else data.corr()[explainers[0]][explainers[1]]
     
 def maxImportanceScoreGenerator(filenames:list): #Generate the maxScores addendum list
     for filename in filenames:
