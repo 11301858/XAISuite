@@ -10,4 +10,4 @@ else:
 #Package Modules
 from .dataLoader import load_data_CSV, load_data_sklearn
 from .hub import train_and_explainModel
-from .analyzer import compare_explanations
+from .analyzer import compare_explanations, compare_explanationssinglef
