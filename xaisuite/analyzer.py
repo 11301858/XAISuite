@@ -7,7 +7,8 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
     :param ``**addendumkwargs``: Any additional columns to be added to analysis. Each new parameter should be of the form addendumName = [addendumList]]
     :return: None
     '''
-  corr = 0.0
+  corrList = []
+  model = filenames[0].split()[3] #All files should have the same model
   try:
     df = pd.read_csv(filenames[0])
     df['features'][0] = ast.literal_eval(df['features'][0])
@@ -15,9 +16,28 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
         if len(filenames) != 2:
           compare_explanationssinglef(filenames, feature, verbose, **addendumkwargs)
         else:
-          corr += compare_explanationssinglef(filenames, feature, verbose, **addendumkwargs)
-    corr /= len(df['features'][0])
-    print("Average correlation is " + corr)
+           corrList.append(compare_explanationssinglef(filenames, feature, verbose, **addendumkwargs))
+    
+    if len(filenames) == 2:
+      import statistics
+      print("Average correlation is " + statistics.fmean(corrList))
+    
+    if len(filenames) == 2:
+      try:
+        data = pd.read_csv("featuresvsmodel.csv")
+      except Exception as e:
+        with open('featuresvsmodel.csv', 'w', newline='') as file:
+          writer = csv.writer(file)
+          writer.writerow(["Model"] + df['features'][0])
+        data = pd.read_csv("featuresvsmodel.csv")
+      finally:
+        data.loc[len(data.index)] = [model] + corrList
+        print("Correlation map for different features with given model between " + filenames[0].split()[0] + " and" + filenames[1].split()[0])
+        plt.matshow(data)
+        plt.show()
+        data.to_csv("featuresvsmodel.csv")
+        
+      
   except Exception as e:
     print("An error occurred while analyzing the graph. " + str(e))
   
@@ -32,16 +52,7 @@ def compare_explanationssinglef(filenames:list, feature:str, verbose = False, **
     '''
   explainers = []
   features = [] #All files should have same features
-  model = filenames[0].split()[3] #All files should have the same model
   data = pd.DataFrame()
-  featurevsmodel = pd.DataFrame()
-  if len(filenames) == 2:
-    try:
-      featurevsmodel = pd.read_csv("featurevsmodel.csv")
-    except Exception as e:
-      with open("featurevsmodel.csv", "a") as file:
-        pass
-      featurevsmodel = pd.read_csv("featurevsmodel.csv")
   for filename in filenames:
     try: 
         df = pd.read_csv(filename)
@@ -73,15 +84,13 @@ def compare_explanationssinglef(filenames:list, feature:str, verbose = False, **
     except Exception as e:
         print("An error occurred while analyzing the graph. " + str(e))
 
-  print("Correlation map for explanations:")
-  plt.matshow(data.corr())
-  plt.show()
+  #print("Correlation map for explanations:")
+  #plt.matshow(data.corr())
+  #plt.show()
   for key, value in addendumkwargs.items():
     data[key] = value
   data.plot()
   data.to_csv(feature + " " + model + ' .csv')
-  if len(filenames) == 2:
-    featurevsmodel[feature][model] = data.corr()[explainers[0]][explainers[1]]
   return data.corr() if len(filenames) != 2 else data.corr()[explainers[0]][explainers[1]]
     
 def maxImportanceScoreGenerator(filenames:list): #Generate the maxScores addendum list
