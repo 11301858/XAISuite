@@ -7,6 +7,10 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
     :param ``**addendumkwargs``: Any additional columns to be added to analysis. Each new parameter should be of the form addendumName = [addendumList]]
     :return: None
     '''
+  data = addendumkwargs["data"] if "data" in addendumkwargs else ""
+  if "data" in addendumkwargs:
+    del addendumkwargs["data"]
+    
   print("There are " + str(len(filenames)) + " files.")
   corrList = []
   model = filenames[0].split()[3] #All files should have the same model
@@ -26,20 +30,20 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
     if len(filenames) == 2:
       print("Printing in-depth information since 2 explainers are provided.")
       try:
-        data = pd.read_csv("featuresvsmodel.csv")
+        data = pd.read_csv("featuresvsmodel" + data + ".csv")
       except Exception as e:
-        with open('featuresvsmodel.csv', 'w', newline='') as file:
+        with open("featuresvsmodel" + data + ".csv", 'w', newline='') as file:
           writer = csv.writer(file)
           writer.writerow(["Model"] + df['features'][0])
-        data = pd.read_csv("featuresvsmodel.csv")
+        data = pd.read_csv("featuresvsmodel" + data + ".csv")
       finally:
         data.loc[len(data.index)] = [model] + corrList
+        data.set_index('Model', inplace=True, drop=True)
         print("List of correlations is \n" + str(data.head()))
         print("Correlation map for different features with given model between " + filenames[0].split()[0] + " and " + filenames[1].split()[0])
-        data.set_index('Model', inplace=True, drop=True)
         plt.matshow(data)
         plt.show()
-        data.to_csv("featuresvsmodel.csv")
+        data.to_csv("featuresvsmodel" + data + ".csv")
         
       
   except Exception as e:
