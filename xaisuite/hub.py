@@ -75,11 +75,11 @@ def train_and_explainModel(model:str, tabular_data:Tabular, x_ai:list = [], inde
         filepath = Path('modelresults.csv')  
         comparison_data.to_csv(filepath) #Save data to CSV file
 
-        try:
-            score = modeler.score(x_test, y_test) #Calculates R^2 value by comparing predicted target values and actual target values
-            print(model + " score is " + str(score)) #Print model score
-        except Exception as e:
-            print("Could not retrieve model score. " + str(e)) #This will occur if an error occurred while calculating score or if model does not support score calculation
+    try:
+        score = modeler.score(x_test, y_test) #Calculates R^2 value by comparing predicted target values and actual target values
+        print(model + " score is " + str(score)) #Print model score
+    except Exception as e:
+        print("Could not retrieve model score. " + str(e)) #This will occur if an error occurred while calculating score or if model does not support score calculation
 
     if (len(x_ai) == 0): #List of explanatory methods is blank
       print("NO EXPLANATIONS REQUESTED BY USER") #Print that no explanations were requested by user
