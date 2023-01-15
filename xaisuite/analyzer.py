@@ -10,10 +10,11 @@ def compare_explanations(filenames:list, showGraphics = True, verbose = False, *
   dataset = addendumkwargs["dataset"] if "dataset" in addendumkwargs else ""
   if "dataset" in addendumkwargs:
     del addendumkwargs["dataset"]
-    
+  
+  model = filenames[0].split()[3] #All files should have the same model
+  print(model.upper() + "\n" + "============")
   print("There are " + str(len(filenames)) + " files.")
   corrList = []
-  model = filenames[0].split()[3] #All files should have the same model
   try:
     df = pd.read_csv(filenames[0])
     df['features'][0] = ast.literal_eval(df['features'][0])
