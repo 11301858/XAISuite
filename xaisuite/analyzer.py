@@ -7,9 +7,9 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
     :param ``**addendumkwargs``: Any additional columns to be added to analysis. Each new parameter should be of the form addendumName = [addendumList]]
     :return: None
     '''
-  data = addendumkwargs["data"] if "data" in addendumkwargs else ""
-  if "data" in addendumkwargs:
-    del addendumkwargs["data"]
+  dataset = addendumkwargs["dataset"] if "dataset" in addendumkwargs else ""
+  if "dataset" in addendumkwargs:
+    del addendumkwargs["dataset"]
     
   print("There are " + str(len(filenames)) + " files.")
   corrList = []
@@ -30,12 +30,12 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
     if len(filenames) == 2:
       print("Printing in-depth information since 2 explainers are provided.")
       try:
-        data = pd.read_csv("featuresvsmodel" + data + ".csv")
+        data = pd.read_csv("featuresvsmodel" + dataset + ".csv")
       except Exception as e:
-        with open("featuresvsmodel" + data + ".csv", 'w', newline='') as file:
+        with open("featuresvsmodel" + dataset + ".csv", 'w', newline='') as file:
           writer = csv.writer(file)
           writer.writerow(["Model"] + df['features'][0])
-        data = pd.read_csv("featuresvsmodel" + data + ".csv")
+        data = pd.read_csv("featuresvsmodel" + dataset + ".csv")
       finally:
         data.loc[len(data.index)] = [model] + corrList
         print("List of correlations is \n" + str(data.head()))
@@ -43,7 +43,7 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
         data.set_index('Model', inplace=True, drop=True)
         plt.matshow(data)
         plt.show()
-        data.to_csv("featuresvsmodel" + data + ".csv")
+        data.to_csv("featuresvsmodel" + dataset + ".csv")
         
       
   except Exception as e:
