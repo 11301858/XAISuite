@@ -38,9 +38,9 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
         data = pd.read_csv("featuresvsmodel" + data + ".csv")
       finally:
         data.loc[len(data.index)] = [model] + corrList
-        data.set_index('Model', inplace=True, drop=True)
         print("List of correlations is \n" + str(data.head()))
         print("Correlation map for different features with given model between " + filenames[0].split()[0] + " and " + filenames[1].split()[0])
+        data.set_index('Model', inplace=True, drop=True)
         plt.matshow(data)
         plt.show()
         data.to_csv("featuresvsmodel" + data + ".csv")
