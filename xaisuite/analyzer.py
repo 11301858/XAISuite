@@ -41,9 +41,10 @@ def compare_explanations(filenames:list, verbose = False, **addendumkwargs): #An
         print("List of correlations is \n" + str(data.head()))
         print("Correlation map for different features with given model between " + filenames[0].split()[0] + " and " + filenames[1].split()[0])
         data.set_index('Model', inplace=True, drop=True)
+        plt.matshow(data)
         plt.xticks(ticks = range (0, len(df['features'][0])), labels = df['features'][0])
         plt.yticks(ticks = range (0, len(data.index)), labels = data.index)
-        plt.matshow(data)
+        
         
         plt.show()
         data.to_csv("featuresvsmodel" + dataset + ".csv")
