@@ -49,7 +49,7 @@ def compare_explanations(filenames:list, showGraphics = True, verbose = False, *
         plt.yticks(ticks = range (0, len(data.index)), labels = data.index)
         plt.colorbar()
         
-        plt.show() if showGraphics == True
+        plt.show() if showGraphics == True else print("No graphics shown as requested.")
         data.to_csv("featuresvsmodel" + dataset + ".csv")
         
       
