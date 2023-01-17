@@ -37,18 +37,18 @@ def compare_explanations(filenames:list, showGraphics = True, verbose = False, *
       except Exception as e: #Data storage file not found or could not be retrieved
         with open("featuresvsmodel" + dataset + ".csv", 'w', newline='') as file: #Create the data storage file
           writer = csv.writer(file)
-          writer.writerow(["Model"] + df['features'][0]) #Create the header for the file: Model | Feature 1 | Feature 2 etc. Note the order of the features is as they appear in the first file's first instance
+          writer.writerow(["Model"] + sorted(df['features'][0])) #Create the header for the file: Model | Feature 1 | Feature 2 etc. Note the order of the features is as they appear in the first file's first instance
         data = pd.read_csv("featuresvsmodel" + dataset + ".csv") #Now read the data storage file onto a dataframe
       finally: #Now that we have the data storage file created and read onto a dataframe
         data.loc[len(data.index)] = [model] + corrList # Add a new row with the model name and the explainer correlations for each feature
         data.set_index('Model', inplace=True, drop=True) #Set the index of the dataframe to the model name instead of 0, 1, 2, 3...
-        print("List of correlations is \n" + display(data)) #Display the dataframe
+        display(data) #Display the dataframe
         plt.matshow(data) #Create a heatmap of correlations
         plt.title("Correlation between " + filenames[0].split()[0] + " and " + filenames[1].split()[0]) #For clarification, print the two explainers the user wants to compare
         #Set the axis labels for the heat map to be Features vs Models
         plt.xlabel("Features")
         plt.ylabel("Model")
-        plt.xticks(ticks = range (0, len(df['features'][0])), labels = df['features'][0])
+        plt.xticks(ticks = range (0, len(df['features'][0])), labels = sorted(df['features'][0]))
         plt.yticks(ticks = range (0, len(data.index)), labels = data.index)
         plt.colorbar() #Create the color key for the heat map
         
