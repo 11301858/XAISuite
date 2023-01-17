@@ -20,7 +20,7 @@ def compare_explanations(filenames:list, showGraphics = True, verbose = False, *
   try:
     df = pd.read_csv(filenames[0]) #Read the first file onto a dataframe
     df['features'][0] = ast.literal_eval(df['features'][0]) #Make sure to compare the string representation of the list of features for the first instance into an actual list
-    for feature in df['features'][0]: #For each feature listed on the first instance
+    for feature in sorted(df['features'][0]): #For each feature listed on the first instance (sorted so that this applies to the first instances for any model and explainer). We assume that all instances provide importance scores for all features
         if len(filenames) != 2: #If there are more than 2 explainers to compare (with 1 explainer, there will be nothing to compare)
           compare_explanationssinglef(filenames, feature, verbose, **addendumkwargs) #Compare the explanations for the specific features
         else: #If there are exactly 2 explainers to compare, then a single correlation can be found and stored
