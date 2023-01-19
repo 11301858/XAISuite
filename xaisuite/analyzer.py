@@ -100,7 +100,8 @@ def compare_explanationssinglef(filenames:list, feature:str, verbose = False, **
           try:
             featurescore.append(scores[i][features[i].index(feature)]) #Add the score for the feature we are looking for to the list
           except Exception as w:
-            print("Warning: " + feature + " not found for instance " + str(i) + " in file " + filename + ". Assuming zero importance for that specific instance.")
+            if (verbose):
+              print("Warning: " + feature + " not found for instance " + str(i) + " in file " + filename + ". Assuming zero importance for that specific instance.")
             featurescore.append(0.0)
             
         data[explainer] =  featurescore #Set a column of the dataframe to the list of scores for the feature given a particular explainer
