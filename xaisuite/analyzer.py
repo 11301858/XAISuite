@@ -115,8 +115,8 @@ def compare_explanationssinglef(filenames:list, feature:str, verbose = False, **
   for key, value in addendumkwargs.items(): #For each additional list to be plotted
     data[key] = value #Add it to the dataframe
   data.plot(title = feature) #Plot the data
-  data.to_csv(feature + " " + model + ' .csv') #Store the dataframe on a file
-  return data.corr() if len(filenames) != 2 else data.corr()[explainers[0]][explainers[1]] #Return the correlation if only 2 explainers are being compared
+  data.to_csv(feature + " " + model + ' .csv', index = False) #Store the dataframe on a file
+  return data.corr() if len(data.columns) != 2 else data.corr()[explainers[0]][explainers[1]] #Return the correlation if only 2 explainers are being compared
     
 def maxImportanceScoreGenerator(filenames:list): #Generate the maxScores addendum list
     for filename in filenames:
