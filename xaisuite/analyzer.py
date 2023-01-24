@@ -144,8 +144,8 @@ def maxImportanceScoreGenerator(filenames:list, verbose = False): #Generate the 
         
         maxdf[explainer + " maxScore"] = maxScore
         maxdf[explainer + " maxScoreFeature"] = maxScoreFeature
-        display(maxdf)
-        return maxdf.corr() if len(explainers) != 2 else maxdf.corr()[explainers[0] + " maxScore"][explainers[1] + " maxScore"] #Return the correlation if only 2 explainers are being compared
+    display(maxdf)
+    return maxdf.corr() if len(explainers) != 2 else maxdf.corr()[explainers[0] + " maxScore"][explainers[1] + " maxScore"] #Return the correlation if only 2 explainers are being compared
     return maxdf
         
         
