@@ -123,14 +123,14 @@ def maxImportanceScoreGenerator(filenames:list): #Generate the maxScores addendu
     for filename in filenames:
         df = pd.read_csv(filename)
         explainer = filename.split()[0]
-        vars()[explainer + "maxScore"] = []
-        vars()[explainer + "maxScoreFeature"] = []
+        maxScore = []
+        maxScoreFeature = []
         for i in range(len(df["scores"])):
-            eval(explainer + "maxScore").append(max(df["scores"][i]))
-            eval(explainer + "maxScoreFeature").append(df["features"][i][df["scores"][i].index(max(df["scores"][i]))])
+            maxScore.append(max(df["scores"][i]))
+            maxScoreFeature.append(df["features"][i][df["scores"][i].index(max(df["scores"][i]))])
         
-        maxdf[explainer + "maxScore"] = eval(explainer + "maxScore") 
-        maxdf[explainer + "maxScoreFeature"] = eval(explainer + "maxScoreFeature")
+        maxdf[explainer + " maxScore"] = maxScore
+        maxdf[lime + " maxScoreFeature"] = maxScoreFeature
     return maxdf
         
         
