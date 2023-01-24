@@ -130,7 +130,7 @@ def maxImportanceScoreGenerator(filenames:list, verbose = False): #Generate the 
             indexofhighestscore = df["scores"][i].index(highestscore)
             maxScore.append(highestscore)
             if(verbose):
-              print("Index of highest score: " + indexofhighestscore)
+              print("Index of highest score: " + int(indexofhighestscore))
               print (df["features"][i])
             maxScoreFeature.append(df["features"][i][indexofhighestscore])
         
