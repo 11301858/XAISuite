@@ -130,7 +130,7 @@ def maxImportanceScoreGenerator(filenames:list): #Generate the maxScores addendu
             maxScoreFeature.append(df["features"][i][df["scores"][i].index(max(df["scores"][i]))])
         
         maxdf[explainer + " maxScore"] = maxScore
-        maxdf[lime + " maxScoreFeature"] = maxScoreFeature
+        maxdf[explainer + " maxScoreFeature"] = maxScoreFeature
     return maxdf
         
         
