@@ -118,7 +118,7 @@ def compare_explanationssinglef(filenames:list, feature:str, verbose = False, **
   data.to_csv(feature + " " + model + ' .csv', index = False) #Store the dataframe on a file
   return data.corr() if len(data.columns) != 2 else data.corr()[explainers[0]][explainers[1]] #Return the correlation if only 2 explainers are being compared
     
-def maxImportanceScoreGenerator(filenames:list): #Generate the maxScores addendum list
+def maxImportanceScoreGenerator(filenames:list, verbose = False): #Generate the maxScores addendum list
     maxdf = pd.DataFrame()
     for filename in filenames:
         df = pd.read_csv(filename)
@@ -126,8 +126,13 @@ def maxImportanceScoreGenerator(filenames:list): #Generate the maxScores addendu
         maxScore = []
         maxScoreFeature = []
         for i in range(len(df["scores"])):
-            maxScore.append(max(df["scores"][i]))
-            maxScoreFeature.append(df["features"][i][df["scores"][i].index(max(df["scores"][i]))])
+            highestscore = max(df["scores"][i])
+            indexofhighestscore = df["scores"][i].index(highestscore)
+            maxScore.append(highestscore)
+            if(verbose):
+              print("Index of highest score: " + indexofhighestscore)
+              print (df["features"][i])
+            maxScoreFeature.append(df["features"][i][indexofhighestscore])
         
         maxdf[explainer + " maxScore"] = maxScore
         maxdf[explainer + " maxScoreFeature"] = maxScoreFeature
