@@ -11,6 +11,7 @@ import numpy as np
 #Machine Learning Models and Training
 from sklearn.model_selection import train_test_split
 
+#I decided to trade-off memory for security. This is a list of all accepted models. Without this, the program works perfectly, but malicious users could hijack the system to execute their own code.
 acceptedModels = {"SVC": "sklearn.svm", "NuSVC": "sklearn.svm", "LinearSVC": "sklearn.svm", "SVR": "sklearn.svm", "NuSVR": "sklearn.svm", "LinearSVR": "sklearn.svm", 
                  "AdaBoostClassifier": "sklearn.ensemble", "AdaBoostRegressor": "sklearn.ensemble", "BaggingClassifier": "sklearn.ensemble", "BaggingRegressor": "sklearn.ensemble",
                  "ExtraTreesClassifier": "sklearn.ensemble", "ExtraTreesRegressor": "sklearn.ensemble", 
@@ -53,7 +54,7 @@ acceptedModels = {"SVC": "sklearn.svm", "NuSVC": "sklearn.svm", "LinearSVC": "sk
                   "ExtraTreeClassifier": "sklearn.tree", "ExtraTreeRegressor": "sklearn.tree"
                  }
 
-from sklearn.base import is_classifier, is_regressor
+from sklearn.base import is_classifier, is_regressor #For model type identification. Necessary for explanation generation and to ensure model is not unsupervised
 
 #OmniXAI Explanatory Models and Visualization
 from omnixai.data.tabular import Tabular
