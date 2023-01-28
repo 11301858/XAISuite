@@ -1,1 +1,1 @@
-We welcome contribution or feedback! Please file a pull request or issue, and we'll get back to you as soon as we can.
+We welcome contribution or feedback! Please file a pull request or issue, and we'll get back to you as soon as we can. Code entries must be your own work. Cite all sources and/or other pull requests about the topic when filing a pull request of your own.
