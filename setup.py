@@ -1,7 +1,7 @@
 from setuptools import setup, find_namespace_packages
 
 setup(name='XAISuite',
-      version='0.8.8', 
+      version='0.9', 
       description='XAISuite: Training and Explanation Generation Utilities for Machine Learning Models',
       long_description=open("README.md", "r", encoding="utf-8").read(),
       long_description_content_type="text/markdown",
@@ -13,5 +13,5 @@ setup(name='XAISuite',
         "dash>=2.7.1"
         "dash_bootstrap_components>=1.3.0"
       ],
-       packages=["xaisuite", "demo"],
+       packages=["xaisuite", "demo", "GUI"],
       )
