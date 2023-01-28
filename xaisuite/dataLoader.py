@@ -1,4 +1,6 @@
-from .imports import*
+from .imports import* #Import necessary libraries
+
+#Explandable data loder. Users can propose functions to load data from a variety of places. As of now, the data loading harbor contains two piers: one for CSV file and one for sk-learn premade datasets.
 
 
 def load_data_CSV(data:str, target:str, cut: Union[str, list] = None) -> Tabular: # Returns tabular data
