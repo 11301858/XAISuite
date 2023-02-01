@@ -53,7 +53,7 @@ def compare_explanations(filenames:list, showGraphics = True, verbose = False, *
         plt.xticks(ticks = range (0, len(df['features'][0])), labels = sorted(df['features'][0]))
         plt.yticks(ticks = range (0, len(data.index)), labels = data.index)
         plt.colorbar() #Create the color key for the heat map
-        
+        plt.savefig('Heat Map ' + dataset + " .png")
         plt.show() if showGraphics == True else print("No graphics shown as requested.") #We construct the graph anyway but only show it if it is asked for
         data.to_csv("featuresvsmodel" + dataset + ".csv") #Write the specific model's explainer correlation scores for all features to the storage file in case the same dataset is trained on different models
         
@@ -116,6 +116,7 @@ def compare_explanationssinglef(filenames:list, feature:str, verbose = False, **
   for key, value in addendumkwargs.items(): #For each additional list to be plotted
     data[key] = value #Add it to the dataframe
   data.plot(title = feature) #Plot the data
+  data.plot(title = feature).get_figure().savefig("Correlation " + feature + " " + filenames[0] + " .png")
   data.to_csv(feature + " " + model + ' .csv', index = False) #Store the dataframe on a file
   return data.corr() if len(data.columns) != 2 else data.corr()[explainers[0]][explainers[1]] #Return the correlation if only 2 explainers are being compared
     
