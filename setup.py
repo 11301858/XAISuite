@@ -9,8 +9,8 @@ setup(name='XAISuite',
       url="https://github.com/11301858/XAISuite",
       author = "Shreyan Mitra",
       install_requires=[
-        "omnixai>=1.2.4"
-        "dash>=2.7.1"
+        "omnixai>=1.2.4";
+        "dash>=2.7.1";
         "dash_bootstrap_components>=1.3.0"
       ],
        packages=["xaisuite", "demo", "GUI"],
