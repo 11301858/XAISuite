@@ -111,8 +111,9 @@ Finally, what you were really looking for! Click the following links for access 
    :maxdepth: 2
 
    xaisuite
-   demo
    GUI
+   demo
+
    
 Indices and Tables
 ==================
