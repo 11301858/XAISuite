@@ -45,8 +45,7 @@ XAISuite accomplishes machine learning model training and explanation generation
 explanation generation. Each of these steps are delved into more detail in our [documentation](https://11301858.github.io/XAISuite/v0.6.7-beta/index.html) and in the demo tutorials.
 
 
-![XAISuiteDetailedFramework](https://user-images.githubusercontent.com/66180831/216538041-a744579a-2481-4307-889b-c7c8b0d7d604.png)
-
+![XAISuiteDetailedFramework2](https://user-images.githubusercontent.com/66180831/216541918-b8289745-7b98-4429-a261-ed13d542879c.jpg)
 
 
 XAISuite was created as a helper library to [this paper](insert link), which studied the difference in SHAP and LIME explanations for different models on tabular datasets.
