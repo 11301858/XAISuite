@@ -1,0 +1,771 @@
+instance,features,values,scores
+"   Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+0             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+   Orientation  Glazing_Area  Glazing_Area_Distribution  
+0    -0.438156      1.231324                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, 0.12560256945767148, -0.0027797457928142055, -0.43815570558638767]","[-7.982212640903029, 4.944547497089562, 4.424724111858292, -3.7910532430489075, -1.283704012103185, -0.18771175052581052, 0.13926742549444182, 0.13441523744981712]"
+"   Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+1             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+   Orientation  Glazing_Area  Glazing_Area_Distribution  
+1     0.464621     -1.026614                  -0.522464  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, -0.5224644695928357, 0.4646214864607328]","[-8.040623833037598, -5.133798914429881, -4.054875647247989, -2.4489147937968228, 1.9121668119150899, 0.6450077965106735, -0.16571680761252144, 0.15681206968190534]"
+"   Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+2              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+   Orientation  Glazing_Area  Glazing_Area_Distribution  
+2    -0.438156     -1.026614                  -0.522464  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, -1.0266138406389769, -0.6757701577126913, 0.5661415598030419, 0.2645715506234637, -0.41419528314477305, -0.43815570558638767, -0.5224644695928357]","[8.132644684406161, -5.095311369071175, 3.9246798806414573, 1.2128599122162715, -1.1578674762647123, 0.3576542913807784, 0.10103128969972845, -0.04048995428553746]"
+"   Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+3                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+   Orientation  Glazing_Area  Glazing_Area_Distribution  
+3     0.464621      -1.77926                  -1.818599  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[1.0164214592291214, -1.7792596891790744, -0.6757701577126913, 0.5498998856635239, -0.692745013540053, -1.81859854769385, -0.0027797457928142055, 0.4646214864607328]","[7.8329916052147475, -5.119448099236337, 3.813651461174825, -1.0880129831287426, 0.7259872885257601, -0.39646285145140775, 0.17479909678503447, -0.026226300071800348]"
+"   Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+4              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+   Orientation  Glazing_Area  Glazing_Area_Distribution  
+4    -0.438156      1.231324                  -1.170532  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, 1.2313237049813155, -1.4925474743181886, -1.806943935121173, -0.5717010513886703, -1.1705315086433428, -0.43815570558638767]","[7.991546586198251, -5.4961983152086065, 4.816537623807531, 3.95238633325526, 2.3185710324961617, -2.2937143339102453, -0.44749342656690805, 0.03749087626098783]"
+"   Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+5              1.310775     -1.249844   -0.00278  -1.220288        1.016421   
+
+   Orientation  Glazing_Area  Glazing_Area_Distribution  
+5     1.367399     -1.026614                  -0.522464  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[1.0164214592291214, 1.3107754457703538, -1.0266138406389769, -1.2202883687830228, -1.249844474330613, -0.5224644695928357, -0.0027797457928142055, 1.3673986785078533]","[8.152237740221908, -5.480308052950676, -5.062256109196482, 4.042121304161674, 2.345288790336835, -0.16447210295957776, 0.14177916301334026, 0.007241037506137153]"
+"   Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+6              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+   Orientation  Glazing_Area  Glazing_Area_Distribution  
+6     0.464621      0.102355                  -0.522464  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, 2.0716510058771824, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, 0.1023549321711691, 0.4646214864607328, -0.5224644695928357]","[8.082700198851052, -5.399345359141971, 4.012233736763238, -2.4910749913713595, 2.1795148447155923, 0.5563996861868399, 0.043786074728011666, -0.03827000829443966]"
+"   Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+7                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+   Orientation  Glazing_Area  Glazing_Area_Distribution  
+7    -1.340933      1.231324                  -0.522464  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation', 'Wall_Area']","[1.0164214592291214, 1.2313237049813155, -0.6757701577126913, 0.5498998856635239, -0.692745013540053, -0.5224644695928357, -1.3409328976335082, -0.0027797457928142055]","[8.018177469828084, 4.776778433389872, 3.9153518080690546, -1.0150922713098283, 0.6829032360318659, -0.47090538592394143, 0.16126683877783143, 0.13820822409372802]"
+"   Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+8              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+   Orientation  Glazing_Area  Glazing_Area_Distribution  
+8     1.367399      0.102355                   0.125603  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, 0.9303376657169388, -0.6757701577126913, -0.5717010513886703, -0.971294743935333, 0.1023549321711691, 1.3673986785078533, 0.12560256945767148]","[8.071141977118659, -5.644900232881969, 4.026468797895437, -2.349337388892551, 2.273753675441116, 0.6666175919165964, -0.13398006499682463, -0.07720045128216083]"
+"   Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+9                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+   Orientation  Glazing_Area  Glazing_Area_Distribution  
+9    -1.340933     -1.026614                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -0.6757701577126913, 0.5498998856635239, -0.692745013540053, 0.7736696085081787, -0.0027797457928142055, -1.3409328976335082]","[8.096805833943273, -5.154223000961143, 4.036055224231667, -1.045020573754218, 0.6932362352217135, 0.29360862348239, 0.21572391227227417, 0.033043782432998825]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+10             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+10     1.367399      -1.77926                  -1.818599  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.7792596891790744, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, -1.81859854769385, 1.3673986785078533]","[-8.164144717326309, -5.062042131350194, -4.147808277282005, -2.3058034418756717, 1.8341722164993797, -1.3461571207879697, -0.2862427354713697, 0.08925664984077405]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+11              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+11     0.464621      1.231324                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Wall_Area', 'Glazing_Area_Distribution', 'Surface_Area', 'Orientation']","[1.0164214592291214, 1.2313237049813155, -0.6757701577126913, 0.2645715506234637, 0.5661415598030419, -1.1705315086433428, -0.41419528314477305, 0.4646214864607328]","[7.909287950713655, 4.753069655921503, 3.8975558317806627, -1.1024974584971738, 1.0880350219420314, -0.6203840101123057, 0.5188256841666817, 0.049255265203370154]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+12             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+12     0.464621     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, 1.421736647558686, -0.0027797457928142055, 0.4646214864607328]","[-7.950045522877216, -5.151553359479486, 4.5581972373331014, -3.906380401884686, -1.1608355642226993, 0.41871148172612827, 0.19481878650240889, -0.04392441403930582]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+13              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+13    -0.438156      1.231324                  -0.522464  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, 1.2313237049813155, -0.6757701577126913, 0.5661415598030419, 0.2645715506234637, -0.41419528314477305, -0.43815570558638767, -0.5224644695928357]","[8.069224865958232, 5.03090241213114, 3.853044558574512, 1.2107112878921196, -0.8973626521905316, 0.49748356664247106, 0.09145541806581063, -0.0726835758764435]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+14              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+14    -0.438156      1.231324                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 1.2313237049813155, -0.6757701577126913, 0.5661415598030419, 0.2645715506234637, -0.41419528314477305, 1.421736647558686, -0.43815570558638767]","[8.114039148824519, 5.046893012347158, 4.090760941320607, 1.3259087266363514, -1.1313542018088054, 0.6344920244798887, 0.4253776899700402, 0.06348237857966942]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+15              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+15     0.464621     -1.026614                    0.77367  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 0.9303376657169388, -1.0266138406389769, -0.6757701577126913, -0.5717010513886703, -0.971294743935333, 0.7736696085081787, 0.4646214864607328]","[8.041442147446004, -5.648389563527822, -5.217162819032984, 3.987599556993045, -2.405661021002344, 2.3656664260419316, 0.29220736680587694, -0.01944754194732013]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+16             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+16     1.367399     -1.026614                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 1.3673986785078533, 0.12560256945767148]","[-8.009192042882246, -5.135129736239365, -3.712707098127626, -2.440356880886675, 1.8527202119469912, -1.3140568074375645, -0.13545073675821492, -0.13106916486951373]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+17              1.310775     -1.249844   -0.00278  -1.220288        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+17     1.367399     -1.026614                  -1.170532  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[1.0164214592291214, 1.3107754457703538, -1.0266138406389769, -1.2202883687830228, -1.249844474330613, -1.1705315086433428, -0.0027797457928142055, 1.3673986785078533]","[8.024257784716097, -5.523558635956874, -5.0444360470097, 3.9386132862569534, 2.353033850735746, -0.3066774944753119, 0.213464087809457, -0.06166026707617743]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+18             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+18     1.367399      0.102355                    0.77367  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 0.1023549321711691, 0.7736696085081787, 1.3673986785078533]","[-8.043254748992833, 4.816095409435727, -4.050814006410791, 2.7471436583179645, -2.2749714163949286, 0.6084751147074318, 0.15304073468123786, 0.0258296978988332]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+19             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+19    -0.438156      0.102355                  -0.522464  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 0.1023549321711691, -0.43815570558638767, -0.5224644695928357]","[-8.227820691284023, -3.948360006717041, -2.3919005283698542, 1.9440198266795012, -1.079823565870216, 0.648163197831268, -0.040017886615555255, -0.007929587543291256]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+20             -0.686523      0.700004  -0.571701   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+20    -0.438156      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 0.957784475498303, -0.5717010513886703, -0.6865228995100736, 0.7000036384363467, 0.1023549321711691, -0.43815570558638767, 0.12560256945767148]","[-7.887456258511449, -4.021263104212373, -2.4933339311806666, 1.8833459182395655, -1.0530231938552947, 0.6851622734593549, -0.07628275966072343, 0.05675117264554492]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+21              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+21    -0.438156      1.231324                  -0.522464  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, 1.2313237049813155, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, -0.5224644695928357, -0.43815570558638767]","[7.9223046646083946, -5.531617743595198, 4.925823671948991, 3.869176487894433, -2.25281234278511, 2.222428456832195, -0.12332487426070672, 0.08251197745016556]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+22             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+22    -1.340933     -1.026614                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 0.12560256945767148, -1.3409328976335082]","[-7.993172227369625, -4.956465041012983, -3.8263384756831043, -2.3016979476004122, 1.9067510958333123, -1.3786569483484845, 0.07194628657694711, 0.06518587988284166]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+23              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+23    -1.340933      0.102355                  -0.522464  ","['Overall_Height', 'Roof_Area', 'Relative_Compactness', 'Wall_Area', 'Glazing_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -0.6757701577126913, 0.2645715506234637, 0.5661415598030419, 0.1023549321711691, -0.41419528314477305, -0.5224644695928357, -1.3409328976335082]","[8.177669846777603, 3.981074515092703, -0.9640842428215305, 0.9639528335496256, 0.52058131904367, 0.501149590391027, -0.2946653473867598, 0.0714942911228107]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+24             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+24     1.367399      -1.77926                  -1.818599  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.7792596891790744, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, -1.81859854769385, 1.3673986785078533]","[-8.071735962777312, -5.065436786365516, -3.9305594838756237, -2.3068730217629985, 2.0805872862242865, 0.4684186760241005, -0.309403920287145, -0.19267821368792404]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+25             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+25    -0.438156      1.231324                  -0.522464  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 1.2313237049813155, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, -0.43815570558638767, -0.5224644695928357]","[-7.899171483694422, 4.976660968934503, -4.267273770188816, -2.0781730856181717, 1.8325407621664043, -1.2304192770403228, 0.02696466504713518, -0.020292721616898508]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+26             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+26     1.367399     -1.026614                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 0.7736696085081787, 1.3673986785078533]","[-8.120537539666199, -5.205517188328829, 4.4262907977104, -4.039725865360075, 2.9665207054231226, -2.2661785531552185, 0.2721666505919097, -0.07279921590117847]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+27             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+27    -1.340933      1.231324                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, 1.421736647558686, -1.3409328976335082]","[-7.985257791139386, 5.065993890717054, -3.9676113574295395, -2.3610247850575314, 2.0515792238829906, 0.5366904275536581, 0.40573515558466927, -0.27890460793969263]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+28             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+28     1.367399     -1.026614                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, -1.1705315086433428, 1.3673986785078533]","[-7.987329480555526, -5.182981357662771, -4.010771442684836, -2.5421990364788054, 1.9972145641431334, -1.1916431991102414, -0.2818470483993653, -0.013162699924957657]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+29              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+29    -1.340933      0.102355                   1.421737  ","['Overall_Height', 'Roof_Area', 'Relative_Compactness', 'Wall_Area', 'Glazing_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -0.6757701577126913, 0.2645715506234637, 0.5661415598030419, 0.1023549321711691, -0.41419528314477305, 1.421736647558686, -1.3409328976335082]","[7.843946981899542, 3.9092535939097584, -1.2050827536287136, 1.1679937782803653, 0.5638409871315971, 0.49491249252334446, 0.4531384878588698, 0.08283739335084701]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+30             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+30    -0.438156     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 1.421736647558686, -0.43815570558638767]","[-8.02789292527473, -5.195566171764591, 4.416543860781608, -3.963516036901197, 2.939377127100807, -2.2018694741138245, 0.42809838134692585, 0.18152305569903135]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+31             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+31     0.464621      0.102355                   0.125603  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[-0.9838438483563932, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, 0.1023549321711691, 0.12560256945767148, -0.0027797457928142055, 0.4646214864607328]","[-7.763247481028584, 4.557165837591983, -4.010079782051788, -1.2010736908451176, 0.5716981582170358, -0.21902448298595373, 0.2058871001580209, 0.04963330492227602]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+32              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+32    -1.340933      1.231324                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 1.2313237049813155, -0.6757701577126913, 0.2645715506234637, 0.5661415598030419, -0.41419528314477305, 0.12560256945767148, -1.3409328976335082]","[8.06807781627295, 4.911700473608599, 4.085023563976366, -1.0191311488724697, 0.9649256680833856, 0.5400493859590368, -0.1578914942467732, -0.11403475100889869]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+33             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+33     0.464621      0.102355                  -0.522464  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area', 'Orientation', 'Wall_Area', 'Glazing_Area_Distribution']","[-0.9838438483563932, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, 0.1023549321711691, 0.4646214864607328, -0.0027797457928142055, -0.5224644695928357]","[-7.890649944056832, 4.497227970286985, -4.012153901611445, -1.0331065935255384, 0.665373750489259, -0.3457385354772694, 0.2339042531941515, 0.009644561069141912]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+34              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+34    -0.438156      0.102355                   0.125603  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, 0.1023549321711691, 0.12560256945767148, -0.43815570558638767]","[8.052021217663103, -5.792683853378931, 3.9231270563410754, -2.3053030726691977, 2.244933774191843, 0.9200946901162286, -0.027905257213797878, 0.0210061009054132]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+35             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+35    -1.340933      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Glazing_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, 0.1023549321711691, -0.1356455527494931, 0.12560256945767148, -1.3409328976335082]","[7.8127732749718115, 3.960046204750089, 2.6774493610935433, -0.8231877030860508, 0.737427125748148, 0.4727511434804571, -0.26590191297539584, -0.057476773181040455]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+36             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+36    -1.340933      1.231324                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, 0.12560256945767148, -1.3409328976335082]","[-8.039415867444925, 4.878659603516668, -3.973587775433419, -2.408560430430332, 2.0187536923430818, 0.5532608639968538, -0.05085586301174008, -0.014614919091044365]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+37             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+37    -1.340933      0.102355                   1.421737  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Glazing_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, 0.1023549321711691, -0.1356455527494931, 1.421736647558686, -1.3409328976335082]","[7.990037720793682, 3.7859776404032583, 2.9099517636326913, -1.1170714066918437, 0.6592030740472089, 0.5083742716856299, 0.18632670568095908, -0.04877695715937942]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+38             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+38     1.367399      1.231324                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, -1.1705315086433428, 1.3673986785078533]","[-7.955507413362041, 4.926316088597839, 4.611857710081605, -3.814797347013203, 2.768947858839401, -2.0500311523195376, -0.41122989916198255, -0.014437321023498194]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+39              -1.16207      1.257103   0.566142   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+39    -1.340933      -1.77926                  -1.818599  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.7792596891790744, -1.1620701245768412, 0.957784475498303, 1.2571030992269068, 0.5661415598030419, -1.81859854769385, -1.3409328976335082]","[-7.931097663590225, -5.092176496728633, 4.519606044599088, -3.939405092797898, -2.1447112411492184, 1.0738846619899967, -0.5402650950456159, 0.2021466372159426]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+40             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+40    -0.438156     -1.026614                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, -1.0266138406389769, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, -0.0027797457928142055, -0.43815570558638767, 0.12560256945767148]","[-7.961829074450863, -5.046248490107468, 4.542811407053452, -3.9811267872344196, -1.16166970194395, 0.2193122356308836, 0.14850847600958453, -0.07754503470575692]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+41              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+41     0.464621      0.102355                  -0.522464  ","['Overall_Height', 'Roof_Area', 'Relative_Compactness', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -0.6757701577126913, 0.2645715506234637, 0.5661415598030419, -0.41419528314477305, 0.1023549321711691, -0.5224644695928357, 0.4646214864607328]","[7.944733435149305, 3.7893184064034946, -1.0540119154331056, 1.0227518367622896, 0.5591728185105557, 0.4531750720908645, -0.12712647007838196, 0.11155852812967548]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+42             -0.686523      0.700004  -0.571701   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+42     1.367399      1.231324                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, 0.957784475498303, -0.5717010513886703, -0.6865228995100736, 0.7000036384363467, -1.1705315086433428, 1.3673986785078533]","[-8.110417583982136, 4.828725131329073, -3.9405040522022903, -2.488883951322361, 2.005347806044955, -1.1670839076187405, -0.24760263241798242, -0.06089507950948548]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+43                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+43     1.367399      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Relative_Compactness', 'Glazing_Area', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution', 'Wall_Area']","[1.0164214592291214, -0.6757701577126913, 0.5498998856635239, 0.1023549321711691, -0.692745013540053, 1.3673986785078533, 0.12560256945767148, -0.0027797457928142055]","[7.920782413466538, 4.0163779082962625, -1.1823175555131296, 0.5390722111746472, 0.477987231760708, 0.10863159851558163, -0.08744449488135182, 0.04622471050752334]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+44              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+44    -1.340933      -1.77926                  -1.818599  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 0.9303376657169388, -1.7792596891790744, -0.6757701577126913, -0.5717010513886703, -0.971294743935333, -1.81859854769385, -1.3409328976335082]","[7.994692709131406, -5.572357194559273, -5.104042379906498, 3.9159412050374613, -2.3376970428435104, 2.294706363538605, -0.4911797354479239, 0.033160081372085586]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+45              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+45    -0.438156     -1.026614                   0.125603  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, 2.0716510058771824, -1.0266138406389769, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, -0.43815570558638767, 0.12560256945767148]","[7.91275873589924, -5.513059892004148, -5.198651350279862, 3.9301843072471536, -2.42336471228043, 2.295947401601408, 0.06144217277112007, -0.060259414772657324]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+46             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+46     1.367399     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 1.421736647558686, 1.3673986785078533]","[-8.02899141079328, -5.056338452160232, -3.932450343467905, -2.474220227993259, 1.9557856194008947, -1.212767698668664, 0.4149215847898895, -0.31282110881175007]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+47             -0.686523      0.700004  -0.571701   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+47     1.367399      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 0.957784475498303, -0.5717010513886703, -0.6865228995100736, 0.7000036384363467, 0.1023549321711691, 0.12560256945767148, 1.3673986785078533]","[-7.980442255183409, -3.834387170768477, -2.3029784202489325, 2.07944312807427, -1.4034396324068648, 0.6225085822837585, -0.17221378460098932, -0.030686835027685492]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+48              1.310775     -1.249844   -0.00278  -1.220288        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+48     0.464621     -1.026614                    0.77367  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation', 'Wall_Area']","[1.0164214592291214, 1.3107754457703538, -1.0266138406389769, -1.2202883687830228, -1.249844474330613, 0.7736696085081787, 0.4646214864607328, -0.0027797457928142055]","[8.039409135496713, -5.565320290055664, -5.136883746437033, 4.017973811140132, 2.2979633938402673, 0.17254623583847922, 0.10428145575570455, 0.090755656088174]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+49              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+49     1.367399      1.231324                    0.77367  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 0.9303376657169388, 1.2313237049813155, -0.6757701577126913, -0.5717010513886703, -0.971294743935333, 0.7736696085081787, 1.3673986785078533]","[8.065243483086775, -5.683504271020371, 4.941773163916925, 3.965999040298793, -2.359455027258419, 2.3148553893002854, 0.3208695824890156, -0.1386757529919966]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+50              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+50     0.464621      1.231324                  -0.522464  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, 1.2313237049813155, -1.4925474743181886, -1.806943935121173, -0.5717010513886703, -0.5224644695928357, 0.4646214864607328]","[8.003718617060457, -5.479563028204093, 4.868520328265941, 3.9203162326895233, 2.305872669665258, -2.2760648215650066, -0.17615954853736568, 0.04987203746532994]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+51             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+51     0.464621     -1.026614                  -0.522464  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, -1.0266138406389769, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 0.4646214864607328, -0.5224644695928357]","[-8.079646648335824, -5.127004170197024, 4.641480129853522, -3.997147299544153, 2.9082867599642563, -2.3479188227993157, -0.10573688995044597, -0.06786208439234852]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+52             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+52     1.367399     -1.026614                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, -0.1356455527494931, 0.7736696085081787, 1.3673986785078533]","[8.010865584277647, -5.045562687222989, 3.865406383780189, 2.58141438303686, -1.0937607383276395, 0.4037562863602604, 0.1885942137965683, -0.023702766316855698]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+53             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+53    -1.340933      1.231324                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, 1.421736647558686, -0.0027797457928142055, -1.3409328976335082]","[-7.934880714276108, 4.9185275856062765, 4.52265727090486, -3.943754301093575, -1.2131250368682105, 0.21406115118438507, 0.11686452725429282, 0.04555540732107046]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+54             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+54    -1.340933      0.102355                    0.77367  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Glazing_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, 0.1023549321711691, -0.1356455527494931, 0.7736696085081787, -1.3409328976335082]","[7.844602940414957, 3.834730509489866, 2.768914400876268, -0.9522703906450766, 0.5303341973112518, 0.5207383348163169, 0.17695612726831117, -0.04252543196202147]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+55             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+55     1.367399     -1.026614                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, -1.1705315086433428, 1.3673986785078533]","[-7.943395612266823, -5.194121072898942, -4.03445062676783, -2.4548268014652344, 2.000880911358033, 0.6711520696417196, -0.5710290706202505, 0.018702511133590713]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+56              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+56    -0.438156      -1.77926                  -1.818599  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, -1.7792596891790744, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, -1.81859854769385, -0.43815570558638767]","[7.974481378953005, -5.634975445472249, -5.1032488823530935, 4.024431808123091, -2.4089856880162634, 2.3423848706089956, -0.5375455858434268, -0.005825425386526431]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+57                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+57     1.367399      0.102355                  -1.170532  ","['Overall_Height', 'Roof_Area', 'Relative_Compactness', 'Glazing_Area', 'Glazing_Area_Distribution', 'Surface_Area', 'Wall_Area', 'Orientation']","[1.0164214592291214, -0.6757701577126913, 0.5498998856635239, 0.1023549321711691, -1.1705315086433428, -0.692745013540053, -0.0027797457928142055, 1.3673986785078533]","[7.748185062772612, 3.951840409126489, -0.9614015376383089, 0.5022654096540093, -0.36188407325103034, 0.3185183315835234, 0.09923152549398769, 0.03808186010859839]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+58              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+58     1.367399      0.102355                    0.77367  ","['Overall_Height', 'Roof_Area', 'Relative_Compactness', 'Wall_Area', 'Glazing_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -0.6757701577126913, 0.2645715506234637, 0.5661415598030419, 0.1023549321711691, -0.41419528314477305, 0.7736696085081787, 1.3673986785078533]","[8.058797631511075, 3.8208632444336987, -1.0433171040244498, 0.9275713171905029, 0.6131866211366073, 0.5084774544473273, 0.30843562205517405, 0.27087376126249746]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+59             -0.686523      0.700004  -0.571701   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+59     0.464621      1.231324                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, 0.957784475498303, -0.5717010513886703, -0.6865228995100736, 0.7000036384363467, 0.7736696085081787, 0.4646214864607328]","[-7.97100932139949, 5.100636507591606, -3.7960812819841325, -2.487777457360429, 1.8430897276963434, -1.0431136384878625, 0.2596198945148936, 0.042317969825516215]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+60             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+60     0.464621      1.231324                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 1.2313237049813155, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, -0.0027797457928142055, 0.4646214864607328, 0.12560256945767148]","[-7.864898987236781, 5.0775689679422085, 4.487609700325938, -3.9431444640581184, -1.0875764118750986, 0.1988532061460626, -0.0540602515528993, -0.01546801071150687]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+61             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+61    -1.340933      0.102355                  -0.522464  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 0.1023549321711691, -0.5224644695928357, -1.3409328976335082]","[-8.045173970194531, -3.9081569931333835, -2.0553501255277924, 2.030291089942123, -1.1396980053483412, 0.6114390428699065, -0.4039336743551703, 0.03131956280738787]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+62              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+62     0.464621      1.231324                   0.125603  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, 2.0716510058771824, 1.2313237049813155, -1.4925474743181886, -1.806943935121173, -0.5717010513886703, 0.4646214864607328, 0.12560256945767148]","[7.959957889198962, -5.53848525740804, 4.990144662584095, 3.898425190218114, 2.3719087509473242, -2.310507394676863, -0.0720034646559505, -0.03266451262205199]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+63             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+63     0.464621     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, 1.421736647558686, 0.4646214864607328]","[-8.026392305906517, -5.048636481653889, -3.762216924965786, -2.4111821819202044, 1.9335227519388398, 0.4554639967286251, 0.42297895816137415, -0.09231117028397368]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+64             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+64    -0.438156      0.102355                  -1.170532  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 0.1023549321711691, -1.1705315086433428, -0.43815570558638767]","[-8.060447331694453, -3.959313541931827, -2.4021226110148857, 1.8286556426133158, -1.1453130113767087, 0.6049045840433027, -0.6009977513039214, -0.0825207699313455]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+65             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+65    -1.340933      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Glazing_Area', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.1023549321711691, 0.14290417764578683, -1.3409328976335082, 0.12560256945767148]","[-8.160164010364813, -3.807308353332763, -2.297903026577367, 1.9631259207264087, 0.6483525152496953, 0.4080527085985669, -0.20992973247200525, -0.0905109045233811]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+66              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+66     1.367399      0.102355                  -0.522464  ","['Overall_Height', 'Roof_Area', 'Relative_Compactness', 'Wall_Area', 'Glazing_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -0.6757701577126913, 0.2645715506234637, 0.5661415598030419, 0.1023549321711691, -0.41419528314477305, -0.5224644695928357, 1.3673986785078533]","[8.0744606257197, 3.8366426005051593, -1.3006048713281533, 1.0879082304078747, 0.7819574989414206, 0.7031360015193397, 0.12374838292728174, -0.018207089996511442]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+67             -0.686523      0.700004  -0.571701   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+67    -1.340933     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -0.5717010513886703, -0.6865228995100736, 0.7000036384363467, 1.421736647558686, -1.3409328976335082]","[-7.899460565306739, -5.439112525450594, -4.00647575489232, -2.3182452219350873, 1.872116404244258, -1.294045136503154, 0.32564382142817655, 0.03739821378711114]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+68              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+68     0.464621     -1.026614                   1.421737  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 0.9303376657169388, -1.0266138406389769, -0.6757701577126913, -0.5717010513886703, -0.971294743935333, 1.421736647558686, 0.4646214864607328]","[8.003116396646858, -5.517867520964848, -5.102206296269379, 3.9566710444301694, -2.3540504518111174, 2.1781727123132026, 0.225374711081628, -0.018134604582868155]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+69              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+69     1.367399      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Glazing_Area', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, -0.6757701577126913, 0.5661415598030419, 0.2645715506234637, 0.1023549321711691, -0.41419528314477305, 1.3673986785078533, 0.12560256945767148]","[8.103904380416436, 3.8759259816324585, 1.4616387486745572, -1.2009092146093299, 0.7314797680493875, 0.7131404800236724, 0.17379077246912578, -0.038546909807256224]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+70              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+70    -1.340933      1.231324                   0.125603  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, 1.2313237049813155, -1.4925474743181886, -1.806943935121173, -0.5717010513886703, 0.12560256945767148, -1.3409328976335082]","[7.974158674595111, -5.517268517208825, 5.0161740417413725, 3.961991918211562, 2.368379183549719, -2.334214928855525, -0.1338552435534153, -0.013345292755217586]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+71             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+71     0.464621     -1.026614                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 0.7736696085081787, 0.4646214864607328]","[-7.971565350881305, -5.3001437262728155, -4.123057496512892, -2.4286667413915155, 1.9161675772234645, -1.2001649596258344, 0.3282887263280979, -0.02479165654735307]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+72                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+72    -0.438156     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -0.6757701577126913, 0.5498998856635239, -0.692745013540053, 1.421736647558686, -0.0027797457928142055, -0.43815570558638767]","[7.998887066775275, -5.046139889807619, 4.0733604468918685, -1.0284170933689611, 0.4383706795309161, 0.2949581818268994, 0.139425880698017, 0.05777287018312279]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+73             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+73     0.464621      1.231324                  -0.522464  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 1.2313237049813155, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 0.4646214864607328, -0.5224644695928357]","[-7.90677070796019, 4.9968376376730115, 4.453396621631389, -3.9674917746052705, 2.7230376725855994, -2.0783407725370897, 0.034478076087165674, 0.008393527992174741]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+74              -1.16207      1.257103   0.566142   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+74     1.367399     -1.026614                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, -1.1620701245768412, 0.957784475498303, 1.2571030992269068, 0.5661415598030419, 0.7736696085081787, 1.3673986785078533]","[-8.093982529912582, -5.259029476194172, 4.533834973518276, -3.9031316496460717, -2.157226950022424, 1.187384398155757, 0.22229299225092114, 0.047536271687528234]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+75                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+75     1.367399      0.102355                  -0.522464  ","['Overall_Height', 'Roof_Area', 'Surface_Area', 'Relative_Compactness', 'Glazing_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[1.0164214592291214, -0.6757701577126913, -0.692745013540053, 0.5498998856635239, 0.1023549321711691, -0.5224644695928357, -0.0027797457928142055, 1.3673986785078533]","[7.97373109652159, 4.139363709003921, 0.8644291376097356, -0.8363248032330244, 0.7168920019328796, -0.14965628879532095, 0.14276222191554622, -0.09419591320778387]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+76              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+76    -1.340933      1.231324                    0.77367  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, 1.2313237049813155, -1.4925474743181886, -1.806943935121173, -0.5717010513886703, 0.7736696085081787, -1.3409328976335082]","[8.024842583156897, -5.548126310966668, 5.024263087396063, 3.829146206195574, 2.333013792107326, -2.300624833962881, 0.14728995931109926, -0.1444128484554269]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+77              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+77     1.367399      0.102355                   1.421737  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Glazing_Area', 'Glazing_Area_Distribution', 'Surface_Area', 'Orientation']","[1.0164214592291214, -0.6757701577126913, 0.5661415598030419, 0.2645715506234637, 0.1023549321711691, 1.421736647558686, -0.41419528314477305, 1.3673986785078533]","[7.951000422375274, 4.00611256159496, 1.230874053701951, -0.9634664129245881, 0.619900906480757, 0.5621787530412724, 0.5547322571589619, -0.0013610031705473932]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+78              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+78    -1.340933      1.231324                   1.421737  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, 1.2313237049813155, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, 1.421736647558686, -1.3409328976335082]","[8.072022170619528, -5.560955798943245, 4.83027255130516, 4.056263838338828, -2.381027336265446, 2.3324643072590416, 0.4242707624436804, 0.047096445481013716]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+79             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+79    -1.340933      1.231324                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, -1.1705315086433428, -1.3409328976335082]","[-7.950527845345146, 4.9824931450742, -3.979845231056012, -2.4771311479821443, 1.8721106646108299, -1.3297107259911498, -0.21919928141182657, 0.1615479682331758]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+80              1.310775     -1.249844   -0.00278  -1.220288        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+80     1.367399      1.231324                  -0.522464  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[1.0164214592291214, 1.3107754457703538, 1.2313237049813155, -1.2202883687830228, -1.249844474330613, -0.5224644695928357, -0.0027797457928142055, 1.3673986785078533]","[7.947390902357431, -5.501687930094254, 5.107309363405151, 3.905935140581957, 2.2415823305160947, -0.21767845916856593, 0.17622077001447098, -0.08266050522409345]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+81              1.310775     -1.249844   -0.00278  -1.220288        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+81     0.464621     -1.026614                   0.125603  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 1.3107754457703538, -1.0266138406389769, -1.2202883687830228, -1.249844474330613, -0.0027797457928142055, 0.12560256945767148, 0.4646214864607328]","[8.002560417716, -5.577891628776688, -5.186645263310935, 3.9078426651419065, 2.245044301124759, 0.17676318351862721, -0.14737512254742252, -0.06982553560743575]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+82             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+82    -0.438156     -1.026614                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation', 'Wall_Area']","[-0.9838438483563932, -1.0266138406389769, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, -1.1705315086433428, -0.43815570558638767, -0.0027797457928142055]","[-8.017744529086606, -5.293454514416512, 4.628749771985526, -3.949351564743573, -1.2740563311466853, -0.4115787774494604, -0.11519231386150473, 0.07630627706934263]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+83             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+83     0.464621      0.102355                   1.421737  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 0.1023549321711691, 1.421736647558686, 0.4646214864607328]","[-8.035651242435094, 4.702102965376761, -3.826450234454198, 2.594900155741225, -2.4243464168041218, 0.4844180508834409, 0.40192263628720504, 0.01925704231947215]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+84                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+84     1.367399      1.231324                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation', 'Wall_Area']","[1.0164214592291214, 1.2313237049813155, -0.6757701577126913, 0.5498998856635239, -0.692745013540053, 1.421736647558686, 1.3673986785078533, -0.0027797457928142055]","[8.01116132625331, 5.153067653318563, 4.0383790827926065, -1.0073599841516967, 0.6166196918597969, 0.32865278289365124, 0.23250466954207055, 0.09522281001002166]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+85                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+85     0.464621      0.102355                  -0.522464  ","['Overall_Height', 'Roof_Area', 'Relative_Compactness', 'Glazing_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -0.6757701577126913, 0.5498998856635239, 0.1023549321711691, -0.692745013540053, -0.0027797457928142055, -0.5224644695928357, 0.4646214864607328]","[7.953085898177062, 3.851734197638657, -0.9943968793856582, 0.7365641470858455, 0.34082832339739244, 0.11690860851529644, -0.08615975587886812, -0.033446063568552516]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+86              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+86     0.464621     -1.026614                   1.421737  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, -1.0266138406389769, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, 1.421736647558686, 0.4646214864607328]","[7.858939999591932, -5.612205685755018, -5.170526566509209, 3.9337190839678327, -2.380497068393443, 2.288536884088003, 0.28956044351801713, 0.015934511937497346]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+87              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+87     0.464621      -1.77926                  -1.818599  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.7792596891790744, -0.6757701577126913, 0.2645715506234637, 0.5661415598030419, -0.41419528314477305, -1.81859854769385, 0.4646214864607328]","[7.990304419818545, -5.269627681497632, 3.68562290189179, -1.094908871723443, 0.9857399446217068, 0.44774556816357886, -0.4067896970549259, 0.026499189350233463]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+88             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+88    -1.340933     -1.026614                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 0.7736696085081787, -1.3409328976335082]","[-8.025997816661615, -5.205449550340249, 4.525111546651412, -3.918119077408762, 2.7560134791354924, -2.3654114305022462, 0.2809717038566082, -0.017643507700811037]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+89             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+89     1.367399      1.231324                  -0.522464  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 1.2313237049813155, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 1.3673986785078533, -0.5224644695928357]","[-7.91199127678599, 4.9082605944838775, 4.407779606127225, -3.9430958087620747, 2.7916777225503964, -2.2757274797681566, -0.0674858086052268, 0.057887948452082665]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+90             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+90     0.464621      1.231324                  -0.522464  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, -0.5224644695928357, 0.4646214864607328]","[-8.070039012311279, 4.840860605581406, -3.902220701484673, -2.4146876459192046, 1.940244432921513, 0.41734588576197795, -0.13360287262437662, 0.02241545798142611]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+91              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+91     1.367399     -1.026614                   1.421737  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 0.9303376657169388, -1.0266138406389769, -0.6757701577126913, -0.971294743935333, -0.5717010513886703, 1.421736647558686, 1.3673986785078533]","[8.014072394195615, -5.500976561271723, -5.2754601940110515, 3.97836786682411, 2.3341260323912487, -2.3320335486944312, 0.41481676351049207, 0.05859306042113334]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+92             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+92    -0.438156      0.102355                  -1.170532  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, 0.1023549321711691, -1.1705315086433428, -0.43815570558638767]","[-7.8884627696629135, -4.208495407386305, -2.3931543932854487, 1.8707538740245542, 0.663329365661366, 0.5716441658446143, -0.3967539338718079, 0.08654601745855557]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+93              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+93     0.464621     -1.026614                  -1.170532  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, -1.0266138406389769, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, -1.1705315086433428, 0.4646214864607328]","[7.99400247474733, -5.607954820464776, -5.156051213162108, 3.7823633280973845, -2.3892664364942235, 2.2462179983668946, -0.42585778717872785, 0.15220661875491265]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+94             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+94    -1.340933      1.231324                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 1.2313237049813155, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, -0.1356455527494931, -1.1705315086433428, -1.3409328976335082]","[7.964577804536354, 4.911374724701282, 3.9657898086554213, 2.8991362864304926, -1.095391316090885, 0.5808776958572504, -0.4756283724915777, 0.025585224042673004]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+95             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+95    -1.340933      1.231324                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, -1.1705315086433428, -1.3409328976335082]","[-7.937218397486936, 4.887142300047608, 4.5622604870434875, -3.791210527633468, 2.8628719288973503, -2.1563367448341064, -0.2652395061385523, -0.026591041231712083]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+96                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+96     0.464621      1.231324                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 1.2313237049813155, -0.6757701577126913, 0.5498998856635239, -0.0027797457928142055, -0.692745013540053, 0.12560256945767148, 0.4646214864607328]","[8.152280296825616, 4.916710919871237, 4.017470556105205, -0.9772607806979307, 0.19847550122738847, 0.1956123356949681, 0.05042827424630931, 0.03436734649367104]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+97             -0.686523      0.700004  -0.571701   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+97    -1.340933      1.231324                  -0.522464  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, 0.957784475498303, -0.5717010513886703, -0.6865228995100736, 0.7000036384363467, -0.5224644695928357, -1.3409328976335082]","[-8.17221587043904, 4.757348981358769, -3.7076481076451144, -2.1571068226207566, 1.9648761385739217, -1.1081896944616503, -0.12541555201949092, -0.025201782740898623]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+98             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+98     1.367399      -1.77926                  -1.818599  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[-0.9838438483563932, -1.7792596891790744, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, -1.81859854769385, -0.0027797457928142055, 1.3673986785078533]","[-8.025909828102451, -5.040661991426958, 4.505715659065341, -3.9898783395969146, -1.2898802676208787, -0.33781021372345504, 0.12818934780553376, -0.04048181223605961]"
+"    Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+99             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+    Orientation  Glazing_Area  Glazing_Area_Distribution  
+99     0.464621      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, -0.1356455527494931, 0.1023549321711691, 0.4646214864607328, 0.12560256945767148]","[7.830453494160436, 3.93864067092921, 2.8070287869418733, -0.9431878511163208, 0.5588456924386134, 0.4091558666541595, 0.17081188552240947, -0.008672004686372997]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+100              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+100     0.464621     -1.026614                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -0.6757701577126913, 0.5661415598030419, 0.2645715506234637, -0.41419528314477305, 0.12560256945767148, 0.4646214864607328]","[8.067282950977832, -5.153752474032691, 3.8827483413313093, 1.2080090212715404, -0.9898992437195128, 0.6274533610314997, -0.19675291105874865, -0.0259734842150967]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+101                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+101    -1.340933     -1.026614                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Surface_Area', 'Wall_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, -1.0266138406389769, -0.6757701577126913, 0.5498998856635239, -0.692745013540053, -0.0027797457928142055, -1.3409328976335082, 0.12560256945767148]","[8.00032696842607, -5.0289963821441255, 3.8736226384677854, -1.0995405680467247, 0.5380595111662216, 0.2545458537190009, 0.22820356659017824, -0.19702314278381136]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+102              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+102     0.464621      -1.77926                  -1.818599  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 0.9303376657169388, -1.7792596891790744, -0.6757701577126913, -0.5717010513886703, -0.971294743935333, -1.81859854769385, 0.4646214864607328]","[7.945413401763317, -5.5485415989097895, -5.128387511647263, 3.9199465894636356, -2.5083558640589803, 2.3264921808753223, -0.4275769908801456, 0.021987771195784073]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+103             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+103    -1.340933     -1.026614                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, -0.1356455527494931, -1.1705315086433428, -1.3409328976335082]","[8.230745440113663, -5.167494026628389, 4.087113876846977, 2.9083408569920186, -0.9587587045841193, 0.5169142161933385, -0.47197918324352706, 0.23232087366397047]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+104             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+104     1.367399     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, 1.421736647558686, 1.3673986785078533]","[-7.893754723854167, -5.247678299657959, -3.962039945902511, -2.3972425418908743, 1.991466013514332, 0.5470041938394032, 0.3668190275444413, -0.06496162804385407]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+105              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+105     1.367399      0.102355                    0.77367  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 0.9303376657169388, -0.6757701577126913, -0.5717010513886703, -0.971294743935333, 0.1023549321711691, 0.7736696085081787, 1.3673986785078533]","[7.996808433663971, -5.553856632627406, 4.002478521917366, -2.266530817602478, 2.1362369676810746, 0.5905290928813183, 0.14420636976004564, -0.05065356197572532]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+106              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+106    -1.340933      1.231324                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 1.2313237049813155, -0.6757701577126913, 0.5661415598030419, 0.2645715506234637, -0.41419528314477305, 1.421736647558686, -1.3409328976335082]","[8.03949423552995, 4.902739440018864, 4.177828899812739, 1.3641260191245383, -1.0498825565483685, 0.7991546549141935, 0.41082529170534293, 0.07777392594868958]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+107             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+107     1.367399      0.102355                    0.77367  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, 0.1023549321711691, -0.0027797457928142055, 0.7736696085081787, 1.3673986785078533]","[-7.805138885865014, 4.670809758493746, -4.010823873014031, -1.1785249221898655, 0.49762004211122823, -0.05257643281769119, 0.035680141905276554, 0.027939944504748605]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+108             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+108    -1.340933      0.102355                  -1.170532  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 0.1023549321711691, -1.1705315086433428, -1.3409328976335082]","[-8.183423285677563, -3.7449209195682625, -2.5163348757055086, 2.171053892264766, -1.3030407608916383, 0.5357256648254645, -0.5016286926611814, 0.14381826637395137]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+109              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+109     0.464621      -1.77926                  -1.818599  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, -1.7792596891790744, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, -1.81859854769385, 0.4646214864607328]","[7.982425378851035, -5.514621306582149, -5.236089975612515, 3.9202685916112805, -2.3843906998335727, 2.356942292951846, -0.4512007643209938, -0.03965347489591265]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+110              -1.16207      1.257103   0.566142   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+110    -1.340933      1.231324                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, -1.1620701245768412, 0.957784475498303, 1.2571030992269068, 0.5661415598030419, 1.421736647558686, -1.3409328976335082]","[-7.9307721489445475, 4.852622428390061, 4.464379324433005, -4.027669736654324, -2.1380570274713713, 1.007118954271823, 0.5039638541615754, 0.047101528319750285]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+111             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+111     0.464621     -1.026614                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, -0.1356455527494931, 0.7736696085081787, 0.4646214864607328]","[7.9678423494515815, -5.126925228045403, 3.8661382038055234, 2.7270414853830887, -1.0048120119191069, 0.4945853248340691, 0.24947640690279455, -0.12856642858895195]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+112              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+112     0.464621      1.231324                  -0.522464  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, 0.9303376657169388, 1.2313237049813155, -0.6757701577126913, -0.5717010513886703, -0.971294743935333, 0.4646214864607328, -0.5224644695928357]","[7.984596907942993, -5.599293241816307, 4.898261941676381, 3.8050411339154615, -2.384704296802602, 2.316613500874042, 0.0652356190085605, -0.05023487353068374]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+113              -1.16207      1.257103   0.566142   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+113     1.367399     -1.026614                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, -1.1620701245768412, 0.957784475498303, 1.2571030992269068, 0.5661415598030419, 0.12560256945767148, 1.3673986785078533]","[-7.986665458292188, -5.119145409061184, 4.56873776922498, -3.9332088741807922, -2.2776355395164787, 0.9913347901309573, -0.10020383342454135, 0.09060056142439857]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+114             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+114     1.367399      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 0.1023549321711691, 1.3673986785078533, 0.12560256945767148]","[-7.76240238378123, -4.141978440456925, -2.2388702784258365, 2.0085831760908883, -1.2394772734895352, 0.7314735733521972, 0.2023865124520454, -0.09793262188419415]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+115              -1.16207      1.257103   0.566142   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+115     1.367399     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, -1.1620701245768412, 0.957784475498303, 1.2571030992269068, 0.5661415598030419, 1.421736647558686, 1.3673986785078533]","[-7.893060210222448, -5.260766014144233, 4.629374862347985, -3.8840300206534946, -2.1532056295556434, 1.2163760899569374, 0.35796165834811494, -0.17539169353920286]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+116             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+116     1.367399     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, 1.421736647558686, -0.0027797457928142055, 1.3673986785078533]","[-7.966781108047572, -5.187831664142562, 4.624378535668847, -3.8309143460421535, -1.2930990285160346, 0.218736374475536, 0.13630501153944613, -0.0064036918989679855]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+117              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+117     0.464621     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -0.6757701577126913, 0.2645715506234637, 0.5661415598030419, -0.41419528314477305, 1.421736647558686, 0.4646214864607328]","[7.959548792433915, -5.072604750552422, 3.8780058174870007, -1.2536436574891643, 1.037314111439481, 0.579243781121444, 0.5430098344400749, 0.04855852926118194]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+118              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+118    -0.438156     -1.026614                   1.421737  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 0.9303376657169388, -1.0266138406389769, -0.6757701577126913, -0.5717010513886703, -0.971294743935333, 1.421736647558686, -0.43815570558638767]","[8.039025564895201, -5.498489212262483, -5.1057884035099805, 3.958957163581877, -2.3804097098858263, 2.3244651341383125, 0.741335302880341, 0.11374595386900031]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+119             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+119    -1.340933      1.231324                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 1.2313237049813155, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, -0.1356455527494931, 1.421736647558686, -1.3409328976335082]","[7.99797084042411, 5.044405341426171, 3.980580174588876, 2.9234217106662737, -0.8693416491665912, 0.6500971425532305, 0.6063102769888716, -0.06088043791844328]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+120              1.310775     -1.249844   -0.00278  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+120    -0.438156      1.231324                   1.421737  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[1.0164214592291214, 1.3107754457703538, 1.2313237049813155, -1.2202883687830228, -1.249844474330613, 1.421736647558686, -0.0027797457928142055, -0.43815570558638767]","[8.033643515569198, -5.766021509166534, 4.966792073139415, 3.984443145708529, 2.344884684633643, 0.46024059423048974, 0.15948081843971681, -0.014782433131060119]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+121             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+121     0.464621      0.102355                  -0.522464  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Glazing_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.1023549321711691, 0.14290417764578683, -0.5224644695928357, 0.4646214864607328]","[-7.953951372027018, -4.202983907736682, -2.359612696149744, 1.9220119424187008, 0.6475437404813946, 0.585686976237511, -0.21304953019342499, 0.10876847039007051]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+122             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+122     0.464621      0.102355                  -1.170532  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 0.1023549321711691, -1.1705315086433428, 0.4646214864607328]","[-8.008928843052956, -3.810984573687129, -2.305683796743824, 1.8831757456024758, -1.2224505582117606, 0.48697861562150474, -0.23442362779805806, -0.01069763620621308]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+123              1.310775     -1.249844   -0.00278  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+123     0.464621      1.231324                  -0.522464  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Orientation', 'Wall_Area', 'Glazing_Area_Distribution']","[1.0164214592291214, 1.3107754457703538, 1.2313237049813155, -1.2202883687830228, -1.249844474330613, 0.4646214864607328, -0.0027797457928142055, -0.5224644695928357]","[7.914306948289885, -5.594240812623506, 4.915081100666624, 4.119850131326521, 2.192670099787494, -0.17198767272140705, 0.12266699703621961, -0.0760904707124408]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+124             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+124    -0.438156      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, 0.1023549321711691, -0.43815570558638767, 0.12560256945767148]","[-7.861837230488308, -4.035316636007836, -2.2453803681922104, 2.113193370331412, -1.2962380007482233, 0.6424605488381273, 0.13743862575334237, 0.0023774028174942514]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+125             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+125     0.464621      1.231324                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 1.2313237049813155, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, -0.1356455527494931, 0.7736696085081787, 0.4646214864607328]","[7.818652023544502, 5.028686997299633, 3.774216049826143, 2.7176550724923114, -1.044086469191633, 0.40984665176380186, 0.2042441373607456, -0.06006541577320573]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+126             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+126     0.464621      1.231324                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, 0.7736696085081787, 0.4646214864607328]","[-8.017519804536246, 5.131605968997094, -3.896716523936987, -2.44406773556116, 1.9454098321199575, 0.552855760835621, 0.11476998662606563, 0.02156330518084384]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+127              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+127     0.464621      0.102355                   0.125603  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Orientation', 'Glazing_Area_Distribution']","[1.0164214592291214, 2.0716510058771824, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, 0.1023549321711691, 0.4646214864607328, 0.12560256945767148]","[7.975555102194821, -5.54587877850108, 4.085738967960886, -2.5014397605737066, 2.1443176551661693, 0.6653668530642424, -0.05009606668804169, -0.0016097713224103045]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+128             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+128    -1.340933      0.102355                    0.77367  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, 0.1023549321711691, 0.7736696085081787, -1.3409328976335082]","[-7.930084585496484, -3.992259752954178, -2.3695602841192036, 2.1365039226045073, 0.49322949841652425, 0.4856701464919366, 0.2577096857098563, -0.11004885880848267]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+129              0.930338     -0.971295  -0.571701   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+129    -1.340933      1.231324                   1.421737  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 0.9303376657169388, 1.2313237049813155, -0.6757701577126913, -0.5717010513886703, -0.971294743935333, 1.421736647558686, -1.3409328976335082]","[8.023040119587739, -5.524278825187141, 4.979885208912724, 3.9477608957155113, -2.3555893764559017, 2.3213350907625743, 0.40751060210772877, 0.09338206520904574]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+130             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+130     1.367399     -1.026614                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, -0.1356455527494931, -1.1705315086433428, 1.3673986785078533]","[7.967668504892982, -5.205359699709198, 3.8121642979355688, 2.883810315521522, -0.9607900884965546, 0.5258634107107595, -0.4017680549374469, -0.16314615774490146]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+131              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+131    -0.438156     -1.026614                  -1.170532  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, -1.0266138406389769, -1.4925474743181886, -1.806943935121173, -0.5717010513886703, -1.1705315086433428, -0.43815570558638767]","[7.980915851857804, -5.488233045334441, -5.098317259961419, 3.838815145306749, 2.365601723999777, -2.350024721592085, -0.5328502612467336, 0.08295883619170177]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+132              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+132     0.464621     -1.026614                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -0.6757701577126913, 0.5661415598030419, 0.2645715506234637, -0.41419528314477305, 0.7736696085081787, 0.4646214864607328]","[7.93897848935118, -5.149530059665258, 3.9696219324199347, 1.1718431187699558, -1.02100387273904, 0.46425324347324864, 0.09867115662418177, -0.03005044993699135]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+133             -0.210976      0.142904  -1.709544   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+133    -0.438156      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 0.957784475498303, -1.7095436625803826, -0.21097567444330495, 0.14290417764578683, 0.1023549321711691, -0.43815570558638767, 0.12560256945767148]","[-7.83136436391783, -4.009392981948259, -2.464280111735989, 1.8727629008279763, 0.671777548409455, 0.6452925515435315, -0.16701993404735904, -0.016962829153476477]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+134             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+134     1.367399      0.102355                   1.421737  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Glazing_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, 0.1023549321711691, -0.1356455527494931, 1.421736647558686, 1.3673986785078533]","[8.067968376368777, 3.874722584462358, 2.946818239439205, -1.0173524659716624, 0.5612694476527623, 0.49450264985680537, 0.32345196623049255, 0.13051646352706248]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+135             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+135    -0.438156      -1.77926                  -1.818599  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[-0.9838438483563932, -1.7792596891790744, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, -1.81859854769385, -0.0027797457928142055, -0.43815570558638767]","[-7.976658431580422, -5.303524997964748, 4.546198773241986, -3.9659304922561747, -1.2524288965050854, -0.34863991836810165, 0.2672889849033804, -0.012999200311248325]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+136                0.5499     -0.692745   -0.00278   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+136     1.367399      1.231324                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Relative_Compactness', 'Glazing_Area_Distribution', 'Wall_Area', 'Surface_Area', 'Orientation']","[1.0164214592291214, 1.2313237049813155, -0.6757701577126913, 0.5498998856635239, 0.7736696085081787, -0.0027797457928142055, -0.692745013540053, 1.3673986785078533]","[8.369799873365961, 4.994875200982029, 4.182389913522415, -1.2517382861529227, 0.38836237819662545, 0.3230927185753457, 0.30328816374818185, -0.051386090619635574]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+137              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+137    -1.340933     -1.026614                  -1.170532  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, 2.0716510058771824, -1.0266138406389769, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, -1.1705315086433428, -1.3409328976335082]","[7.939189190177321, -5.451598324244144, -5.149652087144852, 3.8878554007605777, -2.2474017460544977, 2.2427404465737855, -0.3432734358102427, 0.016538989340381716]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+138             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+138    -0.438156     -1.026614                   1.421737  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, -0.1356455527494931, 1.421736647558686, -0.43815570558638767]","[7.8948079231772645, -5.166062589590881, 3.8799949841112134, 2.986220612522012, -1.1443027711741764, 0.579274938305521, 0.544530688023438, 0.04656047182752959]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+139             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+139    -0.438156      1.231324                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 1.2313237049813155, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, -0.43815570558638767, 0.12560256945767148]","[-8.031082705344945, 4.952206647397613, -3.84057372061204, -2.379925070504131, 1.8395447439765025, -1.2213306363829102, 0.1267849234506434, -0.019552678033798673]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+140              -1.16207      1.257103   0.566142   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+140     1.367399      0.102355                  -1.170532  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.1620701245768412, 0.957784475498303, 1.2571030992269068, 0.5661415598030419, 0.1023549321711691, -1.1705315086433428, 1.3673986785078533]","[-8.10388713708528, 4.487435268158758, -3.798103256260418, -2.4661475869070992, 1.0072786803898264, 0.4631024601891948, -0.4468248611961737, -0.2187554422552222]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+141              -1.16207      1.257103   0.566142   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+141    -1.340933      1.231324                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Wall_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 1.2313237049813155, -1.1620701245768412, 0.957784475498303, 1.2571030992269068, 0.5661415598030419, -1.1705315086433428, -1.3409328976335082]","[-7.813828081260981, 4.9597807737520885, 4.470543722581445, -4.106548637014096, -2.1579442511151234, 1.024222736806957, -0.4682045189673313, -0.007622869468135115]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+142              1.310775     -1.249844   -0.00278  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+142    -1.340933     -1.026614                    0.77367  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[1.0164214592291214, 1.3107754457703538, -1.0266138406389769, -1.2202883687830228, -1.249844474330613, 0.7736696085081787, -0.0027797457928142055, -1.3409328976335082]","[8.108283899614039, -5.571211010692641, -5.098737821115663, 4.0343827761841915, 2.358777130620311, 0.3755708538727629, 0.1349380968983569, 0.11328847750400284]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+143             -0.496304      0.421454  -1.140622   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+143    -1.340933     -1.026614                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, 0.957784475498303, -1.1406223569845264, -0.49630400948336617, 0.4214539080410668, -1.1705315086433428, -1.3409328976335082]","[-7.862880478338358, -5.157130834153182, -3.996014614507707, -2.38592037121872, 1.9930815487144335, -1.2888309184062692, -0.4678816993378633, -0.00883087125788199]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+144              0.264572     -0.414195   0.566142   -0.67577        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+144    -1.340933     -1.026614                  -1.170532  ","['Overall_Height', 'Glazing_Area', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.0266138406389769, -0.6757701577126913, 0.5661415598030419, 0.2645715506234637, -0.41419528314477305, -1.1705315086433428, -1.3409328976335082]","[7.980761759701216, -5.247599086717549, 3.998046340059514, 1.230937779446801, -1.0546154041615654, 0.7162567304302924, -0.3155881579619244, 0.05453952505752153]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+145             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+145     1.367399      1.231324                   0.125603  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Orientation', 'Glazing_Area_Distribution']","[-0.9838438483563932, 1.2313237049813155, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 1.3673986785078533, 0.12560256945767148]","[-7.945056288314716, 5.004452411849566, 4.530128785261396, -4.018458505196503, 2.7786144983250014, -2.3362530945748774, -0.16562154792582826, -0.06168634421595782]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+146              1.310775     -1.249844   -0.00278  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+146    -1.340933     -1.026614                  -1.170532  ","['Overall_Height', 'Relative_Compactness', 'Glazing_Area', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[1.0164214592291214, 1.3107754457703538, -1.0266138406389769, -1.2202883687830228, -1.249844474330613, -1.1705315086433428, -0.0027797457928142055, -1.3409328976335082]","[7.98302990167063, -5.68841822285451, -5.153974745461316, 3.9552522788873032, 2.3338415155004175, -0.4357744225140183, 0.15532050305872633, 0.1140989890897877]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+147             -0.020757     -0.135646   2.272905  -1.220288        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+147     0.464621      0.102355                  -1.170532  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[1.0164214592291214, -1.2202883687830228, 2.2729054765906103, -0.020756784416597472, -0.1356455527494931, 0.1023549321711691, -1.1705315086433428, 0.4646214864607328]","[8.165848880836226, 4.100495689548052, 2.842227030248223, -1.1304317955387115, 0.612646476508053, 0.5270872261696536, -0.38006660042823204, -0.030764644708322766]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+148             -0.686523      0.700004  -0.571701   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+148    -1.340933      0.102355                   0.125603  ","['Overall_Height', 'Roof_Area', 'Wall_Area', 'Relative_Compactness', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, 0.957784475498303, -0.5717010513886703, -0.6865228995100736, 0.7000036384363467, 0.1023549321711691, 0.12560256945767148, -1.3409328976335082]","[-7.804161396834391, -4.046789472131376, -2.2626680285216265, 1.8585066743030987, -1.2305054132765907, 0.7198598625601806, -0.03875345733326065, -0.017735299860100636]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+149             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+149    -1.340933      0.102355                    0.77367  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 0.1023549321711691, 0.7736696085081787, -1.3409328976335082]","[-8.029927554980869, 4.322293733563121, -4.0647245025301135, 2.782765998357075, -2.123038594915525, 0.6624331401582263, 0.4252471880250884, 0.22988594134671178]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+150              2.071651     -1.806944  -0.571701  -1.492547        1.016421   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+150     0.464621      0.102355                   1.421737  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Glazing_Area', 'Orientation']","[1.0164214592291214, 2.0716510058771824, -1.4925474743181886, -0.5717010513886703, -1.806943935121173, 1.421736647558686, 0.1023549321711691, 0.4646214864607328]","[7.935208652569069, -5.638691284500719, 3.831402361805216, -2.4299960834305194, 2.189300157150891, 0.495496766169882, 0.43238212773100654, 0.16411156985824227]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+151             -0.971851      0.978553   -0.00278   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+151     0.464621     -1.026614                    0.77367  ","['Overall_Height', 'Glazing_Area', 'Relative_Compactness', 'Roof_Area', 'Surface_Area', 'Glazing_Area_Distribution', 'Wall_Area', 'Orientation']","[-0.9838438483563932, -1.0266138406389769, -0.9718512345501338, 0.957784475498303, 0.9785533688316267, 0.7736696085081787, -0.0027797457928142055, 0.4646214864607328]","[-8.18285354365117, -5.27049176763045, 4.424425970189453, -4.241066723914424, -1.2432115907866088, 0.493150246998492, 0.19363908951451833, -0.07478641074266644]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+152             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+152     1.367399      0.102355                   1.421737  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 0.1023549321711691, 1.421736647558686, 1.3673986785078533]","[-8.206457655978802, 4.476625104009933, -3.8638803690358676, 3.005163361017336, -2.1161168432673705, 0.566243397830049, 0.4322676685635045, -0.1465137283736532]"
+"     Relative_Compactness  Surface_Area  Wall_Area  Roof_Area  Overall_Height  \
+153             -1.352289      1.535653   1.135063   0.957784       -0.983844   
+
+     Orientation  Glazing_Area  Glazing_Area_Distribution  
+153    -1.340933      0.102355                  -0.522464  ","['Overall_Height', 'Relative_Compactness', 'Roof_Area', 'Wall_Area', 'Surface_Area', 'Glazing_Area', 'Glazing_Area_Distribution', 'Orientation']","[-0.9838438483563932, -1.3522890146035487, 0.957784475498303, 1.1350628653988981, 1.5356528296221867, 0.1023549321711691, -0.5224644695928357, -1.3409328976335082]","[-8.005634216845923, 4.667690323289378, -4.06810536249853, 2.556334478561061, -2.202029753413347, 0.645267331494595, -0.04939442249335423, -0.03909366924268266]"
