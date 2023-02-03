@@ -47,6 +47,8 @@ explanation generation. Each of these steps are delved into more detail in our [
 
 ![XAISuiteDetailedFramework](https://user-images.githubusercontent.com/66180831/216538041-a744579a-2481-4307-889b-c7c8b0d7d604.png)
 
+
+
 XAISuite was created as a helper library to [this paper](insert link), which studied the difference in SHAP and LIME explanations for different models on tabular datasets.
 
 ## Installation
