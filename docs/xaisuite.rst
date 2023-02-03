@@ -1,4 +1,4 @@
-Modules in XAISuite
+Functions in XAISuite
 --------------------
 
 .. automodule:: xaisuite
