@@ -108,10 +108,11 @@ Documentation
 Finally, what you were really looking for! Click the following links for access to the tutorial and XAISuite documentation. 
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
    xaisuite
    demo
+   GUI
    
 Indices and Tables
 ==================
