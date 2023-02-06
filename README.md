@@ -6,7 +6,7 @@
 
 # XAISuite: Training and Explaining Machine Learning Models
 
-> :warning: **This is version 1.0A, our first public release. If there are any issues with the library, please let us know right away. Version 1.0B will be published with any edits once our research paper is published. This is the pre-research paper version.
+> :warning: This is version 1.0A, our first public release. If there are any issues with the library, please let us know right away. Version 1.0B will be published with any edits once our research paper is published. This is the pre-research paper version.
 
 <div align="center">
   <a href="#">
