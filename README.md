@@ -57,6 +57,7 @@ You can install the ``XAI Suite`` through PyPI:
 ``
 pip install XAISuite
 ``
+
 This will automatically install the latest version and is the reccomended way to download the library. The version on Github may not be stable. If yu already have XAISuite and want to upgrade it, do:
 
 ``
