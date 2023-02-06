@@ -45,7 +45,7 @@
 XAISuite (E<b>x</b>planatory <b>A</b>rtificial <b>I</b>ntelligence <b>Suite</b>) is a library for training and explaining machine learning models for tabular datasets in Python. It provides a unified interface for training any sklearn model using just a line of code and allows users to easily compare the results of different explainers. It is based on the XAISuite framework, which we propose in our paper (still in pre-publication).
 
 XAISuite accomplishes machine learning model training and explanation generation in three steps: (1) data loading, (2) model training and explanation generation, and (3)
-explanation comparison. Each of these steps are delved into more detail in our [documentation](https://11301858.github.io/XAISuite/v0.6.7-beta/index.html) and in the demo tutorials.
+explanation comparison. Each of these steps are delved into more detail in our [documentation](https://11301858.github.io/XAISuite/v0.6.7-beta/index.html) and in the demo tutorials. A more detailed flowchart is presented in our paper.
 
 ![Basic Flowchart of how XAISuite works](https://user-images.githubusercontent.com/66180831/209634297-296fa5d8-4429-434c-afaa-7500d776cd75.png)
 
