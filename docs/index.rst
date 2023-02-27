@@ -111,7 +111,7 @@ Finally, what you were really looking for! Click the following links for access 
    :maxdepth: 2
 
    xaisuite
-   GUI
+   xaisuitegui
    demo
 
    
