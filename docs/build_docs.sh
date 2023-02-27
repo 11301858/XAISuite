@@ -49,8 +49,8 @@ pip3 uninstall -y xaisuite
 # and use them to build the appropriate API docs.
 # Uninstall after we're done with each one.
 versions=()
-git fetch
-git checkout main
+git rm -r --cached .
+git add .
 checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "setup.py")
 for version in $(git tag --list 'v[0-9]*'); do
     if [[ "$version" != "v0.3.0-alpha" ]]; then
