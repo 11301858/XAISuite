@@ -3,7 +3,7 @@ This provides the graphical user interface for XAISuite. It allows the user to i
 To use after installation, simply do:
 
 ```
-import XAISuiteGUI.runner
+import xaisuitegui.runner
 ```
 
 And the graphical interface should pop up. 
