@@ -1,1 +1,1 @@
-import XAISuiteGUI
+import .runner
