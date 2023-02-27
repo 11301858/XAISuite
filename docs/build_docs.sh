@@ -52,6 +52,7 @@ versions=()
 checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "xaisuitegui" "setup.py")
 for version in $(git tag --list 'v[0-9]*'); do
     if [[ "$version" -le "v1.0.2" ]]; then
+      echo Skipping $version
       continue
     fi
     versions+=("$version")
