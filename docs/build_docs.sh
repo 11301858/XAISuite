@@ -51,7 +51,7 @@ pip3 uninstall -y xaisuite
 versions=()
 checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "xaisuitegui" "setup.py")
 for version in $(git tag --list 'v[0-9]*'); do
-    if [[ "$version" == "v0.3.0-alpha" ]]; then
+    if [[ "$version" -le "v1.0.2" ]]; then
       continue
     fi
     versions+=("$version")
