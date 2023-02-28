@@ -25,3 +25,5 @@ The correct positioning of the options are as follows:
 
 ```
 $xs --train --model <Model name> --import <filename if --model has no arguments> --data <Data> --target <Target name> --compare --verbose -- GUI --graphics
+
+```
