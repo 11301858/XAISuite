@@ -24,7 +24,6 @@ Command-line options and flags include:
 The correct positioning of the options are as follows:
 
 ````
-alias xs="bash XAISuiteCLI.sh"
 
 $xs --train --model <Model name> --import <filename if --model has no arguments> --data <Data> 
 --target <Target name> --compare --verbose -- GUI --graphics
