@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -x
+
 source import.sh
 
 if [[ $# -ge 2 ]]
