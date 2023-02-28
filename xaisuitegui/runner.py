@@ -30,7 +30,7 @@ class ABC(Frame):
         # size of the window will be very small
         
         
-        self.logo = PhotoImage(file='xaisuitegui.XAISuiteLogo.png')
+        self.logo = PhotoImage(file='XAISuiteLogo.png')
         self.values = []
         panel = Label(self, image = self.logo)
         panel.pack(side = "top", fill = "both", expand = "yes")
