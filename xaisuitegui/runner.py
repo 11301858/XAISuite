@@ -75,6 +75,7 @@ class ABC(Frame):
         
         def core():
             try:
+                print("Selected files are: " + str(list(self.file_selected)))
                 compare_explanations(list(self.file_selected))
                 
             except Exception as e:
