@@ -31,6 +31,8 @@
   -->
 </div>
 
+Welcome to our source page. Our mission is to make machine learning available to all! Whether you are a data scientist, researcher, or just a person curious about how you can use artificial intelligence to your advantage, XAISuite is the library for you. Please be sure to contribute and contact us if you have any questions. 
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Installation](#installation)
@@ -41,16 +43,27 @@
 
 ## Introduction
 
-XAISuite (E<b>x</b>planatory <b>A</b>rtificial <b>I</b>ntelligence <b>Suite</b>) is a library for training and explaining machine learning models for tabular datasets in Python. It provides a unified interface for training any sklearn model using just a line of code and allows users to easily compare the results of different explainers. It is based on the XAISuite framework, which we propose in our paper.
+XAISuite (E<b>x</b>planatory <b>A</b>rtificial <b>I</b>ntelligence <b>Suite</b>) is a library for *convenient* training and explaining machine learning models for tabular datasets in Python (Note the emphasis on the word convenient). It provides a unified interface for training and explaining any machine learning model using at most just a line of code. It allows users to easily compare the results of different explainers. It is based on the XAISuite framework, which we propose in our paper. 
 
-XAISuite accomplishes machine learning model training and explanation generation in three steps: (1) data loading, (2) model training and explanation generation, and (3)
-explanation comparison. Each of these steps are delved into more detail in our [documentation](https://11301858.github.io/XAISuite/v0.6.7-beta/index.html) and in the demo tutorials. A more detailed flowchart is presented in our paper.
+What are explanations? Machine learning models are opaque models, so we have no idea what's going on inside of them. Explainers help us understand machine learning models we have trained and therefore give us aa better idea of why machine learning models fail in particular instances.
 
-![Basic Flowchart of how XAISuite works](https://user-images.githubusercontent.com/66180831/209634297-296fa5d8-4429-434c-afaa-7500d776cd75.png)
+XAISuite accomplishes machine learning model training and explanation generation in three steps: (1) data loading, (2) model training and explanation generation, and (3) explanation comparison. Each of these steps are delved into more detail in our [documentation](https://11301858.github.io/XAISuite/v0.6.7-beta/index.html) and in the demo tutorials. A detailed flowchart is presented in our paper.
 
-XAISuite was created as a helper library to a paper which compared SHAP and LIME explanations for different supervised models on tabular datasets and studied implications on model accuracy using the XAISuite framework. That paper will be published soon.
+A key part of XAISuite is flexibility, and, in our mission to make machine learning available to all, we have made or plan to make XAISuite available in the following formats:
+
+1. As a Python Library
+2. On the Command Line (with XAISuiteCLI)
+3. In block-code (Pending)
+4. In the XAI Programming Language (Pending)
+5. 
+![Screen Shot 2023-02-28 at 6 59 41 PM](https://user-images.githubusercontent.com/66180831/222033965-2fb79215-39e8-43e3-a65b-c1bd98d39681.png)
+
+As far as we know, XAISuite is among the first comprehensive libraries that allow users to both train and explain models, and the first to provide utilities for explanation comparison. XAISuite was created with a focus on users, and our interface reflects that.
+
+We also pioneered the ability to interact with machine learning models on the command line. 
 
 ## Installation
+
 You can install the ``XAI Suite`` through PyPI:
 
 ``
@@ -62,6 +75,7 @@ This will automatically install the latest version and is the reccomended way to
 ``
 pip install XAISuite --upgrade
 ``
+Follow the instructions in individual folder READMEs for use instructions.
 
 ## Getting Started
 
@@ -83,8 +97,7 @@ A paper proposing and using XAISuite to compare explanatory methods is still in 
 ```
 @article{mitra2022-xaisuite,
   author    = {Shreyan Mitra and Leilani Gilpin},
-  title     = {Comparison of SHAP and LIME Explanations for Supervised
-Machine Learning Models Trained on Tabular Datasets},
+  title     = {The XAISuite Framework and Implications on Explanatory System Dissonance},
   year      = {2022},
   doi       = {},
   url       = {},
@@ -92,7 +105,7 @@ Machine Learning Models Trained on Tabular Datasets},
   eprint    = {},
 }
 ```
-
+The paper uses XAISuite to compare SHAP and LIME explanations for different machine learning models. 
 
 ## Contact Us
 If you have any questions, comments or suggestions, please do not hesitate to contact us at xaisuite@gmail.com
