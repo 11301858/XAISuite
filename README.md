@@ -55,8 +55,9 @@ A key part of XAISuite is flexibility, and, in our mission to make machine learn
 2. On the Command Line (with XAISuiteCLI)
 3. In block-code (Pending)
 4. In the XAI Programming Language (Pending)
-5. 
-![Screen Shot 2023-02-28 at 6 59 41 PM](https://user-images.githubusercontent.com/66180831/222033965-2fb79215-39e8-43e3-a65b-c1bd98d39681.png)
+
+![XAISuite options](https://user-images.githubusercontent.com/66180831/222034540-5ae92a6f-2100-4c5c-ad60-aa47857fef4c.png)
+
 
 As far as we know, XAISuite is among the first comprehensive libraries that allow users to both train and explain models, and the first to provide utilities for explanation comparison. XAISuite was created with a focus on users, and our interface reflects that.
 
