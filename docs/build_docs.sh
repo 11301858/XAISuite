@@ -49,7 +49,7 @@ pip3 uninstall -y xaisuite
 # and use them to build the appropriate API docs.
 # Uninstall after we're done with each one.
 versions=()
-checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "xaisuitegui" "setup.py")
+checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "xaisuitegui" "xaisuitecli" "setup.py")
 for version in $(git tag --list 'v[0-9]*'); do
     if [[ "$version" != "v1.0.2" ]]; then #Skip intermediate versions
       echo Skipping $version
