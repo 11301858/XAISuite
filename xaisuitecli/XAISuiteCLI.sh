@@ -14,4 +14,8 @@ then
         echo Training...
         source train.sh ${@:2}
     fi 
+    elif [[ $1 == "--GUI" ]]
+    then
+        echo Opening GUI...
+        python -c "import xaisuitegui.runner"
 fi
