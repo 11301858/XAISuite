@@ -1,7 +1,7 @@
 This is the script for XAISuite's command-line interface. Download it to your working directory and then simply type 
 
 ```
-$xs
+$alias xs="bash XAISuiteCLI.sh"
 ```
 
 for the help menu.
