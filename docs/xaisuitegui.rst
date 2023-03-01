@@ -1,4 +1,4 @@
-XAISUITEGUI
+XAISuite GUI
 --------------------
 
 .. automodule:: xaisuitegui
