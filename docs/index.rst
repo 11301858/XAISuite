@@ -81,8 +81,7 @@ still in pre-publication. Use the following BibTex to cite XAISuite:
 
    @article{mitra2022-xaisuite,
      author    = {Shreyan Mitra and Leilani Gilpin},
-     title     = {Comparison of SHAP and LIME Explanations for Supervised
-   Machine Learning Models Trained on Tabular Datasets},
+     title     = {The XAISuite Framework and Implications on Explanatory System Dissonance},
      year      = {2022},
      doi       = {},
      url       = {},
@@ -112,6 +111,7 @@ Finally, what you were really looking for! Click the following links for access 
 
    xaisuite
    xaisuitegui
+   xaisuitecli
    demo
 
    
