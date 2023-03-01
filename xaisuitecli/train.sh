@@ -30,12 +30,4 @@ else
     exit 1
 fi
 
-echo $Model
-
-echo $Data
-
-echo $Target
-
-echo Running...
-
 python -u CLIRunner.py "$model" "$data" "$target"
