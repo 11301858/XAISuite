@@ -111,7 +111,6 @@ Finally, what you were really looking for! Click the following links for access 
 
    xaisuite
    xaisuitegui
-   xaisuitecli
    demo
 
    
