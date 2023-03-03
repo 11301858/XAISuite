@@ -1,4 +1,0 @@
-[submodule "xaisuitecli"]
-	path = xaisuitecli
-	url = https://github.com/11301858/XAISuiteCLI.git
-	branch = master
