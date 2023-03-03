@@ -1,3 +1,3 @@
-[submodule "XAISuiteCLI"]
-	path = XAISuiteCLI
-	url = https://github.com/11301858/XAISuiteCLI.git
+[submodule "xaisuitecli"]
+	path = xaisuitecli
+	url = https://github.com/11301858/xaisuitecli.git
