@@ -1,4 +1,3 @@
 [submodule "xaisuitecli-legacy"]
-	path = xaisuitecli
-	url = https://github.com/11301858/xaisuitecli-legacy.git
-	branch = master
+	path = xaisuitecli-legacy
+	url = https://github.com/11301858/xaisuitecli-legacy
