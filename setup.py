@@ -13,5 +13,7 @@ setup(name='XAISuite',
         "dash>=2.7.1",
         "dash_bootstrap_components>=1.3.0"
       ],
-       packages=["xaisuite", "demo", "xaisuitegui"],
+      include_package_data=True,
+      package_data={'': ['static/*']},
+      packages=["xaisuite", "demo", "xaisuitegui"],
       )
