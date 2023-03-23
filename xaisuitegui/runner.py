@@ -10,7 +10,7 @@ import os
 import warnings
 import matplotlib.pyplot as plt
 import requests
-from PIL import Image
+from PIL import Image, ImageTk
 
 warnings.filterwarnings("ignore")
 
@@ -31,8 +31,9 @@ class ABC(Frame):
         # this adds something to the frame, otherwise the default
         # size of the window will be very small
         
-        
-        self.logo = Image.open(requests.get("https://user-images.githubusercontent.com/66180831/209478341-a1b4d80b-dbcb-448c-a3e0-109e27590ec5.png", stream=True).raw)
+        im = Image.open(requests.get("https://user-images.githubusercontent.com/66180831/209478341-a1b4d80b-dbcb-448c-a3e0-109e27590ec5.png", stream=True).raw)
+        ph = ImageTk.PhotoImage(im)
+        self.logo = ph
         self.values = []
         panel = Label(self, image = self.logo)
         panel.pack(side = "top", fill = "both", expand = "yes")
