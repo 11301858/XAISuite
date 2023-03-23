@@ -15,5 +15,5 @@ setup(name='XAISuite',
       ],
       include_package_data=True,
       package_data={'': ['static/*']},
-      packages=["xaisuite", "demo", "xaisuitegui"],
+      packages=["xaisuite", "demo", "xaisuitegui", "models"],
       )
