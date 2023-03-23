@@ -9,6 +9,8 @@ import pandas as pd
 import os
 import warnings
 import matplotlib.pyplot as plt
+import requests
+from PIL import Image
 
 warnings.filterwarnings("ignore")
 
@@ -30,7 +32,7 @@ class ABC(Frame):
         # size of the window will be very small
         
         
-        self.logo = PhotoImage(file='XAISuiteLogo.png')
+        self.logo = Image.open(requests.get("https://user-images.githubusercontent.com/66180831/209478341-a1b4d80b-dbcb-448c-a3e0-109e27590ec5.png", stream=True).raw)
         self.values = []
         panel = Label(self, image = self.logo)
         panel.pack(side = "top", fill = "both", expand = "yes")
