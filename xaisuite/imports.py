@@ -7,6 +7,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import ast
 import numpy as np
+from sklearn.datasets import*
 
 #Machine Learning Models and Training
 from sklearn.model_selection import train_test_split
