@@ -121,7 +121,7 @@ def get_model(hidden_layer_dim, meta):
     model.add(keras.layers.Activation("softmax"))
     return model
 
-train_and_explainModel("KerasClassifier", load_data_sklearn(data, "target"), ["shap"], get_model, loss="sparse_categorical_crossentropy", hidden_layer_dim=100
+train_and_explainModel("KerasClassifier", load_data_sklearn(data, "target"), ["shap"], get_model, loss="sparse_categorical_crossentropy", hidden_layer_dim=100)
 ```
 
 ## How to Contribute
