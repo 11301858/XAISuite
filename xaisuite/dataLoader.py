@@ -42,4 +42,34 @@ def load_data_sklearn(datastore:dict, target:str, cut: Union[str, list] = None) 
         return tabular_data #Return data through a Tabular object
     except:
         raise ValueError("Unable to load data properly. Make sure your file is in the same directory and that the target is present") #This means that there was a problem reading the data, cutting columns, or creating the Tabular object
+        
+def generate_data(type:str, target:str, cut: Union[int, list] = None, **generationArgs) -> Tabular: # Returns tabular data
+    '''A function that creates a omnixai.data.tabular.Tabular object instance representing a particular sklearn dataset for demoing.
+ 
+    :param type str: Type of data to generate ("classification" or "regression")
+    :param target str: name of target variable
+    :param ``**generationArgs``: Arguments to be passed onto the data generation function
+    :return: Tabular object instance representing randomly generated dataset
+    :rtype: Tabular
+    :raises ValueError: if data cannot be loaded
+    '''
+    df = pd.Dataframe()
+    try:
+        if (type == "classification"):
+            data = make_classification(**generationArgs)
+            df = pd.Dataframe(data[0])
+            df["target"] = data[1]
+        else if (type == "regression"):
+            data = make_regression(**generationArgs)
+            df = pd.Dataframe(data[0])
+            df["target"] = data[1]
+        else:
+            raise ValueError("Not correct type. Choices are 'classification' or 'regression'.")
+          
+        if cut is not None:
+          df.drop([cut], axis = 1, index = None, columns = None, level = None, inplace = True, errors = 'raise') #Remove columns the user doesn't want to include
+        tabular_data = Tabular(df, target_column=target) #Create a Tabular object (needed for future training and explaining) and specify the target column. Omnixai does not allow multiple targets, so datasets containing 2 or more targets need to be passed twice through the program, with one of the targets being cut. 
+        return tabular_data #Return data through a Tabular object
+    except:
+        raise ValueError("Unable to load data properly. Make sure your file is in the same directory and that the target is present") #This means that there was a problem reading the data, cutting columns, or creating the Tabular object
 
