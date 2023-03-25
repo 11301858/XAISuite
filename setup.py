@@ -12,7 +12,8 @@ setup(name='XAISuite',
         "omnixai==1.2.4",
         "dash>=2.7.1",
         "dash_bootstrap_components>=1.3.0",
-        "skorch>=0.12.1" #For integration with pytorch
+        "skorch>=0.12.1", #For integration with pytorch
+        "scikeras>=0.10.0" #For integration with Tensorflow Keras
       ],
       include_package_data=True,
       package_data={'': ['static/*']},
