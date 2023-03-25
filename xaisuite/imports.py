@@ -53,7 +53,7 @@ acceptedModels = {"SVC": "sklearn.svm", "NuSVC": "sklearn.svm", "LinearSVC": "sk
                   "BernoulliRBM": "sklearn.neural_network", "MLPClassifier": "sklearn.neural_network", "MLPRegressor": "sklearn.neural_network",  
                   "DecisionTreeClassifier": "sklearn.tree", "DecisionTreeRegressor": "sklearn.tree",
                   "ExtraTreeClassifier": "sklearn.tree", "ExtraTreeRegressor": "sklearn.tree", "NullRegressor": "models.NullRegressor",
-                  "NeuralNetClassifier": "skorch.NeuralNetClassifier", "KerasClassifier": "scikeras.wrappers.KerasClassifier", "KerasRegressor": "scikeras.wrappers.KerasRegressor"
+                  "NeuralNetClassifier": "skorch.NeuralNetClassifier", "KerasClassifier": "scikeras.wrappers", "KerasRegressor": "scikeras.wrappers"
                  }
 
 from sklearn.base import is_classifier, is_regressor #For model type identification. Necessary for explanation generation and to ensure model is not unsupervised
