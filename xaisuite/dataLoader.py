@@ -53,15 +53,15 @@ def generate_data(type:str, target:str, cut: Union[int, list] = None, **generati
     :rtype: Tabular
     :raises ValueError: if data cannot be loaded
     '''
-    df = pd.Dataframe()
+    df = pd.DataFrame()
     try:
         if (type == "classification"):
             data = make_classification(**generationArgs)
-            df = pd.Dataframe(data[0])
+            df = pd.DataFrame(data[0])
             df["target"] = data[1]
         elif (type == "regression"):
             data = make_regression(**generationArgs)
-            df = pd.Dataframe(data[0])
+            df = pd.DataFrame(data[0])
             df["target"] = data[1]
         else:
             raise ValueError("Not correct type. Choices are 'classification' or 'regression'.")
