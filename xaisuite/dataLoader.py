@@ -59,7 +59,7 @@ def generate_data(type:str, target:str, cut: Union[int, list] = None, **generati
             data = make_classification(**generationArgs)
             df = pd.Dataframe(data[0])
             df["target"] = data[1]
-        else if (type == "regression"):
+        elif (type == "regression"):
             data = make_regression(**generationArgs)
             df = pd.Dataframe(data[0])
             df["target"] = data[1]
