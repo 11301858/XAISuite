@@ -101,10 +101,6 @@ from sklearn.datasets import make_classification
 from tensorflow import keras
 from xaisuite import*
 
-
-
-
-
 def get_model(hidden_layer_dim, meta):
     # note that meta is a special argument that will be
     # handed a dict containing input metadata
@@ -121,7 +117,14 @@ def get_model(hidden_layer_dim, meta):
     model.add(keras.layers.Activation("softmax"))
     return model
 
-train_and_explainModel("KerasClassifier", generate_data("classification", "target", 1000, 20, n_informative=10, random_state=0), ["shap"], get_model, loss="sparse_categorical_crossentropy", hidden_layer_dim=100)
+
+train_and_explainModel("KerasClassifier"
+                      , generate_data("classification", "target", n_samples = 1000, n_features = 20, n_informative=10, random_state=0)
+                      , build_fn=get_model
+                      , loss="sparse_categorical_crossentropy"
+                      , hidden_layer_dim=100
+                      , epochs = 51
+                      )
 ```
 
 ## How to Contribute
