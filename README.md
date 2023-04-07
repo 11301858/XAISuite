@@ -51,9 +51,9 @@ XAISuite accomplishes machine learning model training and explanation generation
 
 A key part of XAISuite is flexibility, and, in our mission to make machine learning available to all, we have made or plan to make XAISuite available in the following formats:
 
-1. As a Python Library
+1. As a Python Library (with XAISuite and XAISuiteGUI)
 2. On the Command Line (with XAISuiteCLI)
-3. In block-code (Pending)
+3. In block-code (with XAISuiteBlock)
 4. In the XAI Programming Language (Pending)
 
 ![XAISuite options](https://user-images.githubusercontent.com/66180831/222034540-5ae92a6f-2100-4c5c-ad60-aa47857fef4c.png)
