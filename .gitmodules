@@ -6,4 +6,7 @@
 	url = https://github.com/11301858/xaisuitecli.git
 [submodule "xaisuiteblock"]
 	path = xaisuiteblock
-	url = https://github.com/11301858/xaisuiteblock.git
+	url = https://github.com/11301858/xaisuiteblock
+[submodule "xaisuiteweb"]
+	path = xaisuiteweb
+	url = https://github.com/11301858/xaisuiteweb.git
