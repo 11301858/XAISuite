@@ -150,7 +150,7 @@ A paper proposing and using XAISuite to compare explanatory methods is still in 
 The paper uses XAISuite to compare SHAP and LIME explanations for different machine learning models. 
 
 ## Contact Us
-If you have any questions, comments or suggestions, please do not hesitate to contact us at xaisuite@gmail.com
+If you have any questions, comments or suggestions, please do not hesitate to contact us at xaisuite@gmail.com 
 
 ## License
 
