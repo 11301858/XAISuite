@@ -11,4 +11,8 @@ No modules to display. Simply type
 
 :code:`import xaisuitegui.runner`
 
+or on the CLI, 
+
+:code:`xaisuitecli --GUI`
+
 
