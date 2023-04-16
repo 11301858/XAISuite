@@ -9,14 +9,14 @@ XAISuite GUI
    
 No modules to display. Simply type 
 
-```python
+``
 import xaisuitegui.runner
-```
+``
 
 or 
 
-```shell
+``
 xaisuitecli --GUI
-```
+``
 
 to open.
