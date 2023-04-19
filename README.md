@@ -24,11 +24,11 @@
   <img alt="Documentation" src="https://github.com/11301858/XAISuite/actions/workflows/docs.yml/badge.svg"/>
   </a>
   
-  <!-- Some more badges to display, upon release of research paper
+  
   <a href="https://arxiv.org/abs/2206.01612">
   <img alt="DOI" src="https://zenodo.org/badge/DOI/.svg"/>
   </a>
-  -->
+
 </div>
 
 Welcome to our source page. Our mission is to make machine learning available to all! Whether you are a data scientist, researcher, or just a person curious about how you can use artificial intelligence to your advantage, XAISuite is the library for you. Please be sure to contribute and contact us if you have any questions. 
