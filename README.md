@@ -134,7 +134,7 @@ We welcome the contribution from the open-source community to improve the librar
 To add a new functionality into the library or point out a flaw, please create a new issue on Github. We'll try to look into your requests as soon as we can. Keep in mind that, as this is an open-source project, you release any copyright protection over code you may contribute to the XAISuite Project.
 
 ## Technical Report and Citing XAISuite
-A paper proposing and using XAISuite to compare explanatory methods is still in pre-publication. Use the following BibTex to cite XAISuite for now:
+Use the following BibTex to cite XAISuite:
 
 ```
 @misc{mitra2023xaisuite,
@@ -146,7 +146,7 @@ A paper proposing and using XAISuite to compare explanatory methods is still in 
       primaryClass={cs.LG}
 }
 ```
-The paper uses XAISuite to compare SHAP and LIME explanations for different machine learning models. 
+The paper cited proposes XAISuite and uses it to compare SHAP and LIME explanations for different machine learning models. 
 
 ## Contact Us
 If you have any questions, comments or suggestions, please do not hesitate to contact us at xaisuite@gmail.com 
