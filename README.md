@@ -137,14 +137,13 @@ To add a new functionality into the library or point out a flaw, please create a
 A paper proposing and using XAISuite to compare explanatory methods is still in pre-publication. Use the following BibTex to cite XAISuite for now:
 
 ```
-@article{mitra2022-xaisuite,
-  author    = {Shreyan Mitra and Leilani Gilpin},
-  title     = {The XAISuite Framework and Implications on Explanatory System Dissonance},
-  year      = {2022},
-  doi       = {},
-  url       = {},
-  archivePrefix = {},
-  eprint    = {},
+@misc{mitra2023xaisuite,
+      title={The XAISuite framework and the implications of explanatory system dissonance}, 
+      author={Shreyan Mitra and Leilani Gilpin},
+      year={2023},
+      eprint={2304.08499},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
 }
 ```
 The paper uses XAISuite to compare SHAP and LIME explanations for different machine learning models. 
