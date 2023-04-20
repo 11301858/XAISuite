@@ -25,7 +25,7 @@
   </a>
   
   
-  <a href="https://arxiv.org/abs/2206.01612">
+  <a href="https://arxiv.org/abs/2304.08499">
   <img alt="DOI" src="https://zenodo.org/badge/DOI/10.48550/ARXIV.2304.08499.svg"/>
   </a>
 
