@@ -1,22 +1,32 @@
-function [modelfn, resultdata] = trainandexplainModel(model, datapath, target, explainers, varargin)
-    data = readtable(datapath);
-    Y = eval(("data." + target));
-    eval(("data." + target + '= []'));
+function [modelfn, resultdata] = trainandexplainModel(model, data, explainers, varargin)
+
+    Y = data.Target;
+    data.Target = [];
     X = data;
-    train_data = X(1:floor(end-0.8*end),:);
-    test_data = X(floor(0.8*end+1):end,:);
-    train_target = Y(1:floor(end-0.8*end),:);
-    test_target = Y(floor(0.8*end+1):end,:);
-    modelfn = eval("fit" + model + "(train_data, train_target)");
-    predictions = modelfn.predict(test_data);
+    X_train = X(1:floor(end-0.8*end),:);
+    X_test = X(floor(0.8*end+1):end,:);
+    Y_train = Y(1:floor(end-0.8*end),:);
+    Y_test = Y(floor(0.8*end+1):end,:);
+    modelfn = eval("fit" + model + "(X_train, Y_train)");
+    predictions = modelfn.predict(X_test);
     %directhits = sum(predictions == test_target) / length(predictions);
-    performance = loss(modelfn, test_data, test_target);
-    fprintf("Model %s has loss of %.2f", model, performance);
+    %performance = loss(modelfn, test_data, test_target);
+    accuracy = corrcoef(predictions, Y_test);
+    score = accuracy(1, 2);
+    fprintf("%s score: %.2f", model, score);
     for explainer = 1:length(explainers)
         exp = eval(explainers(explainer) + "(modelfn, X)");
-        exp = fit(exp, varargin{:});
+        if length(varargin) == 0
+            exp = fit(exp);
+        elseif length(varargin) == 1
+            exp = fit(exp, data(varargin{1}, :));
+        else
+            exp = fit(exp, data(varargin{1}, :), varargin{2});
+        end
         figure;
         plot(exp);
+        set(gca,'TickLabelInterpreter','none')
+
     end
-    resultdata = [test_target predictions];
+    resultdata = [Y_test predictions];
 end
