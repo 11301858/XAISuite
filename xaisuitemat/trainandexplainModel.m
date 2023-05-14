@@ -16,7 +16,7 @@ function [modelfn, resultdata, explained] = trainandexplainModel(model, data, ex
     fprintf("%s score: %.2f", model, score);
     for explainer = 1:length(explainers)
         exp = eval(explainers(explainer) + "(modelfn, X)");
-        if length(varargin) == 0
+        if isempty(varargin)
             exp = fit(exp);
         elseif length(varargin) == 1
             exp = fit(exp, data(varargin{1}, :));
@@ -26,7 +26,11 @@ function [modelfn, resultdata, explained] = trainandexplainModel(model, data, ex
             exp = fit(exp, data(varargin{1}, :));
         end
         figure;
-        plot(exp);
+        f = plot(exp);
+        b = findobj(f,'Type','bar');
+        imp = b.YData;
+        T = table(flipud(array2table(imp', RowNames = gcf().CurrentAxes.YTickLabel, VariableNames = {'Predictor Importance'})));
+        writetable(splitvars(T), model + " " + explainers(explainer) + " " + varargin{1} + ".csv");
         explained{explainer} = struct(exp);
         set(gca,'TickLabelInterpreter','none')
 
