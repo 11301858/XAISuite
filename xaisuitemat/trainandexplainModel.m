@@ -1,5 +1,5 @@
-function [modelfn, resultdata] = trainandexplainModel(model, data, explainers, varargin)
-
+function [modelfn, resultdata, explained] = trainandexplainModel(model, data, explainers, varargin)
+    explained = cell(length(explainers), 1);
     Y = data.Target;
     data.Target = [];
     X = data;
@@ -20,11 +20,14 @@ function [modelfn, resultdata] = trainandexplainModel(model, data, explainers, v
             exp = fit(exp);
         elseif length(varargin) == 1
             exp = fit(exp, data(varargin{1}, :));
-        else
+        elseif length(varargin)==2 && strcmp(explainers(explainer), "lime")
             exp = fit(exp, data(varargin{1}, :), varargin{2});
+        else
+            exp = fit(exp, data(varargin{1}, :));
         end
         figure;
         plot(exp);
+        explained{explainer} = struct(exp);
         set(gca,'TickLabelInterpreter','none')
 
     end
