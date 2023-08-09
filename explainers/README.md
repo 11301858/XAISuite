@@ -1,3 +1,3 @@
 This is the home of all XAIHub explainers. The purpose of this is to serve as a repository of all explainers. Are we missing an explainer or do you have a novel explainer to add? File a pull request. 
 
-The explainers in this folder may not be compatible with the XAISuite python library as of the current version. 
+As of the current version, the explainers in this folder may not be compatible with the XAISuite python library. 
