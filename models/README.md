@@ -4,4 +4,4 @@ Write your model and submit a pull request to add your .py file to this folder. 
 
 If your model is approved, it will be found here and automatically integrated into XAISuite.
 
-The model must have a fit(), predict(), and score() method.
+The model must have a fit() and predict(). A score() method is optional.
