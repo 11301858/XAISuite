@@ -22,32 +22,33 @@ class DataLoader:
   '''
   Class that loads data from a given source
 
-  :param Union[str, Callable, numpy.ndarray, pd.DataFrame] data: The data identifier, a function that returns the data, or the data itself in the form of a numpy array or a pandas DataFrame
+  :param Union[str, Callable, numpy.ndarray, pd.DataFrame, tuple] data: The data identifier, a function that returns the data, or the data itself in the form of a numpy array or a pandas DataFrame
   :param str, optional source: The source of the data. Either "auto", "system", "preloaded", "generated", or "url". If "auto", the source will be inferred based on `data`. By default, "auto"
-  :param str, optional type: The type of data. Either "Tabular", "Image", or "Text". By default, "Tabular"
-  :param dict additional: Additional arguments to pass in. For example, if `data` is Callable, this will house any arguments passed to that function. You can also pass in a value of the variable config here to specify the format of the data returned.
-  Ex. dataArgs = {"dataGenerationArgs": {"return_X_y": True}, dataTypeArgs: {"feature_names" : [x1, x2], "target_names": [y1, y2], "cut": x3}, config:"X_y"}
-  :raises ValueError: if provided data is not found or if provided config is invalid
+  :param str, optional type: The type of data. Either "Tabular", "Image", or "Text". By default, "Tabular". If "Text" or "Image", only one feature is allowed. 
+  :param Union[str, list], optional variable_names: The variables in the dataset. By default, set to "auto" and inferred. 
+  :param Union[str, list], optional target_names: The target variable(s). By default, set to "auto" and inferred
+  :param Union[str, list], optional cut: Variables to drop from the data. By default, None. 
+  :param `**dataGenerationArgs`: Additional arguments to pass in if `data` is Callable. 
+  :raises ValueError: if data cannot be resolved or if invalid arguments are passed. 
   '''
-  def __init__(self, data:Union[str, Callable, numpy.ndarray, pd.DataFrame], source:str = "auto", type:str = "Tabular", additional:dict = None):
+  def __init__(self, data:Union[str, Callable, numpy.ndarray, pd.DataFrame, tuple], source:str = "auto", type:str = "Tabular", variable_names:Union[str, list] = "auto", target_names:Union[str, list] = "auto", cut:Union[str, list] = None, **dataGenerationArgs):
+    '''
+    Class constructor
+    '''
+    self.content = None
+    if isinstance(data, Callable):
+      data = data(**dataGenerationArgs)
+
+    if isinstance(data, Callable):
+      raise ValueError("Callable passed to DataLoader returns another Callable instead of a string, numpy.ndarray, pd.DataFrame, or tuple.")
+    
     if isinstance(data, pd.DataFrame):
       self.content = data
     elif isinstance(data, numpy.ndarray):
       self.content = pd.DataFrame(data)
-    elif isinstance(data, Callable):
-      if additional is not None and additional.get("dataGenerationArgs") is not None:
-        tempContent = data(**additional.get("dataGenerationArgs"))
-        if additional.get("config") is not None:
-          match additional.get("config"):
-            case "complete":
-              self.content = pd.DataFrame(tempContent)
-            case "X_y":
-              self.content = pd.DataFrame(tempContent[0])
-              self.content["target"] = tempContent[1]
-            case _:
-              raise ValueError("Config value of data is invalid. Must be either 'complete' or 'X_y'")  
-        else:
-          self.content = pd.DataFrame(tempContent)
+    elif isinstance(data, tuple):
+      self.content = pd.DataFrame(data[0])
+      self.content["target"] = data[1]
     elif isinstance(data, str):
       match source:
         case "system":
@@ -55,9 +56,7 @@ class DataLoader:
         case "preloaded":
           initializeDataFromPreloaded(data)
         case "generated":
-          generateArgs = additional.get("dataGenerationArgs")
-          generateArgs.update(additional.get("config"))
-          initializeDataFromGenerated(data, **generateArgs)
+          initializeDataFromGenerated(data, **dataGenerationArgs)
         case "url":
           initializeDataFromUrl(data)
         case "auto":
@@ -78,8 +77,10 @@ class DataLoader:
                   raise ValueError("Data is not valid. Please make sure your data string is not misspelt and exists.")
     assert isinstance(self.content, pd.DataFrame), "A problem occurred with the data loading. If the problem persists, file an issue at github.com/11301858/XAISuite"
 
-    if type == "Tabular":
-      self = eval(type + "(data = self.content, **additional.get('dataTypeArgs'))")
+    self.content.drop([additional.get("dataTypeArgs").get("cut")], axis = 1, index = None, columns = None, level = None, inplace = True, errors = 'raise')
+    additional.get("dataTypeArgs").pop("cut")
+
+    
     
     
     
@@ -120,24 +121,7 @@ class DataLoader:
     :param str id: The string generation command
     :raises NotFoundError: if provided generation configuration is not found
     '''
-    if generateArgs is not None and generateArgs.get("config") is not None:
-      configuration = generateArgs.get("config")
-      generateArgs.pop("config")
-      match configuration:
-        case "complete":
-          data = eval(id + "(" + generateArgs + ")")
-          assert isinstance(data, numpy.ndarray), "Command does not return a numpy ndarray."
-          self.content = pd.DataFrame(data)
-        case "X_y":
-          self.content = pd.DataFrame(data[0])
-          self.content["target"] = data[1]
-          assert isinstance(data[0], numpy.ndarray), "Command does not return a numpy ndarray."
-          assert isinstance(data[1], numpy.ndarray), "Command does not return a numpy ndarray."
-        case _:
-          raise NotFoundError("Configuration " + configuration + " not found.")
-    else:
-      data = eval(id + "(" + generateArgs + ")")
-      assert isinstance(data, numpy.ndarray), "Command does not return a numpy ndarray."
+      
       self.content = pd.DataFrame(data)
   
   def initializeDataFromUrl(id:str):
