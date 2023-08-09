@@ -78,7 +78,9 @@ class DataLoader:
                   raise ValueError("Data is not valid. Please make sure your data string is not misspelt and exists.")
     assert isinstance(self.content, pd.DataFrame), "A problem occurred with the data loading. If the problem persists, file an issue at github.com/11301858/XAISuite"
 
-    self.content = eval(type + "(data = self.content, **additional.get('dataTypeArgs'))")
+    if type == "Tabular":
+      self = eval(type + "(data = self.content, **additional.get('dataTypeArgs'))")
+    
     
     
                   
