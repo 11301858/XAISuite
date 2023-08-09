@@ -39,6 +39,8 @@ class DataLoader:
     if isinstance(data, Callable):
       data = data(**dataGenerationArgs)
 
+
+
     if isinstance(data, Callable):
       raise ValueError("Callable passed to DataLoader returns another Callable instead of a string, numpy.ndarray, pd.DataFrame, or tuple.")
     
@@ -122,7 +124,7 @@ class DataLoader:
     :raises NotFoundError: if provided generation configuration is not found
     '''
       
-      self.content = pd.DataFrame(data)
+      self.content = pd.DataFrame(eval(id + "(**generateArgs)"))
   
   def initializeDataFromUrl(id:str):
     '''
