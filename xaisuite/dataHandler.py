@@ -78,7 +78,9 @@ class DataLoader:
                   raise ValueError("Data is not valid. Please make sure your data string is not misspelt and exists.")
     assert isinstance(self.content, pd.DataFrame), "A problem occurred with the data loading. If the problem persists, file an issue at github.com/11301858/XAISuite"
 
-    self.content = eval(type + "(**additional.get('dataTypeArgs'))")
+    self.content = eval(type + "(data = self.content, **additional.get('dataTypeArgs'))")
+    
+    
                   
 
   def initializeDataFromSystem(id:str):
@@ -150,7 +152,27 @@ class DataLoader:
 class DataProcessor:
   '''
   Class that processes data
+
+  :param object, optional processor: The data processer, either a string function, or an object with fit() and transform() methods.
+  :param `**processorArgs`: Arguments to be passed into the processor
   '''
 
+  def __init__(processor:object = None, **processorArgs):
+    self.processor = processor
+    compositeTabularProcessorArgs = None
+    if processor == "TabularTransform" and processorArgs is not None:
+      for component in processorArgs.items():
+        if isinstance(component[1], str):
+          compositeTabularProcessorArgs.update((component[0], eval(component[1] + "()")))
+        else:
+          compositeTabularProcessorArgs.update((component[0], component[1]))
+      processorArgs = compositeTabularProcessorArgs
+        
+    if isinstance(processor, str):
+      self.processor = self.eval(processor + "(**processorArgs)")
+    elif isinstance(processor, Callable):
+      self.processor() = processor(**processorArgs)
+
+    
 
 
