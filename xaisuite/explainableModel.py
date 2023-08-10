@@ -40,7 +40,7 @@ class ModelTrainer:
 
     explainer_names = explainers if isinstance(explainers, list) else explainers.keys()
 
-    explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, preprocess = withData.processor, params = explainers if isinstance(explainers, dict) else None)")
+    self.explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, preprocess = withData.processor, params = explainers if isinstance(explainers, dict) else None)")
     
     
 
