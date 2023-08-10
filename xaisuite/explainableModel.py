@@ -21,6 +21,7 @@ class ModelTrainer:
       tempModel = model(**modelArgs)
 
     model = tempModel
+    self.model = model
 
     try:
       model.fit(withData.X_train, withDataLoader.y_train)
@@ -40,8 +41,23 @@ class ModelTrainer:
 
     explainer_names = explainers if isinstance(explainers, list) else explainers.keys()
 
-    self.explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, preprocess = withData.processor, params = explainers if isinstance(explainers, dict) else None)")
-    
+    self.explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, preprocess = withData.processor, postprocess = withData.processor.invert, params = explainers if isinstance(explainers, dict) else None)")
+
+  def getExplanationsFor(testIndex:Union[int, list] = None, feature_values:dict = None)
+  '''
+  Function to get the local explanations for a particular testing instance. 
+
+  :param Union[int, list], optional testIndex: The indices of the testing data for which to fetch local explanations. If empty, local explanations for all instances are returned. If None, `feature_values` is used.
+  :param dict, optional feature_values: The values of the features corresponding to a particular index. If None, `testIndex` is used. 
+  :raises ValueError: If neither testIndex or feature_values is passed
+  
+  '''
+  if testIndex is None and feature_values is None:
+    raise ValueError("One of testIndex or feature_values must be provided.")
+
+  if testIndex is not None and feature_values is not None:
+    print("Both testIndex and feature_values were provided. Using testIndex.")
+  
     
 
     
