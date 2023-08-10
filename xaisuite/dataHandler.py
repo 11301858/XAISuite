@@ -218,6 +218,7 @@ class DataProcessor:
     self.processor = processor
     self.processedX = None
     self.processedy = None
+    self.loader = forDataLoader
     target_transform = None
 
     if processor is None: #Get default processor if processor is not provided
