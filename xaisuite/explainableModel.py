@@ -44,7 +44,7 @@ class ModelTrainer:
 
     self.explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, preprocess = withData.processor, postprocess = withData.processor.invert, params = explainers if isinstance(explainers, dict) else None)")
 
-  def getExplanationsFor(testIndex:Union[int, list] = None, feature_values:dict = None)
+  def getExplanationsFor(testIndex:Union[int, list] = None, feature_values:dict = None):
   '''
   Function to get the local explanations for a particular testing instance. 
 
