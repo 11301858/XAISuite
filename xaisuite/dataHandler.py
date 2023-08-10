@@ -17,6 +17,7 @@ class ProcessedData(Data):
   Class representing a processed dataset that inherits from Data
   '''
 
+#Class DataLoader starts here
 
 class DataLoader:
   '''
@@ -139,13 +140,6 @@ class DataLoader:
       self.wrappedData = Image(data = self.x, batched = True)
     else if type == "Text":
       self.wrappedData = Text(data = self.x.values.reshape(-1,).tolist())
-    
-
-    
-    
-    
-    
-                  
 
   def initializeDataFromSystem(id:str):
     '''
@@ -203,7 +197,7 @@ class DataLoader:
     df = pd.read_csv(id)
     self.content = df
     
-
+#Class DataLoader ends here
 
 class DataProcessor:
   '''
