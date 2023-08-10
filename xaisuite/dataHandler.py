@@ -244,6 +244,7 @@ class DataProcessor:
        self.processedX = tempProcessedData.drop(forDataLoader.target).to_numpy()
 
      self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.processedX, self.processedy, test_size = test_size)
+     self.processedData = {"X_train": self.X_train, "X_test": self.X_test, "y_train":self.y_train, "y_test":self.y_test}
     
 
     
