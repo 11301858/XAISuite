@@ -132,7 +132,7 @@ class DataLoader:
     self.X = self.content.drop("target")
 
     #Now we're ready to finalize creating the data object
-self.wrappedData = None
+    self.wrappedData = None
     if type == "Tabular":
       self.wrappedData = Tabular(data = self.content, feature_columns = self.x.columns, categorical_columns = categorical, target_column = self.y.columns)
     else if type == "Image":
