@@ -67,6 +67,8 @@ class ModelTrainer:
     explanations = self.explainer.explain(self.withData.processor.invert(numpy.array([withData.processedData.X_test[i] for i in testIndex])))
   elif isinstance(testIndex, int):
     explanations = self.explainer.explain(self.withData.processor.invert(numpy.array(withData.processedData.X_test[testIndex])))
+
+  
   
     
 
