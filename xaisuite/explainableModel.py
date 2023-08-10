@@ -44,12 +44,13 @@ class ModelTrainer:
 
     self.explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, preprocess = withData.processor, postprocess = withData.processor.invert, params = explainers if isinstance(explainers, dict) else None)")
 
-  def getExplanationsFor(testIndex:Union[int, list] = None, feature_values:dict = None):
+  def getExplanationsFor(testIndex:Union[int, list] = None, feature_values:dict = None) -> dict:
   '''
   Function to get the local explanations for a particular testing instance. 
 
   :param Union[int, list], optional testIndex: The indices of the testing data for which to fetch local explanations. If empty, local explanations for all instances are returned. If None, `feature_values` is used.
   :param dict, optional feature_values: The values of the features corresponding to a particular index. If None, `testIndex` is used. 
+  :returns dict explanations: The requested explanations
   :raises ValueError: If neither testIndex or feature_values is passed
   
   '''
@@ -59,16 +60,28 @@ class ModelTrainer:
   if testIndex is not None and feature_values is not None:
     print("Both testIndex and feature_values were provided. Using testIndex.")
 
-  explanations = None
+  
 
   if isinstance(testIndex, list) and len(testIndex) == 0:
-    explanations = self.explainer.explain(self.withData.processor.invert(withData.processedData.X_test))
+    return self.explainer.explain(self.withData.processor.invert(withData.processedData.X_test))
   elif isinstance(testIndex, list) and len(testIndex) >0:
-    explanations = self.explainer.explain(self.withData.processor.invert(numpy.array([withData.processedData.X_test[i] for i in testIndex])))
+    return self.explainer.explain(self.withData.processor.invert(numpy.array([withData.processedData.X_test[i] for i in testIndex])))
   elif isinstance(testIndex, int):
-    explanations = self.explainer.explain(self.withData.processor.invert(numpy.array(withData.processedData.X_test[testIndex])))
+    return self.explainer.explain(self.withData.processor.invert(numpy.array(withData.processedData.X_test[testIndex])))
 
+  #By this point, we are aware that we are dealing with feature_values and testIndex must be None. 
+
+  assert(testIndex is None), "Something went wrong. Please try again."
+
+  #First, we fetch all the feature data for the dataset
+  data = self.withData.loader.X
   
+  #Next, we create a string that resolves into a boolean expression when evaluated and will be a search query constructed from the provided feature_values
+  query = []
+  for feature, value in feature_values.items():
+    query.append("df['" + feature + "'] == " + value)
+  queryString = " and ".join(query)
+  return self.explainer.explain(data.loc[eval(queryString)])
   
     
 
