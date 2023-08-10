@@ -1,22 +1,3 @@
-class Data:
-  '''
-  Class representing a dataset
-  '''
-
- 
-
-
-class UnprocessedData(Data):
-  '''
-  Class representing an unprocessed dataset that inherits from Data
-  '''
-  
-
-class ProcessedData(Data):
-  '''
-  Class representing a processed dataset that inherits from Data
-  '''
-
 #Class DataLoader starts here
 
 class DataLoader:
@@ -131,7 +112,8 @@ class DataLoader:
     #Now we split the data to make it easier to handle:
 
     self.y = self.content[target]
-    self.X = self.content.drop("target")
+    self.X = self.content.drop(target)
+    self.target = target
 
     #Now we're ready to finalize creating the data object
     self.wrappedData = None
@@ -206,29 +188,69 @@ class DataProcessor:
   :param DataLoader forDataLoader: The dataloader that will be associated with this processor. 
   :param float, optional test_size: The proportion of data that will be used to test and score the machine learning model. By default, 0.2
   :param object, optional processor: The data processer, either a string function, or an object with fit() and transform() methods.
-  :param `**processorArgs`: Arguments to be passed into the processor
+  :param `**processorArgs`: Arguments to be passed into the processor. If the argument is a function, like a component of a composite processor, pass it in as shown in this example: 
+  DataProcessor(..., target_transform = "component: KBins(n_bins = 5)", ratio = 0.1)
   '''
 
-  def __init__(forDataLoader:DataLoader, test_size = 0.2:float, processor:object = None, **processorArgs):
+  def __init__(forDataLoader:DataLoader, test_size:float = 0.2, processor:object = None, **processorArgs):
     self.processor = processor
-    compositeTabularProcessorArgs = None
+    self.processedX = None
+    self.processedy = None
+    target_transform = None
+
+    if processor is None: #Get default processor if processor is not provided
+      match forDataLoader.type:
+        case "Tabular":
+          processor = "TabularTransform"
+        case "Image":
+          processor = "Scale"
+        case "Text":
+          processor = "Tfidf"
     
-    if processor == "TabularTransform" and processorArgs is not None:
-      for component in processorArgs.items():
-        if isinstance(component[1], str):
-          compositeTabularProcessorArgs.update((component[0], eval(component[1] + "()")))
+    tempProcessorArgs = None
+
+    if processorArgs is not None: #This is if the user passes in a component transformer as a string representation of a function
+      for variable in processorArgs.items():
+        if isinstance(variable[1], str) && "component:" in variable[1].replace(" ", ""):
+          function_string = (variable[1].replace(" ", "")).split(":", 1)[1]
+          if !function_string.endswith(")"):
+            function_string = function_string + "()"
+          actualValue = eval(function_string)
+          tempProcessorArgs.update((variable[0], actualValue))
         else:
-          compositeTabularProcessorArgs.update((component[0], component[1]))
-      processorArgs = compositeTabularProcessorArgs
+          tempProcessorArgs.update(variable)
+    
+    processorArgs = tempProcessorArgs
+
+    if forDataLoader.type != "Tabular" and processorArgs.get("target_transform") is not None:
+      target_transform = processorArgs.get("target_transform")
+      processorArgs.pop("target_transform")
+      target_transform.fit(forDataLoader.y)
+      self.processedy = target_transform.transform(forDataLoader.y)
+      
         
     if isinstance(processor, str):
-      self.processor = self.eval(processor + "(**processorArgs)")
+      self.processor = eval(processor + "(**processorArgs)")
     elif isinstance(processor, Callable):
       self.processor = processor(**processorArgs)
 
-  
-
     self.processor.fit(forDataLoader.wrappedData)
+    processedData = self.processor.transform(forDataLoader.wrappedData)
+     if forDataLoader.type != "Tabular":
+      self.processedX = processedData
+     else:
+       tempProcessedData = pd.DataFrame(processedData)
+       self.processedy = tempProcessedData[forDataLoader.target].to_numpy()
+       self.processedX = tempProcessedData.drop(forDataLoader.target).to_numpy()
+
+     self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.processedX, self.processedy, test_size = test_size)
+    
+
+    
+    
+      
+      
+    
 
     
 
