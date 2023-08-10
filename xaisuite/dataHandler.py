@@ -38,6 +38,7 @@ class DataLoader:
     Class constructor
     '''
     #Initially, we set the data content to None. self.content is meant to be a pd.DataFrame
+    self.type = type
     self.content = None
     #If data is a function that returns the dataset or a string representation of such a function, we reassign data to the return value of this function. 
     if isinstance(data, Callable):
@@ -203,13 +204,15 @@ class DataProcessor:
   '''
   Class that processes data
   :param DataLoader forDataLoader: The dataloader that will be associated with this processor. 
+  :param float, optional test_size: The proportion of data that will be used to test and score the machine learning model. By default, 0.2
   :param object, optional processor: The data processer, either a string function, or an object with fit() and transform() methods.
   :param `**processorArgs`: Arguments to be passed into the processor
   '''
 
-  def __init__(forDataLoader:DataLoader, processor:object = None, **processorArgs):
+  def __init__(forDataLoader:DataLoader, test_size = 0.2:float, processor:object = None, **processorArgs):
     self.processor = processor
     compositeTabularProcessorArgs = None
+    
     if processor == "TabularTransform" and processorArgs is not None:
       for component in processorArgs.items():
         if isinstance(component[1], str):
@@ -221,7 +224,11 @@ class DataProcessor:
     if isinstance(processor, str):
       self.processor = self.eval(processor + "(**processorArgs)")
     elif isinstance(processor, Callable):
-      self.processor() = processor(**processorArgs)
+      self.processor = processor(**processorArgs)
+
+  
+
+    self.processor.fit(forDataLoader.wrappedData)
 
     
 
