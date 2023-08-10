@@ -82,6 +82,14 @@ class ModelTrainer:
     query.append("df['" + feature + "'] == " + value)
   queryString = " and ".join(query)
   return self.explainer.explain(data.loc[eval(queryString)])
+
+  def getSummaryExplanations() -> dict:
+    '''
+    Returns global explanations
+
+    :returns dict explanations: The requested global explanations
+    '''
+    return self.explainers.explain_global()
   
     
 
