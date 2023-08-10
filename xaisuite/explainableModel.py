@@ -4,10 +4,13 @@ class ModelTrainer:
 
   :param object model: The string name of the model, the function returning the model, or the model object itself. The model function must have fit() and predict() functions. A score() function is optional.
   :param DataProcessor withData: The data that will be used to train and test the model
-  :param str task: The type of task that the model performs. By default, "Tabular". Other options are "Vision", "NLP", "Data", and "Ranking"
+  :param str task: The type of task that the model performs. By default, "Tabular". Other options are "Vision" and "NLP"
   '''
 
-  def __init__(model:object, withData: Data, task:str = "Tabular", explainers:Union[str, list] = None, **modelArgs):
+  def __init__(model:object, withDataLoader: DataLoader, task:str = "Tabular", explainers:Union[str, list] = None, **modelArgs):
+    '''
+    Class constructor
+    '''
     tempModel = model
     if isinstance(model, str):
       tempModel = eval(model + "(**modelArgs)")
@@ -29,7 +32,10 @@ class ModelTrainer:
       score = r2_score([model.predict(x) for x in withData.X_test], withData.y_test)
 
     print("Model score is " + score)
-      
+
+    #Model has been trained by this point. Now for the explanations
+    
+    
     
 
     
