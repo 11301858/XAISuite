@@ -1,3 +1,23 @@
+#Class Data starts here
+class Data:
+  '''
+  Class to represent data. 
+
+  :param numpy.ndarray X_train: The training features
+  :param numpy.ndarray X_test: The testing features
+  :param numpy.ndarray y_train: The training targets
+  :param numpy.ndarray y_test: The testing targets
+  '''
+  def __init__(X_train, X_test, y_train, y_test):
+    self.X_train = X_train
+    self.X_test = X_test
+    self.y_train = y_train
+    self.y_test = y_test
+    self.trainingData = (X_train, y_train)
+    self.testingData = (X_test, y_test)
+
+#Class Data ends here
+
 #Class DataLoader starts here
 
 class DataLoader:
@@ -182,6 +202,8 @@ class DataLoader:
     
 #Class DataLoader ends here
 
+#Class DataProcessor starts
+
 class DataProcessor:
   '''
   Class that processes data
@@ -244,7 +266,10 @@ class DataProcessor:
        self.processedX = tempProcessedData.drop(forDataLoader.target).to_numpy()
 
      self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.processedX, self.processedy, test_size = test_size)
-     self.processedData = {"X_train": self.X_train, "X_test": self.X_test, "y_train":self.y_train, "y_test":self.y_test}
+     self.processedData = Data(X_train = self.X_train, X_test = self.X_test, y_train = self.y_train, y_test = self.y_test)
+      
+
+    #Class DataProcessorEnds
     
 
     
