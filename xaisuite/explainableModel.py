@@ -59,12 +59,14 @@ class ModelTrainer:
   if testIndex is not None and feature_values is not None:
     print("Both testIndex and feature_values were provided. Using testIndex.")
 
+  explanations = None
+
   if isinstance(testIndex, list) and len(testIndex) == 0:
-    self.explainer.explain(self.withData.processor.invert(withData.processedData.X_test))
+    explanations = self.explainer.explain(self.withData.processor.invert(withData.processedData.X_test))
   elif isinstance(testIndex, list) and len(testIndex) >0:
-    self.explainer.explain(self.withData.processor.invert(numpy.array([withData.processedData.X_test[i] for i in testIndex])))
+    explanations = self.explainer.explain(self.withData.processor.invert(numpy.array([withData.processedData.X_test[i] for i in testIndex])))
   elif isinstance(testIndex, int):
-    self.explainer.explain(self.withData.processor.invert(numpy.array(withData.processedData.X_test[testIndex])))
+    explanations = self.explainer.explain(self.withData.processor.invert(numpy.array(withData.processedData.X_test[testIndex])))
   
     
 
