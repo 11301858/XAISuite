@@ -36,7 +36,7 @@ class ModelTrainer:
     except:
         score = r2_score([model.predict(x) for x in withData.X_test], withData.y_test)
 
-    print("Model score is " + score)
+    print("Model score is " + str(score))
 
     #Model has been trained by this point. Now for the explanations
 
