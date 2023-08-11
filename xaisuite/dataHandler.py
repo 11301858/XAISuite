@@ -98,7 +98,7 @@ class DataLoader:
 
     #Make sure that variable_names are the same length as the number of columns in the data provided. 
 
-    if (len(variable_names) != len(self.content.columns)):
+    if variable_names != "auto" and (len(variable_names) != len(self.content.columns)):
         raise ValueError("The length of variable_names is incompatible with the data provided.")
 
     #Make sure that the target variable, if provided, is in the provided variable_names, if provided
