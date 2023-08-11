@@ -138,7 +138,7 @@ class DataLoader:
     #Now we're ready to finalize creating the data object
     self.wrappedData = None
     if type == "Tabular":
-        self.wrappedData = Tabular(data = self.content, feature_columns = self.X.columns.tolist(), categorical_columns = categorical, target_column = tuple(self.y.columns))
+        self.wrappedData = Tabular(data = self.content, feature_columns = self.X.columns.tolist(), categorical_columns = categorical, target_column = self.y.columns.tolist())
     elif type == "Image":
         self.wrappedData = Image(data = self.X, batched = True)
     elif type == "Text":
