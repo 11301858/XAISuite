@@ -150,10 +150,10 @@ class DataLoader:
     Initializes data from user's system
   
     :param str id: The data file path
-    :raises NotFoundError: if provided file path is not found or is not a file
+    :raises ValueError: if provided file path is not found or is not a file
     '''
     if not os.path.isfile(id):
-        raise NotFoundError("Given data id is not a file path.")
+        raise ValueError("Given data id is not a file path.")
     
     df = pd.read_csv(id)
     self.content = df
@@ -165,14 +165,14 @@ class DataLoader:
     Initializes data from preloaded sklearn datasets
   
     :param str id: The name of the preloaded dataset
-    :raises NotFoundError: if provided preloaded data name is not found
+    :raises ValueError: if provided preloaded data name is not found
     '''
     if id in acceptedDataIDs:
         data = eval(acceptedDataIDs.get(id) + "(return_X_y=True)")
         self.content = pd.DataFrame(data[0])
         self.content["target"] = data[1]
     else:
-        raise NotFoundError("Not an accepted preloaded data id. Available preloaded data ids are: \n" + acceptedDataIDs.keys() + "\n")
+        raise ValueError("Not an accepted preloaded data id. Available preloaded data ids are: \n" + acceptedDataIDs.keys() + "\n")
   
     return 
 
@@ -182,10 +182,9 @@ class DataLoader:
   
     :param str id: The string generation command
     :param `**generateArgs`: Arguments to pass to the function represented by `id`
-    :raises NotFoundError: if provided generation configuration is not found
     '''
     data = eval(id + "(**generateArgs)")
-    if isinstance(data, tuple): #We take casre of the case that the generatorfunction returns a tuple
+    if isinstance(data, tuple): #We take care of the case that the generator function returns a tuple
         temp = pd.DataFrame(data[0])
         temp["target"] = data[1]
         self.content = temp
