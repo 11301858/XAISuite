@@ -17,24 +17,24 @@ class ModelTrainer:
     self.withData = withData
     tempModel = model
     if isinstance(model, str):
-      tempModel = eval(model + "(**modelArgs)")
+        tempModel = eval(model + "(**modelArgs)")
     elif isinstance(model, Callable):
-      tempModel = model(**modelArgs)
+        tempModel = model(**modelArgs)
 
     model = tempModel
     self.model = model
 
     try:
-      model.fit(withData.X_train, withDataLoader.y_train)
+        model.fit(withData.X_train, withDataLoader.y_train)
     except Exception as e:
-      print("Model could not be fit to data: \n" + str(e))
+        print("Model could not be fit to data: \n" + str(e))
 
     score = 0
 
     try:
-      score = model.score(withData.X_test, withData.y_test)
+        score = model.score(withData.X_test, withData.y_test)
     except:
-      score = r2_score([model.predict(x) for x in withData.X_test], withData.y_test)
+        score = r2_score([model.predict(x) for x in withData.X_test], withData.y_test)
 
     print("Model score is " + score)
 
@@ -45,43 +45,43 @@ class ModelTrainer:
     self.explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, preprocess = withData.processor, postprocess = withData.processor.invert, params = explainers if isinstance(explainers, dict) else None)")
 
   def getExplanationsFor(testIndex:Union[int, list] = None, feature_values:dict = None) -> dict:
-  '''
-  Function to get the local explanations for a particular testing instance. 
+    '''
+    Function to get the local explanations for a particular testing instance. 
 
-  :param Union[int, list], optional testIndex: The indices of the testing data for which to fetch local explanations. If empty, local explanations for all instances are returned. If None, `feature_values` is used.
-  :param dict, optional feature_values: The values of the features corresponding to a particular index. If None, `testIndex` is used. 
-  :returns dict explanations: The requested explanations
-  :raises ValueError: If neither testIndex or feature_values is passed
+    :param Union[int, list], optional testIndex: The indices of the testing data for which to fetch local explanations. If empty, local explanations for all instances are returned. If None, `feature_values` is used.
+    :param dict, optional feature_values: The values of the features corresponding to a particular index. If None, `testIndex` is used. 
+    :returns dict explanations: The requested explanations
+    :raises ValueError: If neither testIndex or feature_values is passed
   
-  '''
-  if testIndex is None and feature_values is None:
-    raise ValueError("One of testIndex or feature_values must be provided.")
+    '''
+    if testIndex is None and feature_values is None:
+        raise ValueError("One of testIndex or feature_values must be provided.")
 
-  if testIndex is not None and feature_values is not None:
-    print("Both testIndex and feature_values were provided. Using testIndex.")
+    if testIndex is not None and feature_values is not None:
+        print("Both testIndex and feature_values were provided. Using testIndex.")
 
   
 
-  if isinstance(testIndex, list) and len(testIndex) == 0:
-    return self.explainer.explain(self.withData.processor.invert(withData.processedData.X_test))
-  elif isinstance(testIndex, list) and len(testIndex) >0:
-    return self.explainer.explain(self.withData.processor.invert(numpy.array([withData.processedData.X_test[i] for i in testIndex])))
-  elif isinstance(testIndex, int):
-    return self.explainer.explain(self.withData.processor.invert(numpy.array(withData.processedData.X_test[testIndex])))
+    if isinstance(testIndex, list) and len(testIndex) == 0:
+        return self.explainer.explain(self.withData.processor.invert(withData.processedData.X_test))
+    elif isinstance(testIndex, list) and len(testIndex) >0:
+        return self.explainer.explain(self.withData.processor.invert(numpy.array([withData.processedData.X_test[i] for i in testIndex])))
+    elif isinstance(testIndex, int):
+        return self.explainer.explain(self.withData.processor.invert(numpy.array(withData.processedData.X_test[testIndex])))
 
   #By this point, we are aware that we are dealing with feature_values and testIndex must be None. 
 
-  assert(testIndex is None), "Something went wrong. Please try again."
+    assert(testIndex is None), "Something went wrong. Please try again."
 
   #First, we fetch all the feature data for the dataset
-  data = self.withData.loader.X
+    data = self.withData.loader.X
   
   #Next, we create a string that resolves into a boolean expression when evaluated and will be a search query constructed from the provided feature_values
-  query = []
-  for feature, value in feature_values.items():
-    query.append("df['" + feature + "'] == " + value)
-  queryString = " and ".join(query)
-  return self.explainer.explain(data.loc[eval(queryString)])
+    query = []
+    for feature, value in feature_values.items():
+        query.append("df['" + feature + "'] == " + value)
+    queryString = " and ".join(query)
+    return self.explainer.explain(data.loc[eval(queryString)])
 
   def getSummaryExplanations() -> dict:
     '''
@@ -90,9 +90,3 @@ class ModelTrainer:
     :returns dict explanations: The requested global explanations
     '''
     return self.explainers.explain_global()
-  
-    
-
-    
-    
-    
