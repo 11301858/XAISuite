@@ -8,7 +8,7 @@ class Data:
   :param numpy.ndarray y_train: The training targets
   :param numpy.ndarray y_test: The testing targets
   '''
-  def __init__(X_train, X_test, y_train, y_test):
+  def __init__(self, X_train, X_test, y_train, y_test):
     self.X_train = X_train
     self.X_test = X_test
     self.y_train = y_train
@@ -145,7 +145,7 @@ class DataLoader:
         self.wrappedData = Text(data = self.x.values.reshape(-1,).tolist())
     return
 
-  def initializeDataFromSystem(id:str):
+  def initializeDataFromSystem(self, id:str):
     '''
     Initializes data from user's system
   
@@ -160,7 +160,7 @@ class DataLoader:
     return
     
   
-  def initializeDataFromPreloaded(id:str):
+  def initializeDataFromPreloaded(self, id:str):
     '''
     Initializes data from preloaded sklearn datasets
   
@@ -176,7 +176,7 @@ class DataLoader:
   
     return 
 
-  def initializeDataFromGenerated(id:str, **generateArgs):
+  def initializeDataFromGenerated(self, id:str, **generateArgs):
     '''
     Initializes data from string commands
   
@@ -195,7 +195,7 @@ class DataLoader:
     return  
         
   
-  def initializeDataFromUrl(id:str):
+  def initializeDataFromUrl(self, id:str):
     '''
     Initializes data from URL
   
@@ -219,7 +219,7 @@ class DataProcessor:
   DataProcessor(..., target_transform = "component: KBins(n_bins = 5)", ratio = 0.1)
   '''
 
-  def __init__(forDataLoader:DataLoader, test_size:float = 0.2, processor:Any = None, **processorArgs):
+  def __init__(self, forDataLoader:DataLoader, test_size:float = 0.2, processor:Any = None, **processorArgs):
     self.processor = processor
     self.processedX = None
     self.processedy = None
