@@ -138,11 +138,11 @@ class DataLoader:
     #Now we're ready to finalize creating the data object
     self.wrappedData = None
     if type == "Tabular":
-        self.wrappedData = Tabular(data = self.content, feature_columns = self.x.columns, categorical_columns = categorical, target_column = self.y.columns)
+        self.wrappedData = Tabular(data = self.content, feature_columns = self.X.columns, categorical_columns = categorical, target_column = self.y.columns)
     elif type == "Image":
-        self.wrappedData = Image(data = self.x, batched = True)
+        self.wrappedData = Image(data = self.X, batched = True)
     elif type == "Text":
-        self.wrappedData = Text(data = self.x.values.reshape(-1,).tolist())
+        self.wrappedData = Text(data = self.X.values.reshape(-1,).tolist())
     return
 
   def initializeDataFromSystem(self, id:str):
