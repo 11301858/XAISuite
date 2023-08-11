@@ -268,7 +268,7 @@ class DataProcessor:
     else:
         tempProcessedData = pd.DataFrame(processedData, columns = forDataLoader.content.columns)
         self.processedy = tempProcessedData[forDataLoader.target].to_numpy()
-        self.processedX = tempProcessedData.drop(forDataLoader.target).to_numpy()
+        self.processedX = tempProcessedData.drop(forDataLoader.target, axis=1).to_numpy()
 
     self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.processedX, self.processedy, test_size = test_size)
     self.processedData = Data(X_train = self.X_train, X_test = self.X_test, y_train = self.y_train, y_test = self.y_test)
