@@ -126,7 +126,7 @@ class DataLoader:
     if variable_names != "auto": #Do nothing if the variable_names are set to auto
         self.content.columns = variable_names
 
-    if categorical not in variable_names:
+    if categorical is not None and categorical not in variable_names:
         raise ValueError("Categorical variables provided are incompatible with variable_names.")
 
     #Now we split the data to make it easier to handle:
