@@ -63,11 +63,11 @@ class ModelTrainer:
   
 
     if isinstance(testIndex, list) and len(testIndex) == 0:
-        return self.explainer.explain(self.withData.processor.invert(withData.processedData.X_test))
+        return self.explainer.explain(self.withData.processor.invert(self.withData.processedData.X_test))
     elif isinstance(testIndex, list) and len(testIndex) >0:
-        return self.explainer.explain(self.withData.processor.invert(numpy.array([withData.processedData.X_test[i] for i in testIndex])))
+        return self.explainer.explain(self.withData.processor.invert(numpy.array([self.withData.processedData.X_test[i] for i in testIndex])))
     elif isinstance(testIndex, int):
-        return self.explainer.explain(self.withData.processor.invert(numpy.array(withData.processedData.X_test[testIndex])))
+        return self.explainer.explain(self.withData.processor.invert(numpy.array(self.withData.processedData.X_test[testIndex])))
 
   #By this point, we are aware that we are dealing with feature_values and testIndex must be None. 
 
