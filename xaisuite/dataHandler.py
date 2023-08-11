@@ -64,25 +64,25 @@ class DataLoader:
     elif isinstance(data, str):
         match source:
             case "system":
-                initializeDataFromSystem(data) #The source is system, so we search for a file
+                self.initializeDataFromSystem(data) #The source is system, so we search for a file
             case "preloaded":
-                initializeDataFromPreloaded(data) #The source is preloaded, so we search for the data in a preloaded dictionary
+                self.initializeDataFromPreloaded(data) #The source is preloaded, so we search for the data in a preloaded dictionary
             case "generated":
-                initializeDataFromGenerated(data, **dataGenerationArgs) #The source is generated, and the string is the name of a function, so we pass data and the variables to pass to the data-generating function
+                self.initializeDataFromGenerated(data, **dataGenerationArgs) #The source is generated, and the string is the name of a function, so we pass data and the variables to pass to the data-generating function
             case "url":
-                initializeDataFromUrl(data) #The source is a url, so we try to get the data from the url
+                self.initializeDataFromUrl(data) #The source is a url, so we try to get the data from the url
             case "auto": #Here, the user is either unaware of where to look or just lazy :) Anyway, we need to do some hard work. We need to try each data loading method and see what sticks.
                 try:
-                    initializeDataFromSystem(data) 
+                    self.initializeDataFromSystem(data) 
                 except:
                     try:
-                      initializeDataFromPreloaded(data)
+                      self.initializeDataFromPreloaded(data)
                     except:
                         try:
-                            initializeDataFromGenerated(data, **dataGenerationArgs)
+                            self.initializeDataFromGenerated(data, **dataGenerationArgs)
                         except:
                             try:
-                                  initializeDataFromUrl(data)
+                                  self.initializeDataFromUrl(data)
                             except:
                                   raise ValueError("Data is not valid. Please make sure your data string is not misspelt and exists.") #This means we could not find the data anywhere.
                   
