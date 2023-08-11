@@ -43,74 +43,74 @@ class DataLoader:
     self.content = None
     #If data is a function that returns the dataset or a string representation of such a function, we reassign data to the return value of this function. 
     if isinstance(data, Callable):
-      data = data(**dataGenerationArgs)
+        data = data(**dataGenerationArgs)
 
 
     #If data is still a function, that means that the original value provided for data did not return a valid data value. 
     if isinstance(data, Callable):
-      raise ValueError("Callable passed to DataLoader returns another Callable instead of a string, numpy.ndarray, pd.DataFrame, or tuple.")
+        raise ValueError("Callable passed to DataLoader returns another Callable instead of a string, numpy.ndarray, pd.DataFrame, or tuple.")
 
     #If data is a DataFrame, the work is already done for us. 
     if isinstance(data, pd.DataFrame):
-      self.content = data
+        self.content = data
     #Simple case of passing the provided numpy array directly to the DataFrame constructor
     elif isinstance(data, numpy.ndarray):
-      self.content = pd.DataFrame(data)
+        self.content = pd.DataFrame(data)
     #We assume the tuple is of the form (X, y), where X and y are individually a valid data type, such as numpy.ndarray or pandas.DataFrame
     elif isinstance(data, tuple):
-      self.content = pd.DataFrame(data[0])
-      self.content["target"] = data[1]
+        self.content = pd.DataFrame(data[0])
+        self.content["target"] = data[1]
     #If the data is a string, there are multiple possibilities that we need to check. 
     elif isinstance(data, str):
-      match source:
-        case "system":
-          initializeDataFromSystem(data) #The source is system, so we search for a file
-        case "preloaded":
-          initializeDataFromPreloaded(data) #The source is preloaded, so we search for the data in a preloaded dictionary
-        case "generated":
-          initializeDataFromGenerated(data, **dataGenerationArgs) #The source is generated, and the string is the name of a function, so we pass data and the variables to pass to the data-generating function
-        case "url":
-          initializeDataFromUrl(data) #The source is a url, so we try to get the data from the url
-        case "auto": #Here, the user is either unaware of where to look or just lazy :) Anyway, we need to do some hard work. We need to try each data loading method and see what sticks.
-          try:
-            initializeDataFromSystem(data) 
-          except:
-            try:
-              initializeDataFromPreloaded(data)
-            except:
-              try:
-                initializeDataFromGenerated(data, **dataGenerationArgs)
-              except:
+        match source:
+            case "system":
+                initializeDataFromSystem(data) #The source is system, so we search for a file
+            case "preloaded":
+                initializeDataFromPreloaded(data) #The source is preloaded, so we search for the data in a preloaded dictionary
+            case "generated":
+                initializeDataFromGenerated(data, **dataGenerationArgs) #The source is generated, and the string is the name of a function, so we pass data and the variables to pass to the data-generating function
+            case "url":
+                initializeDataFromUrl(data) #The source is a url, so we try to get the data from the url
+            case "auto": #Here, the user is either unaware of where to look or just lazy :) Anyway, we need to do some hard work. We need to try each data loading method and see what sticks.
                 try:
-                  initializeDataFromUrl(data)
+                    initializeDataFromSystem(data) 
                 except:
-                  raise ValueError("Data is not valid. Please make sure your data string is not misspelt and exists.") #This means we could not find the data anywhere.
+                    try:
+                      initializeDataFromPreloaded(data)
+                    except:
+                        try:
+                            initializeDataFromGenerated(data, **dataGenerationArgs)
+                        except:
+                            try:
+                                  initializeDataFromUrl(data)
+                            except:
+                                  raise ValueError("Data is not valid. Please make sure your data string is not misspelt and exists.") #This means we could not find the data anywhere.
                   
     assert isinstance(self.content, pd.DataFrame), "A problem occurred with the data loading. If the problem persists, file an issue at github.com/11301858/XAISuite" #By this time, data should definitely be a dataframe. If it is not, something has gone horribly wrong. 
 
     if cut is not None:
-      self.content.drop(cut, axis = 1, index = None, columns = None, level = None, inplace = True, errors = 'raise') #Remove the cut variable (if it exists)
+        self.content.drop(cut, axis = 1, index = None, columns = None, level = None, inplace = True, errors = 'raise') #Remove the cut variable (if it exists)
 
     #Now, we should have a dataframe with the features and the target. If the data type is image or text, there should be only one feature
 
     if (type == "Image" or type == "Text") and len(variable_names) < 2:
-      return ValueError("For Image and Text data, there must be only one feature.")
+        return ValueError("For Image and Text data, there must be only one feature.")
 
     #Make sure that variable_names are the same length as the number of columns in the data provided. 
 
     if (len(variable_names) != len(self.content.columns)):
-      raise ValueError("The length of variable_names is incompatible with the data provided.")
+        raise ValueError("The length of variable_names is incompatible with the data provided.")
 
     #Make sure that the target variable, if provided, is in the provided variable_names, if provided
 
-    if target != "auto" && variable_names != "auto" && target not in variable_names:
-      raise ValueError("Custom target variable name not found in variable_names.")
+    if target != "auto" and variable_names != "auto" and target not in variable_names:
+        raise ValueError("Custom target variable name not found in variable_names.")
 
     #If the target variable is auto, we determine what the value of the target variable will be first:
     if target == "auto" and "target" in self.content.columns:
-      target = "target"
+        target = "target"
     elif target == "auto" and "target" not in self.content.columns:
-      target = self.content.columns[-1]
+        target = self.content.columns[-1]
 
     #If variable_names is auto and target is not auto, there is nothing that needs to be done
 
@@ -118,16 +118,16 @@ class DataLoader:
 
     #If variable_names is not auto and target is auto, we need to make sure that variable_names does not override the auto target value. 
     if variable_names != "auto" and target == "auto":
-      target = variable_names[-1] if not isinstance(variable_names, str) else variable_names
-    else if variable_names != "auto" and target == "target":
-      target = variable_names[self.content.columns.get_loc("target")]
+        target = variable_names[-1] if not isinstance(variable_names, str) else variable_names
+    elif variable_names != "auto" and target == "target":
+        target = variable_names[self.content.columns.get_loc("target")]
 
     #Now we set the variable_names.
     if variable_names != "auto": #Do nothing if the variable_names are set to auto
-      self.content.columns = variable_names
+        self.content.columns = variable_names
 
     if categorical not in variable_names:
-      raise ValueError("Categorical variables provided are incompatible with variable_names.")
+        raise ValueError("Categorical variables provided are incompatible with variable_names.")
 
     #Now we split the data to make it easier to handle:
 
@@ -138,11 +138,12 @@ class DataLoader:
     #Now we're ready to finalize creating the data object
     self.wrappedData = None
     if type == "Tabular":
-      self.wrappedData = Tabular(data = self.content, feature_columns = self.x.columns, categorical_columns = categorical, target_column = self.y.columns)
-    else if type == "Image":
-      self.wrappedData = Image(data = self.x, batched = True)
-    else if type == "Text":
-      self.wrappedData = Text(data = self.x.values.reshape(-1,).tolist())
+        self.wrappedData = Tabular(data = self.content, feature_columns = self.x.columns, categorical_columns = categorical, target_column = self.y.columns)
+    elif type == "Image":
+        self.wrappedData = Image(data = self.x, batched = True)
+    elif type == "Text":
+        self.wrappedData = Text(data = self.x.values.reshape(-1,).tolist())
+    return
 
   def initializeDataFromSystem(id:str):
     '''
@@ -152,10 +153,11 @@ class DataLoader:
     :raises NotFoundError: if provided file path is not found or is not a file
     '''
     if not os.path.isfile(id):
-      raise NotFoundError("Given data id is not a file path.")
+        raise NotFoundError("Given data id is not a file path.")
     
     df = pd.read_csv(id)
     self.content = df
+    return
     
   
   def initializeDataFromPreloaded(id:str):
@@ -166,12 +168,14 @@ class DataLoader:
     :raises NotFoundError: if provided preloaded data name is not found
     '''
     if id in acceptedDataIDs:
-      data = eval(acceptedDataIDs.get(id) + "(return_X_y=True)")
-      self.content = pd.DataFrame(data[0])
-      self.content["target"] = data[1]
+        data = eval(acceptedDataIDs.get(id) + "(return_X_y=True)")
+        self.content = pd.DataFrame(data[0])
+        self.content["target"] = data[1]
     else:
-      raise NotFoundError("Not an accepted preloaded data id. Available preloaded data ids are: \n" + acceptedDataIDs.keys() + "\n")
+        raise NotFoundError("Not an accepted preloaded data id. Available preloaded data ids are: \n" + acceptedDataIDs.keys() + "\n")
   
+    return 
+
   def initializeDataFromGenerated(id:str, **generateArgs):
     '''
     Initializes data from string commands
@@ -180,15 +184,15 @@ class DataLoader:
     :param `**generateArgs`: Arguments to pass to the function represented by `id`
     :raises NotFoundError: if provided generation configuration is not found
     '''
-      data = eval(id + "(**generateArgs)")
-      if isinstance(data, tuple): #We take casre of the case that the generatorfunction returns a tuple
+    data = eval(id + "(**generateArgs)")
+    if isinstance(data, tuple): #We take casre of the case that the generatorfunction returns a tuple
         temp = pd.DataFrame(data[0])
         temp["target"] = data[1]
         self.content = temp
-      else:
+    else:
         self.content = pd.DataFrame(data)
 
-      
+    return  
         
   
   def initializeDataFromUrl(id:str):
@@ -199,6 +203,7 @@ class DataLoader:
     '''
     df = pd.read_csv(id)
     self.content = df
+    return
     
 #Class DataLoader ends here
 
@@ -222,63 +227,51 @@ class DataProcessor:
     target_transform = None
 
     if processor is None: #Get default processor if processor is not provided
-      match forDataLoader.type:
-        case "Tabular":
-          processor = "TabularTransform"
-        case "Image":
-          processor = "Scale"
-        case "Text":
-          processor = "Tfidf"
+        match forDataLoader.type:
+            case "Tabular":
+                  processor = "TabularTransform"
+            case "Image":
+                  processor = "Scale"
+            case "Text":
+                  processor = "Tfidf"
     
     tempProcessorArgs = None
 
     if processorArgs is not None: #This is if the user passes in a component transformer as a string representation of a function
-      for variable in processorArgs.items():
-        if isinstance(variable[1], str) && "component:" in variable[1].replace(" ", ""):
-          function_string = (variable[1].replace(" ", "")).split(":", 1)[1]
-          if !function_string.endswith(")"):
-            function_string = function_string + "()"
-          actualValue = eval(function_string)
-          tempProcessorArgs.update((variable[0], actualValue))
-        else:
-          tempProcessorArgs.update(variable)
+        for variable in processorArgs.items():
+            if isinstance(variable[1], str) and "component:" in variable[1].replace(" ", ""):
+                function_string = (variable[1].replace(" ", "")).split(":", 1)[1]
+                if not function_string.endswith(")"):
+                    function_string = function_string + "()"
+                actualValue = eval(function_string)
+                tempProcessorArgs.update((variable[0], actualValue))
+            else:
+                tempProcessorArgs.update(variable)
     
     processorArgs = tempProcessorArgs
-
+    
     if forDataLoader.type != "Tabular" and processorArgs.get("target_transform") is not None:
-      target_transform = processorArgs.get("target_transform")
-      processorArgs.pop("target_transform")
-      target_transform.fit(forDataLoader.y)
-      self.processedy = target_transform.transform(forDataLoader.y)
+        target_transform = processorArgs.get("target_transform")
+        processorArgs.pop("target_transform")
+        target_transform.fit(forDataLoader.y)
+        self.processedy = target_transform.transform(forDataLoader.y)
       
         
     if isinstance(processor, str):
-      self.processor = eval(processor + "(**processorArgs)")
+        self.processor = eval(processor + "(**processorArgs)")
     elif isinstance(processor, Callable):
-      self.processor = processor(**processorArgs)
+        self.processor = processor(**processorArgs)
 
     self.processor.fit(forDataLoader.wrappedData)
     processedData = self.processor.transform(forDataLoader.wrappedData)
-     if forDataLoader.type != "Tabular":
-      self.processedX = processedData
-     else:
-       tempProcessedData = pd.DataFrame(processedData)
-       self.processedy = tempProcessedData[forDataLoader.target].to_numpy()
-       self.processedX = tempProcessedData.drop(forDataLoader.target).to_numpy()
+    if forDataLoader.type != "Tabular":
+            self.processedX = processedData
+    else:
+        tempProcessedData = pd.DataFrame(processedData)
+        self.processedy = tempProcessedData[forDataLoader.target].to_numpy()
+        self.processedX = tempProcessedData.drop(forDataLoader.target).to_numpy()
 
-     self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.processedX, self.processedy, test_size = test_size)
-     self.processedData = Data(X_train = self.X_train, X_test = self.X_test, y_train = self.y_train, y_test = self.y_test)
+    self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.processedX, self.processedy, test_size = test_size)
+    self.processedData = Data(X_train = self.X_train, X_test = self.X_test, y_train = self.y_train, y_test = self.y_test)
       
-
-    #Class DataProcessorEnds
-    
-
-    
-    
-      
-      
-    
-
-    
-
-
+#Class DataProcessorEnds
