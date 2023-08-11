@@ -25,7 +25,7 @@ class ModelTrainer:
     self.model = model
 
     try:
-        model.fit(withData.X_train, withDataLoader.y_train)
+        model.fit(withData.X_train, withData.y_train)
     except Exception as e:
         print("Model could not be fit to data: \n" + str(e))
 
