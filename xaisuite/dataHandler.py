@@ -1,5 +1,5 @@
-#Class Data starts here
-class Data:
+#Class XAIData starts here
+class XAIData:
   '''
   Class to represent data. 
 
@@ -271,6 +271,6 @@ class DataProcessor:
         self.processedX = tempProcessedData.drop(forDataLoader.target, axis=1).to_numpy()
 
     self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(self.processedX, self.processedy, test_size = test_size)
-    self.processedData = Data(X_train = self.X_train, X_test = self.X_test, y_train = self.y_train, y_test = self.y_test)
+    self.processedData = XAIData(X_train = self.X_train, X_test = self.X_test, y_train = self.y_train, y_test = self.y_test)
       
 #Class DataProcessorEnds
