@@ -132,7 +132,7 @@ class DataLoader:
     #Now we split the data to make it easier to handle:
 
     self.y = self.content[target_names]
-    self.X = self.content.drop(target_names)
+    self.X = self.content.drop(target_names, axis=1)
     self.target = target_names
 
     #Now we're ready to finalize creating the data object
