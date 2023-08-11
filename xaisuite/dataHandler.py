@@ -266,7 +266,7 @@ class DataProcessor:
     if forDataLoader.type != "Tabular":
             self.processedX = processedData
     else:
-        tempProcessedData = pd.DataFrame(processedData)
+        tempProcessedData = pd.DataFrame(processedData, columns = forDataLoader.content.columns)
         self.processedy = tempProcessedData[forDataLoader.target].to_numpy()
         self.processedX = tempProcessedData.drop(forDataLoader.target).to_numpy()
 
