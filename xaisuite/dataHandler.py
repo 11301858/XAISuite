@@ -68,7 +68,7 @@ class DataLoader:
             case "preloaded":
                 self.initializeDataFromPreloaded(data) #The source is preloaded, so we search for the data in a preloaded dictionary
             case "generated":
-                self.initializeDataFromGenerated(data, **dataGenerationArgs) #The source is generated, and the string is the name of a function, so we pass data and the variables to pass to the data-generating function
+                self.initializeDataFromGenerated(data, **dataGenerationArgs) if dataGenerationArgs is not None else self.initializeDataFromGenerated(data, None) #The source is generated, and the string is the name of a function, so we pass data and the variables to pass to the data-generating function
             case "url":
                 self.initializeDataFromUrl(data) #The source is a url, so we try to get the data from the url
             case "auto": #Here, the user is either unaware of where to look or just lazy :) Anyway, we need to do some hard work. We need to try each data loading method and see what sticks.
@@ -79,7 +79,7 @@ class DataLoader:
                       self.initializeDataFromPreloaded(data)
                     except:
                         try:
-                            self.initializeDataFromGenerated(data, **dataGenerationArgs)
+                            self.initializeDataFromGenerated(data, **dataGenerationArgs) if dataGenerationArgs is not None else self.initializeDataFromGenerated(data, None)
                         except:
                             try:
                                   self.initializeDataFromUrl(data)
@@ -183,7 +183,7 @@ class DataLoader:
     :param str id: The string generation command
     :param `**generateArgs`: Arguments to pass to the function represented by `id`
     '''
-    data = eval(id + "(**generateArgs)")
+    data = eval(id + "(**generateArgs)") if generateArgs is not None else eval(id + "()")
     if isinstance(data, tuple): #We take care of the case that the generator function returns a tuple
         temp = pd.DataFrame(data[0])
         temp["target"] = data[1]
@@ -257,9 +257,9 @@ class DataProcessor:
       
         
     if isinstance(processor, str):
-        self.processor = eval(processor + "(**processorArgs)")
+        self.processor = eval(processor + "(**processorArgs)") if processorArgs is not None else eval(processor + "()")
     elif isinstance(processor, Callable):
-        self.processor = processor(**processorArgs)
+        self.processor = processor(**processorArgs) if processorArgs is not None else processor()
 
     self.processor.fit(forDataLoader.wrappedData)
     processedData = self.processor.transform(forDataLoader.wrappedData)
