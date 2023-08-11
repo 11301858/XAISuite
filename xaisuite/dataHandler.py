@@ -103,24 +103,24 @@ class DataLoader:
 
     #Make sure that the target variable, if provided, is in the provided variable_names, if provided
 
-    if target != "auto" and variable_names != "auto" and target not in variable_names:
+    if target_names != "auto" and variable_names != "auto" and target_names not in variable_names:
         raise ValueError("Custom target variable name not found in variable_names.")
 
     #If the target variable is auto, we determine what the value of the target variable will be first:
-    if target == "auto" and "target" in self.content.columns:
-        target = "target"
-    elif target == "auto" and "target" not in self.content.columns:
-        target = self.content.columns[-1]
+    if target_names == "auto" and "target" in self.content.columns:
+        target_names = "target"
+    elif target_names == "auto" and "target" not in self.content.columns:
+        target_names = self.content.columns[-1]
 
     #If variable_names is auto and target is not auto, there is nothing that needs to be done
 
     
 
     #If variable_names is not auto and target is auto, we need to make sure that variable_names does not override the auto target value. 
-    if variable_names != "auto" and target == "auto":
-        target = variable_names[-1] if not isinstance(variable_names, str) else variable_names
-    elif variable_names != "auto" and target == "target":
-        target = variable_names[self.content.columns.get_loc("target")]
+    if variable_names != "auto" and target_names == "auto":
+        target_names = variable_names[-1] if not isinstance(variable_names, str) else variable_names
+    elif variable_names != "auto" and target_names == "target":
+        target_names = variable_names[self.content.columns.get_loc("target")]
 
     #Now we set the variable_names.
     if variable_names != "auto": #Do nothing if the variable_names are set to auto
@@ -131,9 +131,9 @@ class DataLoader:
 
     #Now we split the data to make it easier to handle:
 
-    self.y = self.content[target]
-    self.X = self.content.drop(target)
-    self.target = target
+    self.y = self.content[target_names]
+    self.X = self.content.drop(target_names)
+    self.target = target_names
 
     #Now we're ready to finalize creating the data object
     self.wrappedData = None
