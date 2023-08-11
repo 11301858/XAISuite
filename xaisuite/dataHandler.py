@@ -43,7 +43,7 @@ class DataLoader:
     self.content = None
     #If data is a function that returns the dataset or a string representation of such a function, we reassign data to the return value of this function. 
     if isinstance(data, Callable):
-        data = data(**dataGenerationArgs)
+        data = data(**dataGenerationArgs) if dataGenerationArgs is not None else data()
 
 
     #If data is still a function, that means that the original value provided for data did not return a valid data value. 
