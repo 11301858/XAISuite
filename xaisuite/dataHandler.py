@@ -28,13 +28,13 @@ class DataLoader:
   :param str, optional source: The source of the data. Either "auto", "system", "preloaded", "generated", or "url". If "auto", the source will be inferred based on `data`. By default, "auto"
   :param str, optional type: The type of data. Either "Tabular", "Image", or "Text". By default, "Tabular". If "Text" or "Image", only one feature is allowed. 
   :param Union[str, list], optional variable_names: The variables in the dataset excluding `cut`, in the order that they appear in the data. By default, set to "auto" and inferred. 
-  :param Union[str, list], optional target_names: The target variable(s). By default, set to "auto" and inferred
+  :param Union[str, int], optional target_names: The target variable(s). By default, set to "auto" and inferred
   :param Union[str, list], optional cut: Variables to drop from the data. By default, None. 
   :param Union[str, list], optional categorical: If type == "Tabular", variables that contain categorical data.
   :param `**dataGenerationArgs`: Additional arguments to pass in if `data` is Callable. 
   :raises ValueError: if data cannot be resolved or if invalid arguments are passed. 
   '''
-  def __init__(self, data:Union[str, Callable, numpy.ndarray, pd.DataFrame, tuple], source:str = "auto", type:str = "Tabular", variable_names:Union[str, list] = "auto", target_names:Union[str, list] = "auto", cut:Union[str, list] = None, categorical:Union[str, list] = None, **dataGenerationArgs):
+  def __init__(self, data:Union[str, Callable, numpy.ndarray, pd.DataFrame, tuple], source:str = "auto", type:str = "Tabular", variable_names:Union[str, list] = "auto", target_names:Union[str, int] = "auto", cut:Union[str, list] = None, categorical:Union[str, list] = None, **dataGenerationArgs):
     '''
     Class constructor
     '''
