@@ -10,7 +10,7 @@ class ModelTrainer:
   Ex. explainers = ["lime", "shap", "mace"] or explainers = {"lime": {"kernel_width": 3}, "shap": {"nsamples": 100}, "mace": None}
   '''
 
-  def __init__(model:Any, withData: DataProcessor, taskType:str = "Tabular", task:str = "regression", explainers:Union[list, dict] = None, **modelArgs):
+  def __init__(self, model:Any, withData: DataProcessor, taskType:str = "Tabular", task:str = "regression", explainers:Union[list, dict] = None, **modelArgs):
     '''
     Class constructor
     '''
@@ -44,7 +44,7 @@ class ModelTrainer:
 
     self.explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, preprocess = withData.processor, postprocess = withData.processor.invert, params = explainers if isinstance(explainers, dict) else None)")
 
-  def getExplanationsFor(testIndex:Union[int, list] = None, feature_values:dict = None) -> dict:
+  def getExplanationsFor(self, testIndex:Union[int, list] = None, feature_values:dict = None) -> dict:
     '''
     Function to get the local explanations for a particular testing instance. 
 
@@ -83,7 +83,7 @@ class ModelTrainer:
     queryString = " and ".join(query)
     return self.explainer.explain(data.loc[eval(queryString)])
 
-  def getSummaryExplanations() -> dict:
+  def getSummaryExplanations(self) -> dict:
     '''
     Returns global explanations
 
