@@ -89,4 +89,4 @@ class ModelTrainer:
 
     :returns dict explanations: The requested global explanations
     '''
-    return self.explainers.explain_global()
+    return self.explainer.explain_global()
