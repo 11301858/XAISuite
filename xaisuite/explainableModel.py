@@ -19,7 +19,12 @@ class ModelTrainer:
     self.withData = withData
     tempModel = model
     if isinstance(model, str):
+      try:
         tempModel = eval(model + "(**modelArgs)")
+      except:
+        if model in linkModels.keys():
+          exec("from " + linkModel.get(model) + " import*")
+          tempModel = eval(model + "(**modelArgs)")
     elif isinstance(model, Callable):
         tempModel = model(**modelArgs)
 
