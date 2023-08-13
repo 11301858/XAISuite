@@ -7,23 +7,23 @@ XAISuite
    :show-inheritance:
 
 .. autosummary::
-   dataLoader
-   hub
-   analyzer
+   dataHandler
+   explainableModel
+   insightGenerator
    
 
-.. automodule:: xaisuite.dataLoader
+.. automodule:: xaisuite.dataHandler
    :members:
    :undoc-members:
    :show-inheritance:
 
 
-.. automodule:: xaisuite.hub
+.. automodule:: xaisuite.explainableModel
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: xaisuite.analyzer
+.. automodule:: xaisuite.insightGenerator
    :members:
    :undoc-members:
    :show-inheritance: 
