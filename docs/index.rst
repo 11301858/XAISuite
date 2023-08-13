@@ -100,13 +100,13 @@ A paper proposing and using XAISuite to compare explanatory methods is still in 
 
 ```
 @article{mitra2022-xaisuite,
-  author    = {Shreyan Mitra and Leilani Gilpin},
-  title     = {The XAISuite Framework and Implications on Explanatory System Dissonance},
-  year      = {2022},
-  doi       = {},
-  url       = {},
-  archivePrefix = {},
-  eprint    = {},
+author    = {Shreyan Mitra and Leilani Gilpin},
+title     = {The XAISuite Framework and Implications on Explanatory System Dissonance},
+year      = {2022},
+doi       = {},
+url       = {},
+archivePrefix = {},
+eprint    = {},
 }
 ```
 The paper uses XAISuite to compare SHAP and LIME explanations for different machine learning models. 
