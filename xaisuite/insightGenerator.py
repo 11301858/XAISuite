@@ -1,3 +1,5 @@
+from xaisuiteFoundation import*
+
 class InsightGenerator:
   '''
   Class to generate insights based on explanation results. This was first released in version 2.0.0 and is a work in progress.
