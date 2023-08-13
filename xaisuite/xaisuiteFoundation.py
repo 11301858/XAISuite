@@ -1,19 +1,26 @@
 #Needed Libraries
 
-#Data Storage, Export, Access, and Visualization
+#Data Storage, Export, and Access
 import pandas as pd
 import csv
-from pathlib import Path
-import matplotlib.pyplot as plt
-import ast
-import numpy as np
+import os
+
+from omnixai.data.tabular import*
+from omnixai.data.image import*
+from omnixai.data.text import*
+from omnixai.preprocessing.tabular import*
+from omnixai.preprocessing.image import*
+from omnixai.preprocessing.text import*
+
+
+import numpy
 from sklearn.datasets import*
 
 #Machine Learning Models and Training
 from sklearn.model_selection import train_test_split
 
-#I decided to trade-off memory for security. This is a list of all accepted models. Without this, the program works perfectly, but malicious users could hijack the system to execute their own code.
-acceptedModels = {"SVC": "sklearn.svm", "NuSVC": "sklearn.svm", "LinearSVC": "sklearn.svm", "SVR": "sklearn.svm", "NuSVR": "sklearn.svm", "LinearSVR": "sklearn.svm", 
+
+linkModels = {"SVC": "sklearn.svm", "NuSVC": "sklearn.svm", "LinearSVC": "sklearn.svm", "SVR": "sklearn.svm", "NuSVR": "sklearn.svm", "LinearSVR": "sklearn.svm", 
                  "AdaBoostClassifier": "sklearn.ensemble", "AdaBoostRegressor": "sklearn.ensemble", "BaggingClassifier": "sklearn.ensemble", "BaggingRegressor": "sklearn.ensemble",
                  "ExtraTreesClassifier": "sklearn.ensemble", "ExtraTreesRegressor": "sklearn.ensemble", 
                  "GradientBoostingClassifier": "sklearn.ensemble", "GradientBoostingRegressor": "sklearn.ensemble",
@@ -56,15 +63,13 @@ acceptedModels = {"SVC": "sklearn.svm", "NuSVC": "sklearn.svm", "LinearSVC": "sk
                   "NeuralNetClassifier": "skorch.NeuralNetClassifier", "KerasClassifier": "scikeras.wrappers", "KerasRegressor": "scikeras.wrappers"
                  }
 
-from sklearn.base import is_classifier, is_regressor #For model type identification. Necessary for explanation generation and to ensure model is not unsupervised
-
-#OmniXAI Explanatory Models and Visualization
-from omnixai.data.tabular import Tabular
-from sklearn.preprocessing import*
-from omnixai.preprocessing.base import Identity
-from omnixai.preprocessing.tabular import TabularTransform
-from omnixai.explainers.tabular import TabularExplainer
-from omnixai.visualization.dashboard import Dashboard
+#OmniXAI Explanatory Models
+from omnixai.explainers.tabular import*
+from omnixai.explainers.vision import*
+from omnixai.explainers.nlp import*
 
 #For documentation
-from typing import Union, Dict
+from typing import*
+
+#For calculations
+from math import*

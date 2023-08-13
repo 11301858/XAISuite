@@ -8,3 +8,4 @@ class NullRegressor(RegressorMixin):
         # Give back the mean of y, in the same
         # length as the number of X observations
         return np.ones(X.shape[0]) * self.y_bar_
+   

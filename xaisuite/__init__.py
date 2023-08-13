@@ -9,7 +9,8 @@ else:
     __version__ = dist.version
 
 #Package Modules
-from .dataLoader import load_data_CSV, load_data_sklearn, generate_data
-from .hub import train_and_explainModel
-from .analyzer import compare_explanations, compare_explanationssinglef, maxImportanceScoreGenerator
+from .dataHandler import*
+from .explainableModel import*
+from .insightGenerator import*
 from models import*
+from explainers import*
