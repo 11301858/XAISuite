@@ -1,3 +1,5 @@
+from xaisuiteFoundation import*
+
 class ModelTrainer:
   '''
   Class to train an explainable machine learning model.
