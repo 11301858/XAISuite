@@ -140,7 +140,7 @@ class DataLoader:
     if type == "Tabular":
         self.wrappedData = Tabular(data = self.content, categorical_columns = categorical, target_column = self.target)
     elif type == "Image":
-        self.wrappedData = Image(data = self.X, batched = True)
+        self.wrappedData = Image(data = self.X.to_numpy(), batched = True)
     elif type == "Text":
         self.wrappedData = Text(data = self.X.values.reshape(-1,).tolist())
     return
