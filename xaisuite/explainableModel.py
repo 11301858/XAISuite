@@ -13,7 +13,7 @@ class ModelTrainer:
   Ex. explainers = ["lime", "shap", "mace"] or explainers = {"lime": {"kernel_width": 3}, "shap": {"nsamples": 100}, "mace": None}
   '''
 
-  def __init__(self, model:Any, withData: .dataHandler.DataProcessor, taskType:str = "Tabular", task:str = "regression", explainers:Union[list, dict] = None, **modelArgs):
+  def __init__(self, model:Any, withData: DataProcessor, taskType:str = "Tabular", task:str = "regression", explainers:Union[list, dict] = None, **modelArgs):
     '''
     Class constructor
     '''
