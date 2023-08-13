@@ -1,4 +1,4 @@
-from xaisuiteFoundation import*
+from .xaisuiteFoundation import*
 
 class ModelTrainer:
   '''
