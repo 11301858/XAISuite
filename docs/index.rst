@@ -80,14 +80,13 @@ Below, we include an example of explaining a Tensorflow Keras Model as a demonst
 ```python
 from xaisuite import*
 from sklearn.svm import*
-
 z = DataLoader(make_classification, n_samples = 700)
 y = DataProcessor(z, processor = "TabularTransform")
 x = ModelTrainer(SVC(), y, explainers = ["lime", "shap"])
 x.getExplanationsFor([])["lime"].ipython_plot(20)
 a = InsightGenerator(x.getExplanationsFor([]))
 corr = a.calculateExplainerSimilarity("lime", "shap")
-```
+'''
 
 ## How to Contribute
 
