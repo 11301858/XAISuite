@@ -77,7 +77,7 @@ Follow the instructions in individual folder READMEs for further installation in
 Below, we include an example of explaining a Tensorflow Keras Model as a demonstration of what XAISuite can accomplish. This example was partially taken from the SciKeras Getting Started Example to help beginners learning Tensorflow.
 
 
-```python
+``` python
 from xaisuite import*
 from sklearn.svm import*
 z = DataLoader(make_classification, n_samples = 700)
@@ -86,7 +86,7 @@ x = ModelTrainer(SVC(), y, explainers = ["lime", "shap"])
 x.getExplanationsFor([])["lime"].ipython_plot(20)
 a = InsightGenerator(x.getExplanationsFor([]))
 corr = a.calculateExplainerSimilarity("lime", "shap")
-'''
+```
 
 ## How to Contribute
 
