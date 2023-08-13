@@ -96,35 +96,15 @@ Follow the instructions in individual folder READMEs for further installation in
 Below, we include an example of explaining a Tensorflow Keras Model as a demonstration of what XAISuite can accomplish. This example was partially taken from the SciKeras Getting Started Example to help beginners learning Tensorflow.
 
 ```python
-import numpy as np
-from sklearn.datasets import make_classification
-from tensorflow import keras
 from xaisuite import*
+from sklearn.svm import*
 
-def get_model(hidden_layer_dim, meta):
-    # note that meta is a special argument that will be
-    # handed a dict containing input metadata
-    n_features_in_ = meta["n_features_in_"]
-    X_shape_ = meta["X_shape_"]
-    n_classes_ = meta["n_classes_"]
-
-    model = keras.models.Sequential()
-    model.add(keras.layers.Dense(n_features_in_, input_shape=X_shape_[1:]))
-    model.add(keras.layers.Activation("relu"))
-    model.add(keras.layers.Dense(hidden_layer_dim))
-    model.add(keras.layers.Activation("relu"))
-    model.add(keras.layers.Dense(n_classes_))
-    model.add(keras.layers.Activation("softmax"))
-    return model
-
-
-train_and_explainModel("KerasClassifier"
-                      , generate_data("classification", "target", n_samples = 1000, n_features = 20, n_informative=10, random_state=0)
-                      , build_fn=get_model
-                      , loss="sparse_categorical_crossentropy"
-                      , hidden_layer_dim=100
-                      , epochs = 51
-                      )
+z = DataLoader(make_classification, n_samples = 700)
+y = DataProcessor(z, processor = "TabularTransform")
+x = ModelTrainer(SVC(), y, explainers = ["lime", "shap"])
+x.getExplanationsFor([])["lime"].ipython_plot(20)
+a = InsightGenerator(x.getExplanationsFor([]))
+corr = a.calculateExplainerSimilarity("lime", "shap")
 ```
 
 ## How to Contribute
