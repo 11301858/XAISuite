@@ -9,8 +9,7 @@ class ModelTrainer:
   :param DataProcessor withData: The data that will be used to train and test the model
   :param str, optional taskType: The type of task that the model performs. By default, "Tabular". Other options are "Vision" and "NLP"
   :param str, optional task: The task that the model performs. By default, "regression". Other option is "classification"
-  :param list, dict, optional explainers: A list of explainer names or, if specific parameters need to be passed to the explainers, a dict that contains the explainer names and explainer arguments. 
-  Ex. explainers = ["lime", "shap", "mace"] or explainers = {"lime": {"kernel_width": 3}, "shap": {"nsamples": 100}, "mace": None}
+  :param list, dict, optional explainers: A list of explainer names or, if specific parameters need to be passed to the explainers, a dict that contains the explainer names and explainer arguments. Ex. explainers = ["lime", "shap", "mace"] or explainers = {"lime": {"kernel_width": 3}, "shap": {"nsamples": 100}, "mace": None}
   '''
 
   def __init__(self, model:Any, withData: DataProcessor, taskType:str = "Tabular", task:str = "regression", explainers:Union[list, dict] = None, **modelArgs):
