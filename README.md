@@ -58,6 +58,8 @@ A key part of XAISuite is flexibility, and, in our mission to make machine learn
 
 ![XAISuite options](https://user-images.githubusercontent.com/66180831/222034540-5ae92a6f-2100-4c5c-ad60-aa47857fef4c.png)
 
+A note on formats: Version upgrades for different formats happen independently. For example, XAISuiteCLI and XAISuiteBlock may crash on the latest version of XAISuite. 
+
 
 As far as we know, XAISuite is among the first comprehensive libraries that allow users to both train and explain models, and the first to provide utilities for explanation comparison. XAISuite was created with a focus on users, and our interface reflects that.
 
