@@ -1,4 +1,5 @@
 from .xaisuiteFoundation import*
+import collections
 
 class InsightGenerator:
   '''
@@ -8,9 +9,9 @@ class InsightGenerator:
   '''
   def __init__(self, explanations:collections.OrderedDict):
     self.explanations = explanations
-    self.explainers = list(explanations.keys())
+    self.explainers = list(self.explanations.keys())
     self.explainers.remove('predict')
-    self.num_instances = len(explanations.get(explainers[0] if len(explainers) != 0 else "No local explanations").get_explanations())
+    self.num_instances = len(self.explanations.get(self.explainers[0] if len(self.explainers) != 0 else "No local explanations").get_explanations())
 
   def calculateExplainerSimilarity(self, explainer1:str, explainer2:str) -> float:
     '''
@@ -21,8 +22,8 @@ class InsightGenerator:
     '''
 
     sum = 0
-    for i in range (0, num_instances):
-      sum + = self.getShreyanDistance(self.explanations.get(explainer1).get_explanations()[i].get("features"), self.explanations.get(explainer2).get_explanations()[i].get("features"))
+    for i in range (0, self.num_instances):
+      sum += self.getShreyanDistance(self.explanations.get(explainer1).get_explanations()[i].get("features"), self.explanations.get(explainer2).get_explanations()[i].get("features"))
     return sum / self.num_instances
     
 
@@ -40,7 +41,7 @@ class InsightGenerator:
     x = len(vec1)
     max = self.__sigma(0, (x/2) - 1, lambda i: ((x - 2*i - 1) * (2*x - 4*i - 1) / (x**2))) #This is the maximum possible Shreyan distance between two ordered vectors of size x
 
-    enumerated_elements = {index + 1:value for index, value in enumerated(vec1)}
+    enumerated_elements = {index + 1:value for index, value in enumerate(vec1)}
 
     key_list = list(enumerated_elements.keys())
     val_list = list(enumerated_elements.values())
