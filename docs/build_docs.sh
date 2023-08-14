@@ -64,9 +64,8 @@ for version in $(git tag --list 'v[0-9]*'); do
     done
     git fetch
     git checkout "tags/${version}" -- "${checkout_files[@]}"
-    export current_version=${version}
-    pip3 install -e 
-    pip3 install ".[all]"
+    export current_version=${version} 
+    pip3 install -e ".[all]"
     sphinx-build -b html "${DIRNAME}" "${DIRNAME}/_build/html/${current_version}" -W --keep-going
     rm -rf "${DIRNAME}/_build/html/${current_version}/.doctrees"
     pip3 uninstall -y XAISuite
