@@ -6,124 +6,202 @@
 
    <p>
 
-XAISuite: Training and Explaining Machine Learning Models
-=========================================================
-Welcome to XAISuite's documentation!
+Introducing XAISuite Version 2.0: Comparing Machine Learning Explainers
+=======================================================================
 
-But first, let's get past the formalities. Here's a brief overview of this project.
+.. container::
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Installation](#installation)
-3. [Getting Started](#getting-started)
-4. [How to Contribute](#how-to-contribute)
-5. [Technical Report and Citing XAISuite](#technical-report-and-citing-xaisuite)
+   | 
+   | 
 
+Scroll to the bottom of the page if you just want to delve right in to the technical documentation, without the introductions. 
 
-## Introduction
+Welcome to our source page. Our mission is to make machine learning
+explanation easy and available to all! Whether you are a data scientist,
+researcher, or just a person curious about how you can gain a better
+understanding of artificial intelligence, XAISuite is the library for
+you. Please be sure to contribute and contact us if you have any
+questions.
 
-XAISuite (E<b>x</b>planatory <b>A</b>rtificial <b>I</b>ntelligence <b>Suite</b>) is a library for *convenient* training and explaining machine learning models for tabular datasets in Python (Note the emphasis on the word convenient). It provides a unified interface for training and explaining any machine learning model using at most just a line of code. It allows users to easily compare the results of different explainers. It is based on the XAISuite framework, which we propose in our paper. 
+Table of Contents
+-----------------
 
-What are explanations? Machine learning models are opaque models, so we have no idea what's going on inside of them. Explainers help us understand machine learning models we have trained and therefore give us aa better idea of why machine learning models fail in particular instances.
+1. `Introduction <#introduction>`__
+2. `Installation <#installation>`__
+3. `Getting Started <#getting-started>`__
+4. `How to Contribute <#how-to-contribute>`__
+5. `Technical Report and Citing
+   XAISuite <#technical-report-and-citing-xaisuite>`__
 
-XAISuite accomplishes machine learning model training and explanation generation in three steps: (1) data loading, (2) model training and explanation generation, and (3) explanation comparison. Each of these steps are delved into more detail in our [documentation](https://11301858.github.io/XAISuite/v0.6.7-beta/index.html) and in the demo tutorials. A detailed flowchart is presented in our paper.
+Introduction
+------------
 
-A key part of XAISuite is flexibility, and, in our mission to make machine learning available to all, we have made or plan to make XAISuite available in the following formats:
+XAISuite (Explanatory Artificial Intelligence Suite) is a library for
+comparing explanatory systems. In addition, it streamlines the training
+and explanation generation process into one line of code so that users
+can focus on insights instead of the mechanics of how models are trained
+and explained.
+
+While we would like to highlight the fact that you only need one line of
+code for training and explaining your models with XAISuite, our main
+contribution is a novel algorithm that outputs a similarity value
+between two ordered vectors containing the outputs of machine learning
+explainers.
+
+But first, what are explainers? Machine learning models are opaque
+models, so we have no idea what’s going on inside of them. Explainers
+help us understand machine learning models we have trained and therefore
+give us aa better idea of why machine learning models fail in particular
+instances.
+
+XAISuite accomplishes machine learning model training and explanation
+generation in three steps: (1) data loading, (2) data processing, and
+(3) model training and explanation generation. Each of these steps are
+delved into more detail in our
+`documentation <https://11301858.github.io/XAISuite>`__, in the demo
+tutorials, and are overviewed in the graphic below:
+
+.. figure::
+   https://github.com/11301858/XAISuite/assets/66180831/c613e71b-6fa8-4d06-91cb-b8b0f3edb016
+   :alt: A schematic of XAISuite functionalities
+
+   A schematic of XAISuite functionalities
+
+A key part of XAISuite is flexibility, and, in our mission to make
+machine learning available to all, we have made XAISuite available in
+the following formats:
 
 1. As a Python Library (with XAISuite and XAISuiteGUI)
 2. On the Command Line (with XAISuiteCLI)
 3. In block-code (with XAISuiteBlock)
-4. In the XAI Programming Language (Pending)
 
-![XAISuite options](https://user-images.githubusercontent.com/66180831/222034540-5ae92a6f-2100-4c5c-ad60-aa47857fef4c.png)
+.. figure::
+   https://user-images.githubusercontent.com/66180831/222034540-5ae92a6f-2100-4c5c-ad60-aa47857fef4c.png
+   :alt: XAISuite options
 
-A note on formats: Version upgrades for different formats happen independently. For example, XAISuiteCLI and XAISuiteBlock may crash on the latest version of XAISuite. 
+   XAISuite options
 
+*A note on formats: Version upgrades for different formats happen
+independently. For example, XAISuiteCLI and XAISuiteBlock may crash on
+the latest version of XAISuite.*
 
-As far as we know, XAISuite is among the first comprehensive libraries that allow users to both train and explain models, and the first to provide utilities for explanation comparison. XAISuite was created with a focus on users, and our interface reflects that.
+As far as we know, XAISuite is among the first comprehensive libraries
+that allow users to both train and explain models, and the first to
+provide utilities for explanation comparison. XAISuite was created with
+a focus on users, and our interface reflects that. We also pioneered the
+ability to interact with machine learning models on the command line.
 
-We also pioneered the ability to interact with machine learning models on the command line. 
-
-## Installation
+Installation
+------------
 
 You can install the ``XAI Suite`` through PyPI:
 
-``
-pip install XAISuite
-``
+``pip install XAISuite``
 
-This will automatically install the latest version and is the reccomended way to download the library. The version on Github may not be stable. If yu already have XAISuite and want to upgrade it, do:
+This will automatically install the latest version and is the
+reccomended way to download the library. The version on Github may not
+be stable. If yu already have XAISuite and want to upgrade it, do:
 
-``
-pip install XAISuite --upgrade
-``
-Follow the instructions in individual folder READMEs for further installation instructions. For example, to install the command-line tool for XAISuite, do
+``pip install XAISuite --upgrade`` Follow the instructions in individual
+folder READMEs for further installation instructions. For example, to
+install the command-line tool for XAISuite, do
 
+``brew install xaisuitecli``
 
-``
-brew install xaisuitecli
-``
+XAISuite 2.0.0 is not backward-compatible with XAISuite 1.0.8. If you
+want to install version 1.0.8, simply type:
+``pip install XAISuite==1.0.8``
 
-## Getting Started
+Getting Started
+---------------
 
-For comprehensive example code and an introduction to the library, see the Demo Folder. The Demo folder is never fully complete and we will add more and more tutorials as the project progresses.
+For comprehensive example code and an introduction to the library, see
+the Demo Folder. The Demo folder is never fully complete and we will add
+more and more tutorials as the project progresses.
 
-If you are looking for a model or dataset to use, [sklearn](https://scikit-learn.org/stable/) has several cool options.
+If you are looking for a model or dataset to use,
+`sklearn <https://scikit-learn.org/stable/>`__ has several cool options.
 
-Examples of graphs and tables generated by the XAISuite Library can be found [here](https://drive.google.com/drive/u/2/folders/10t4_GYDPJl2sM9hDOuezbum-yqKpN4fc).
+Examples of graphs and tables generated by the XAISuite version 1.0.8
+can be found
+[here].(https://drive.google.com/drive/u/2/folders/10t4_GYDPJl2sM9hDOuezbum-yqKpN4fc).
 
-Follow the instructions in individual folder READMEs for further installation instructions.
+Follow the instructions in individual folder READMEs for further
+installation instructions.
 
-Below, we include an example of explaining a Tensorflow Keras Model as a demonstration of what XAISuite can accomplish. This example was partially taken from the SciKeras Getting Started Example to help beginners learning Tensorflow.
+Below, we include an example of explaining a Support Vector Classifier
+Model as a demonstration of what XAISuite can accomplish.
 
+.. code:: python
 
-``` python
-from xaisuite import*
-from sklearn.svm import*
-z = DataLoader(make_classification, n_samples = 700)
-y = DataProcessor(z, processor = "TabularTransform")
-x = ModelTrainer(SVC(), y, explainers = ["lime", "shap"])
-x.getExplanationsFor([])["lime"].ipython_plot(20)
-a = InsightGenerator(x.getExplanationsFor([]))
-corr = a.calculateExplainerSimilarity("lime", "shap")
-```
+   from xaisuite import*
+   from sklearn.svm import*
 
-## How to Contribute
+   z = DataLoader(make_classification, n_samples = 700)
+   y = DataProcessor(z, processor = "TabularTransform")
+   x = ModelTrainer(SVC(), y, explainers = ["lime", "shap"])
+   x.getExplanationsFor([])["lime"].ipython_plot(20)
+   a = InsightGenerator(x.getExplanationsFor([]))
+   corr = a.calculateExplainerSimilarity("lime", "shap")
 
-We welcome the contribution from the open-source community to improve the library!
+   #You can condense this in one line
 
-To add a new functionality into the library or point out a flaw, please create a new issue on Github. We'll try to look into your requests as soon as we can. Keep in mind that, as this is an open-source project, you release any copyright protection over code you may contribute to the XAISuite Project.
+   corr = InsightGenerator(ModelTrainer(SVC(), DataProcessor(DataLoader(make_classification, n_samples = 700) , processor = "TabularTransform"), explainers = ["lime", "shap"]).getExplanationsFor([])).calculateExplainerSimilarity("lime", "shap")
 
-## Technical Report and Citing XAISuite
-A paper proposing and using XAISuite to compare explanatory methods is still in pre-publication. Use the following BibTex to cite XAISuite for now:
+For example involving PyTorch, SciKeras, and custom models, check out
+the tutorials and example code in the Demo folder.
 
-```
-@article{mitra2022-xaisuite,
-author    = {Shreyan Mitra and Leilani Gilpin},
-title     = {The XAISuite Framework and Implications on Explanatory System Dissonance},
-year      = {2022},
-doi       = {},
-url       = {},
-archivePrefix = {},
-eprint    = {},
-}
-```
-The paper uses XAISuite to compare SHAP and LIME explanations for different machine learning models. 
+How to Contribute
+-----------------
 
-## Contact Us
-If you have any questions, comments or suggestions, please do not hesitate to contact us at xaisuite@gmail.com 
+We welcome the contribution from the open-source community to improve
+the library!
 
-## License
+To add a new functionality into the library or point out a flaw, please
+create a new issue on Github. We’ll try to look into your requests as
+soon as we can. Keep in mind that, as this is an open-source project,
+you release any copyright protection over code you may contribute to the
+XAISuite Project.
 
-This work is licensed under a [BSD 3-Clause License](LICENSE). 
+Technical Report and Citing XAISuite
+------------------------------------
 
+Use the following BibTex to cite XAISuite:
 
+For XAISuite v1.0.8:
+
+::
+
+   @misc{mitra2023xaisuite,
+         title={The XAISuite framework and the implications of explanatory system dissonance}, 
+         author={Shreyan Mitra and Leilani Gilpin},
+         year={2023},
+         eprint={2304.08499},
+         archivePrefix={arXiv},
+         primaryClass={cs.LG}
+   }
+
+For XAISuite v2.0:
+
+::
+
+   @misc{mitra2023xaisuite,
+         title={Paper pending}, 
+         author={Shreyan Mitra and Leilani Gilpin},
+         year={2023},
+         eprint={},
+         archivePrefix={arXiv},
+         primaryClass={cs.LG}
+   }
+
+Contact Us
+----------
+
+If you have any questions, comments or suggestions, please do not
+hesitate to contact us at xaisuite@gmail.com
 
 Documentation
---------------
-
-Finally, what you were really looking for! Click the following links for access to the tutorial and XAISuite documentation. 
-
+----------
 .. toctree::
    :maxdepth: 2
 
