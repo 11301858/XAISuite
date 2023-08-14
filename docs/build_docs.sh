@@ -41,7 +41,7 @@ sphinx-build -M clean "${DIRNAME}" "${DIRNAME}/_build"
 # Build API docs for current head
 export current_version="latest"
 pip3 install ".[all]"
-sphinx-build -b html "${DIRNAME}" "${DIRNAME}/_build/html/${current_version}" -W --keep-going
+sphinx-build -a -b html "${DIRNAME}" "${DIRNAME}/_build/html/${current_version}" -W --keep-going
 rm -rf "${DIRNAME}/_build/html/${current_version}/.doctrees"
 pip3 uninstall -y xaisuite
 
