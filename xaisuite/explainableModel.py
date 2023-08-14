@@ -4,6 +4,7 @@ from .dataHandler import DataProcessor
 class ModelTrainer:
   '''
   Class to train an explainable machine learning model.
+  
   :param Any model: The string name of the model, the function returning the model, or the model Any itself. The model function must have fit() and predict() functions. A score() function is optional.
   :param DataProcessor withData: The data that will be used to train and test the model
   :param str, optional taskType: The type of task that the model performs. By default, "Tabular". Other options are "Vision" and "NLP"
