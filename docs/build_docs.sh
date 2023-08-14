@@ -51,10 +51,6 @@ pip3 uninstall -y XAISuite
 versions=()
 checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "xaisuitegui" "xaisuitecli" "setup.py")
 for version in $(git tag --list 'v[0-9]*'); do
-    if [[ "$version" != "v2.0.0" ]]; then #Skip intermediate versions
-      echo Skipping $version
-      continue
-    fi
     versions+=("$version")
     git fetch
     git checkout -b "${version}_local_docs_only"
