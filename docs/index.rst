@@ -62,7 +62,7 @@ delved into more detail in our
 tutorials, and are overviewed in the graphic below:
 
 .. figure::
-   https://github.com/11301858/XAISuite/assets/66180831/c613e71b-6fa8-4d06-91cb-b8b0f3edb016
+   https://github.com/11301858/XAISuite/assets/66180831/b45ca3b3-10d3-458a-a2c6-6d25bc5abbd8
    :alt: A schematic of XAISuite functionalities
 
    A schematic of XAISuite functionalities
@@ -75,11 +75,7 @@ the following formats:
 2. On the Command Line (with XAISuiteCLI)
 3. In block-code (with XAISuiteBlock)
 
-.. figure::
-   https://user-images.githubusercontent.com/66180831/222034540-5ae92a6f-2100-4c5c-ad60-aa47857fef4c.png
-   :alt: XAISuite options
 
-   XAISuite options
 
 *A note on formats: Version upgrades for different formats happen
 independently. For example, XAISuiteCLI and XAISuiteBlock may crash on
