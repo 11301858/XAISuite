@@ -51,7 +51,9 @@ But first, what are explainers? Machine learning models are opaque models, so we
 
 XAISuite accomplishes machine learning model training and explanation generation in three steps: (1) data loading, (2) data processing, and (3) model training and explanation generation. Each of these steps are delved into more detail in our [documentation](https://11301858.github.io/XAISuite), in the demo tutorials, and are overviewed in the graphic below: 
 
-![A schematic of XAISuite functionalities](https://github.com/11301858/XAISuite/assets/66180831/c613e71b-6fa8-4d06-91cb-b8b0f3edb016)
+
+![A schematic of XAISuite functionalities](https://github.com/11301858/XAISuite/assets/66180831/b45ca3b3-10d3-458a-a2c6-6d25bc5abbd8)
+
 
 A key part of XAISuite is flexibility, and, in our mission to make machine learning available to all, we have made XAISuite available in the following formats:
 
