@@ -213,11 +213,11 @@ class DataLoader:
 class DataProcessor:
   '''
   Class that processes data
+  
   :param DataLoader forDataLoader: The dataloader that will be associated with this processor. 
   :param float, optional test_size: The proportion of data that will be used to test and score the machine learning model. By default, 0.2
   :param Any, optional processor: The data processer, either a string function, or an Object with fit() and transform() methods.
-  :param `**processorArgs`: Arguments to be passed into the processor. If the argument is a function, like a component of a composite processor, pass it in as shown in this example: 
-  DataProcessor(..., target_transform = "component: KBins(n_bins = 5)", ratio = 0.1)
+  :param `**processorArgs`: Arguments to be passed into the processor. If the argument is a function, like a component of a composite processor, pass it in as shown in this example: DataProcessor(..., target_transform = "component: KBins(n_bins = 5)", ratio = 0.1)
   '''
 
   def __init__(self, forDataLoader:DataLoader, test_size:float = 0.2, processor:Any = None, **processorArgs):
