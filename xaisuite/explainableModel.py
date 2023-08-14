@@ -4,7 +4,6 @@ from .dataHandler import DataProcessor
 class ModelTrainer:
   '''
   Class to train an explainable machine learning model.
-
   :param Any model: The string name of the model, the function returning the model, or the model Any itself. The model function must have fit() and predict() functions. A score() function is optional.
   :param DataProcessor withData: The data that will be used to train and test the model
   :param str, optional taskType: The type of task that the model performs. By default, "Tabular". Other options are "Vision" and "NLP"
@@ -54,7 +53,6 @@ class ModelTrainer:
   def getExplanationsFor(self, testIndex:Union[int, list] = None, feature_values:dict = None) -> dict:
     '''
     Function to get the local explanations for a particular testing instance. 
-
     :param Union[int, list], optional testIndex: The indices of the testing data for which to fetch local explanations. If empty, local explanations for all instances are returned. If None, `feature_values` is used.
     :param dict, optional feature_values: The values of the features corresponding to a particular index. If None, `testIndex` is used. 
     :returns dict explanations: The requested explanations
@@ -93,7 +91,6 @@ class ModelTrainer:
   def getSummaryExplanations(self) -> dict:
     '''
     Returns global explanations
-
     :returns dict explanations: The requested global explanations
     '''
     return self.explainer.explain_global()
