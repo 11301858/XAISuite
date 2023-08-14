@@ -26,7 +26,7 @@ function exit_handler {
     git checkout "${GIT_BRANCH}" --
     git stash pop || true
     for version in $(git tag --list 'v[0-9]*'); do
-        if [[ "$version" != "v2.0.0" ]]; then #Skip intermediate versions
+        if [[ "$version" != "v2.0.0-beta2" ]]; then #Skip intermediate versions
           echo Skipping $version
           continue
         fi
