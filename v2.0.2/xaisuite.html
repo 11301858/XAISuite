@@ -37,7 +37,7 @@
             XAISuite
           </a>
               <div class="version">
-                v2.0.1
+                v2.0.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -253,12 +253,18 @@
 <dt class="sig sig-object py" id="xaisuite.explainableModel.ModelTrainer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">xaisuite.explainableModel.</span></span><span class="sig-name descname"><span class="pre">ModelTrainer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withData</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taskType</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Tabular'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'regression'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">explainers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">modelArgs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xaisuite.explainableModel.ModelTrainer" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class to train an explainable machine learning model.
-:param Any model: The string name of the model, the function returning the model, or the model Any itself. The model function must have fit() and predict() functions. A score() function is optional.
-:param DataProcessor withData: The data that will be used to train and test the model
-:param str, optional taskType: The type of task that the model performs. By default, “Tabular”. Other options are “Vision” and “NLP”
-:param str, optional task: The task that the model performs. By default, “regression”. Other option is “classification”
-:param list, dict, optional explainers: A list of explainer names or, if specific parameters need to be passed to the explainers, a dict that contains the explainer names and explainer arguments. Ex. explainers = [“lime”, “shap”, “mace”] or explainers = {“lime”: {“kernel_width”: 3}, “shap”: {“nsamples”: 100}, “mace”: None}</p>
+<p>Class to train an explainable machine learning model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>Any</em>) – The string name of the model, the function returning the model, or the model Any itself. The model function must have fit() and predict() functions. A score() function is optional.</p></li>
+<li><p><strong>withData</strong> (<a class="reference internal" href="#xaisuite.dataHandler.DataProcessor" title="xaisuite.dataHandler.DataProcessor"><em>DataProcessor</em></a>) – The data that will be used to train and test the model</p></li>
+<li><p><strong>taskType</strong> (<em>str</em><em>, </em><em>optional</em>) – The type of task that the model performs. By default, “Tabular”. Other options are “Vision” and “NLP”</p></li>
+<li><p><strong>task</strong> (<em>str</em><em>, </em><em>optional</em>) – The task that the model performs. By default, “regression”. Other option is “classification”</p></li>
+<li><p><strong>explainers</strong> (<em>list</em><em>, </em><em>dict</em><em>, </em><em>optional</em>) – A list of explainer names or, if specific parameters need to be passed to the explainers, a dict that contains the explainer names and explainer arguments. Ex. explainers = [“lime”, “shap”, “mace”] or explainers = {“lime”: {“kernel_width”: 3}, “shap”: {“nsamples”: 100}, “mace”: None}</p></li>
+</ul>
+</dd>
+</dl>
 <p>Class constructor</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="xaisuite.explainableModel.ModelTrainer.getExplanationsFor">
@@ -379,7 +385,7 @@
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Versions</span>
-      v2.0.1
+      v2.0.2
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -391,13 +397,13 @@
           <dd><a href="">latest</a></dd>
           
         
-          
-          <dd><a href="">v2.0.2</a></dd>
-          
-        
            <strong> 
-          <dd><a href="">v2.0.1</a></dd>
+          <dd><a href="">v2.0.2</a></dd>
            </strong> 
+        
+          
+          <dd><a href="">v2.0.1</a></dd>
+          
         
           
           <dd><a href="">v2.0.0-beta2</a></dd>
