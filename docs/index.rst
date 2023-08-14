@@ -201,7 +201,7 @@ If you have any questions, comments or suggestions, please do not
 hesitate to contact us at xaisuite@gmail.com
 
 Documentation
-----------
+-------------
 .. toctree::
    :maxdepth: 2
 
