@@ -61,7 +61,6 @@ A key part of XAISuite is flexibility, and, in our mission to make machine learn
 2. On the Command Line (with XAISuiteCLI)
 3. In block-code (with XAISuiteBlock)
 
-![XAISuite options](https://user-images.githubusercontent.com/66180831/222034540-5ae92a6f-2100-4c5c-ad60-aa47857fef4c.png)
 
 *A note on formats: Version upgrades for different formats happen independently. For example, XAISuiteCLI and XAISuiteBlock may crash on the latest version of XAISuite.* 
 
