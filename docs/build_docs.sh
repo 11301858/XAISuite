@@ -43,14 +43,13 @@ export current_version="latest"
 pip3 install ".[all]"
 sphinx-build -b html "${DIRNAME}" "${DIRNAME}/_build/html/${current_version}" -W --keep-going
 rm -rf "${DIRNAME}/_build/html/${current_version}/.doctrees"
-pip3 uninstall -y XAISuite
+pip3 uninstall -y xaisuite
 
 # Install all previous released versions
 # and use them to build the appropriate API docs.
 # Uninstall after we're done with each one.
 versions=()
-checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "xaisuitegui" "xaisuitecli" "setup.py")
-make clean
+checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "xaisuitegui" "setup.py")
 for version in $(git tag --list 'v[0-9]*'); do
     if [[ "$version" != "v2.0.0" ]]; then #Skip intermediate versions
       echo Skipping $version
@@ -69,7 +68,7 @@ for version in $(git tag --list 'v[0-9]*'); do
     pip3 install ".[all]"
     sphinx-build -b html "${DIRNAME}" "${DIRNAME}/_build/html/${current_version}" -W --keep-going
     rm -rf "${DIRNAME}/_build/html/${current_version}/.doctrees"
-    pip3 uninstall -y XAISuite
+    pip3 uninstall -y xaisuite
     git reset --hard
     git fetch
     git checkout "${GIT_BRANCH}" --
