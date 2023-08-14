@@ -1,4 +1,3 @@
-from .xaisuiteFoundation import*
 import collections
 
 class InsightGenerator:
