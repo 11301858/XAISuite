@@ -7,9 +7,9 @@ XAISuite
    :show-inheritance:
 
 .. autosummary::
-   dataHandler
-   explainableModel
-   insightGenerator
+   xaisuite.dataHandler
+   xaisuite.explainableModel
+   xaisuite.insightGenerator
    
 
 .. automodule:: xaisuite.dataHandler
