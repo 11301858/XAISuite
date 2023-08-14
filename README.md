@@ -49,7 +49,9 @@ While we would like to highlight the fact that you only need one line of code fo
 
 But first, what are explainers? Machine learning models are opaque models, so we have no idea what's going on inside of them. Explainers help us understand machine learning models we have trained and therefore give us aa better idea of why machine learning models fail in particular instances.
 
-XAISuite accomplishes machine learning model training and explanation generation in three steps: (1) data loading, (2) data processing, and (3) model training and explanation generation. Each of these steps are delved into more detail in our [documentation](https://11301858.github.io/XAISuite) and in the demo tutorials. 
+XAISuite accomplishes machine learning model training and explanation generation in three steps: (1) data loading, (2) data processing, and (3) model training and explanation generation. Each of these steps are delved into more detail in our [documentation](https://11301858.github.io/XAISuite), in the demo tutorials, and are overviewed in the graphic below: 
+
+![A schematic of XAISuite functionalities](https://github.com/11301858/XAISuite/assets/66180831/c613e71b-6fa8-4d06-91cb-b8b0f3edb016)
 
 A key part of XAISuite is flexibility, and, in our mission to make machine learning available to all, we have made XAISuite available in the following formats:
 
@@ -62,9 +64,7 @@ A key part of XAISuite is flexibility, and, in our mission to make machine learn
 *A note on formats: Version upgrades for different formats happen independently. For example, XAISuiteCLI and XAISuiteBlock may crash on the latest version of XAISuite.* 
 
 
-As far as we know, XAISuite is among the first comprehensive libraries that allow users to both train and explain models, and the first to provide utilities for explanation comparison. XAISuite was created with a focus on users, and our interface reflects that. We also pioneered the ability to interact with machine learning models on the command line. 
-
-![A schematic of XAISuite functionalities](https://github.com/11301858/XAISuite/assets/66180831/c613e71b-6fa8-4d06-91cb-b8b0f3edb016)
+As far as we know, XAISuite is among the first comprehensive libraries that allow users to both train and explain models, and the first to provide utilities for explanation comparison. XAISuite was created with a focus on users, and our interface reflects that. We also pioneered the ability to interact with machine learning models on the command line.
 
 
 ## Installation
