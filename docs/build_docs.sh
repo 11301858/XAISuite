@@ -50,6 +50,7 @@ pip3 uninstall -y XAISuite
 # Uninstall after we're done with each one.
 versions=()
 checkout_files=("${DIRNAME}/*.rst" "demo" "xaisuite" "xaisuitegui" "xaisuitecli" "setup.py")
+make clean
 for version in $(git tag --list 'v[0-9]*'); do
     if [[ "$version" != "v2.0.0" ]]; then #Skip intermediate versions
       echo Skipping $version
