@@ -12,6 +12,7 @@ else:
 from .dataHandler import*
 from .explainableModel import*
 from .insightGenerator import*
+from .xaisuiteFoundation import*
 from models import*
 from explainers import*
 
