@@ -53,11 +53,11 @@ class ModelTrainer:
   def getExplanationsFor(self, testIndex:Union[int, list] = None, feature_values:dict = None) -> dict:
     '''
     Function to get the local explanations for a particular testing instance. 
+    
     :param Union[int, list], optional testIndex: The indices of the testing data for which to fetch local explanations. If empty, local explanations for all instances are returned. If None, `feature_values` is used.
     :param dict, optional feature_values: The values of the features corresponding to a particular index. If None, `testIndex` is used. 
     :returns dict explanations: The requested explanations
     :raises ValueError: If neither testIndex or feature_values is passed
-  
     '''
     if testIndex is None and feature_values is None:
         raise ValueError("One of testIndex or feature_values must be provided.")
@@ -91,6 +91,7 @@ class ModelTrainer:
   def getSummaryExplanations(self) -> dict:
     '''
     Returns global explanations
+    
     :returns dict explanations: The requested global explanations
     '''
     return self.explainer.explain_global()
