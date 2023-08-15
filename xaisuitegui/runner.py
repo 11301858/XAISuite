@@ -4,6 +4,8 @@
 #(c) Shreyan Mitra
 from tkinter import*
 from tkinter import filedialog
+import pkg_resources
+pkg_resources.require("XAISuite==1.0.8")
 from xaisuite import*
 import pandas as pd
 import os
