@@ -66,7 +66,7 @@ class ModelTrainer:
     if testIndex is not None and feature_values is not None:
         print("Both testIndex and feature_values were provided. Using testIndex.")
 
-  
+    print("Generating explanations.")
 
     if isinstance(testIndex, list) and len(testIndex) == 0:
         return self.explainer.explain(self.withData.processor.invert(self.withData.processedData.X_test))
