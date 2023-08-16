@@ -111,14 +111,14 @@ from sklearn.svm import*
 
 z = DataLoader(make_classification, n_samples = 700)
 y = DataProcessor(z, processor = "TabularTransform")
-x = ModelTrainer(SVC(), y, explainers = ["lime", "shap"])
+x = ModelTrainer(SVC(), y, explainers = {"lime": {"feature_selection": "none"})
 x.getExplanationsFor([])["lime"].ipython_plot(20)
 a = InsightGenerator(x.getExplanationsFor([]))
 corr = a.calculateExplainerSimilarity("lime", "shap")
 
 #You can condense this in one line
 
-corr = InsightGenerator(ModelTrainer(SVC(), DataProcessor(DataLoader(make_classification, n_samples = 700) , processor = "TabularTransform"), explainers = ["lime", "shap"]).getExplanationsFor([])).calculateExplainerSimilarity("lime", "shap")
+corr = InsightGenerator(ModelTrainer(SVC(), DataProcessor(DataLoader(make_classification, n_samples = 700) , processor = "TabularTransform"), explainers = {"lime": {"feature_selection": "none"}, "shap":{}}).getExplanationsFor([])).calculateExplainerSimilarity("lime", "shap")
 ```
 
 For example involving PyTorch, SciKeras, and custom models, check out the tutorials and example code in the Demo folder. 
