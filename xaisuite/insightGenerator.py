@@ -50,17 +50,10 @@ class InsightGenerator:
     for element in vec2:
       enumerated_vec2.append(key_list[val_list.index(element)])
 
-    print("Explainer Results:")
-    print(vec1)
-    print(vec2)
-      
-    print("Enumerated Explainer Keys:")
-    print(range(1, len(vec1) + 1))
-    print(enumerated_vec2)
     
     shreyan_distance = 0.0
 
-    for j in range(1, x+1):
+    for j in range(1, x):
       shreyan_distance += (x - j) * abs(j - enumerated_vec2[j])
     
     shreyan_distance /= (x**2)
