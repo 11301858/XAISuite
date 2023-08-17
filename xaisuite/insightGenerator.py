@@ -53,7 +53,7 @@ class InsightGenerator:
     
     shreyan_distance = 0.0
 
-    for j in range(1, x):
+    for j in range(0, x):
       shreyan_distance += (x - j) * abs(j - enumerated_vec2[j])
     
     shreyan_distance /= (x**2)
