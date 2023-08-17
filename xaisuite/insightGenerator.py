@@ -55,7 +55,7 @@ class InsightGenerator:
     print(vec2)
       
     print("Enumerated Explainer Keys:")
-    print(range(1, length(vec1) + 1))
+    print(range(1, len(vec1) + 1))
     print(enumerated_vec2)
     
     shreyan_distance = 0.0
