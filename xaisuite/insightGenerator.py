@@ -39,7 +39,8 @@ class InsightGenerator:
     assert (len(vec1) == len(vec2)), "Cannot find the Shreyan distance when ordered vectors are of different lengths."
 
     x = len(vec1)
-    max = self.__sigma(0, int((x/2) - 1), lambda i: ((x - 2*i - 1) * (2*x - 4*i - 1) / (x**2))) #This is the maximum possible Shreyan distance between two ordered vectors of size x
+    max = self.__sigma(1, int((x/2)), lambda i: ((x - i + 1) * (x - 2*i + 1) / (x**2))) + self.__sigma(int((x/2)) + 1, x,  lambda i: ((x - i + 1) * int((x/2)) / (x**2)))
+    #This is the maximum possible Shreyan distance between two ordered vectors of size x
 
     enumerated_elements = {index + 1:value for index, value in enumerate(vec1)}
 
