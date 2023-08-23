@@ -60,7 +60,10 @@ linkModels = {"SVC": "sklearn.svm", "NuSVC": "sklearn.svm", "LinearSVC": "sklear
                   "BernoulliRBM": "sklearn.neural_network", "MLPClassifier": "sklearn.neural_network", "MLPRegressor": "sklearn.neural_network",  
                   "DecisionTreeClassifier": "sklearn.tree", "DecisionTreeRegressor": "sklearn.tree",
                   "ExtraTreeClassifier": "sklearn.tree", "ExtraTreeRegressor": "sklearn.tree", "NullRegressor": "models.NullRegressor",
-                  "NeuralNetClassifier": "skorch.NeuralNetClassifier", "KerasClassifier": "scikeras.wrappers", "KerasRegressor": "scikeras.wrappers"
+                  "NeuralNetClassifier": "skorch.NeuralNetClassifier", "KerasClassifier": "scikeras.wrappers", "KerasRegressor": "scikeras.wrappers", 
+                  "CCA": "sklearn.cross_decomposition", "DummyRegressor": "sklearn.dummy", "PLSCanonical": "sklearn.cross_decomposition", "PLSRegression": "sklearn.cross_decomposition", 
+                  "RadiusNeighborsRegressor": "sklearn.neighbors", "RadiusNeighborsClassifier": "sklearn.neighbors", "TransformedTargetRegressor": "sklearn.compose", "CalibratedClassifierCV": "sklearn.calibration", 
+                  "DummyClassifier": "sklearn.dummy", "LinearDiscriminantAnalysis": "sklearn.discriminant_analysis", "Perceptron": "sklearn.linear_model", "QuadraticDiscriminantAnalysis": "sklearn.discriminant_analysis"  
                  }
 
 #OmniXAI Explanatory Models
