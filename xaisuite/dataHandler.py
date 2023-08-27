@@ -236,7 +236,7 @@ class DataProcessor:
             case "Text":
                   processor = "Tfidf"
     
-    tempProcessorArgs = None
+    tempProcessorArgs = {}
 
     if processorArgs is not None: #This is if the user passes in a component transformer as a string representation of a function
         for variable in processorArgs.items():
