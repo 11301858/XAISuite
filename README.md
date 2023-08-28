@@ -111,7 +111,7 @@ from sklearn.svm import*
 
 z = DataLoader(make_classification, n_samples = 700)
 y = DataProcessor(z, processor = "TabularTransform")
-x = ModelTrainer(SVC(), y, explainers = {"lime": {"feature_selection": "none"})
+x = ModelTrainer(SVC(), y, explainers = {"lime": {"feature_selection": "none"}, "shap": {}})
 x.getExplanationsFor([])["lime"].ipython_plot(20)
 a = InsightGenerator(x.getExplanationsFor([]))
 corr = a.calculateExplainerSimilarity("lime", "shap")
