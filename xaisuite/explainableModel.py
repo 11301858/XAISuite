@@ -47,6 +47,9 @@ class ModelTrainer:
 
     #Model has been trained by this point. Now for the explanations
 
+    if explainers is None:
+      return
+
     explainer_names = explainers if isinstance(explainers, list) else explainers.keys()
 
     self.explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, model = model, preprocess = withData.processor.transform, params = explainers if isinstance(explainers, dict) else None)")
