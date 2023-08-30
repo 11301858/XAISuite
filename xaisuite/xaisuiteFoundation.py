@@ -22,6 +22,7 @@ import matplotlib.pyplot as plt
 
 #Machine Learning Models and Training
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import*
 
 
 linkModels = {"SVC": "sklearn.svm", "NuSVC": "sklearn.svm", "LinearSVC": "sklearn.svm", "SVR": "sklearn.svm", "NuSVR": "sklearn.svm", "LinearSVR": "sklearn.svm", 
