@@ -99,3 +99,6 @@ class ModelTrainer:
     :returns dict explanations: The requested global explanations
     '''
     return self.explainer.explain_global()
+
+  def getAllExplanations(self) -> dict:
+    return self.getExplanationsFor([])
