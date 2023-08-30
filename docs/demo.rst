@@ -5,3 +5,5 @@ Tutorials & Example Code
    :members:
    :undoc-members:
    :show-inheritance:
+
+   XAISuiteDemo
