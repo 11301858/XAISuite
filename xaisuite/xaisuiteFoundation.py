@@ -16,6 +16,10 @@ from omnixai.preprocessing.text import*
 import numpy
 from sklearn.datasets import*
 
+#Visualization
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 #Machine Learning Models and Training
 from sklearn.model_selection import train_test_split
 
