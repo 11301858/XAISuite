@@ -205,6 +205,17 @@ class DataLoader:
     df = pd.read_csv(id)
     self.content = df
     return
+
+  def plot(self):
+    fig, axes = plt.subplots(ncols=4, nrows=int(len(self.content.columns)/4) + 1, figsize=(20, 10))
+    
+    for i, ax in zip(range(len(self.content.columns)), axes.flat):
+        sns.histplot(self.content[self.content.columns[i]], ax=ax)
+    num_extraPlots = 4 - len(self.content.columns)%4
+    
+    for i in range (1, num_extraPlots + 1):
+      fig.delaxes(axes[int(len(self.content.columns)/4), len(self.content.columns)%4 + i - 1])
+    plt.show()
     
 #Class DataLoader ends here
 
