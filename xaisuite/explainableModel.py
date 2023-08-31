@@ -108,6 +108,8 @@ class ModelTrainer:
   def plotExplanations(explainer:str = None, index:int = 0):
     try:
       self.requestedExplanations[explainer].ipython_plot(index)
-    except:
+    except Exception as e:
       print("Plotting explanations failed. Make sure you call getExplanationsFor, getAllExplanations, or getSummaryExplanations before plotting.")
+      print("Error statement: " + e)
+      
     
