@@ -105,7 +105,7 @@ class ModelTrainer:
   def getAllExplanations(self) -> dict:
     return self.getExplanationsFor([])
 
-  def plotExplanations(explainer:str = None, index:int = 0):
+  def plotExplanations(self, explainer:str = None, index:int = 0):
     try:
       self.requestedExplanations[explainer].ipython_plot(index)
     except Exception as e:
