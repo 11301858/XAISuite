@@ -53,6 +53,7 @@ class ModelTrainer:
     explainer_names = explainers if isinstance(explainers, list) else explainers.keys()
 
     self.explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, model = model, preprocess = withData.processor.transform, params = explainers if isinstance(explainers, dict) else None)")
+    self.requestedExplanations = None
 
   def getExplanationsFor(self, testIndex:Union[int, list] = None, feature_values:dict = None) -> dict:
     '''
@@ -110,6 +111,6 @@ class ModelTrainer:
       self.requestedExplanations[explainer].ipython_plot(index)
     except Exception as e:
       print("Plotting explanations failed. Make sure you call getExplanationsFor, getAllExplanations, or getSummaryExplanations before plotting.")
-      print("Error statement: " + e)
+      print("Error statement: " + str(e))
       
     
