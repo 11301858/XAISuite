@@ -90,7 +90,8 @@ class ModelTrainer:
     for feature, value in feature_values.items():
         query.append("df['" + feature + "'] == " + value)
     queryString = " and ".join(query)
-    return self.explainer.explain(data.loc[eval(queryString)])
+    self.requestedExplanations = self.explainer.explain(data.loc[eval(queryString)])
+    return self.requestedExplanations
 
   def getSummaryExplanations(self) -> dict:
     '''
@@ -98,9 +99,15 @@ class ModelTrainer:
     
     :returns dict explanations: The requested global explanations
     '''
-    return self.explainer.explain_global()
+    self.requestedExplanations = self.explainer.explain_global()
+    return self.requestedExplanations
 
   def getAllExplanations(self) -> dict:
     return self.getExplanationsFor([])
 
-
+  def plotExplanations(explainer:str = None, index:int = 0):
+    try:
+      self.requestedExplanations[explainer].ipython_plot(index)
+    except:
+      print("Plotting explanations failed. Make sure you call getExplanationsFor, getAllExplanations, or getSummaryExplanations before plotting.")
+    
