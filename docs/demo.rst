@@ -1,4 +1,8 @@
 Tutorials & Example Code
 ========================
 
-:ref: `demo/XAISuiteDemo.ipynb`
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   demo/XAISuiteDemo
