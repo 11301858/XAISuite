@@ -39,7 +39,7 @@ extensions = [
     "sphinx_autodoc_typehints",
 ]
 
-source_suffix = [".rst", ".md"]
+source_suffix = [".rst", ".ipynb"]
 
 autoclass_content = "both"  # include both class docstring and __init__
 autodoc_default_options = {
