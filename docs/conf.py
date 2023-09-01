@@ -35,6 +35,7 @@ extensions = [
     "sphinx.ext.coverage",
     "sphinx.ext.autosummary",
     "nbsphinx",
+    "sphinx_gallery.load_style",
     "sphinx.ext.autosummary",
     "sphinx_autodoc_typehints",
 ]
