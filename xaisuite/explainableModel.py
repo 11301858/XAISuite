@@ -53,7 +53,7 @@ class ModelTrainer:
     explainer_names = explainers if isinstance(explainers, list) else explainers.keys()
 
     self.explainer = eval(taskType + "Explainer(explainers = explainer_names, mode = task, data = withData.loader.wrappedData, model = model, preprocess = withData.processor.transform, params = explainers if isinstance(explainers, dict) else None)")
-    self.requestedExplanations = None
+    #self.requestedExplanations = None
 
   def getExplanationsFor(self, testIndex:Union[int, list] = None, feature_values:dict = None) -> dict:
     '''
