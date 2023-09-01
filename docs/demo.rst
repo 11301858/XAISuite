@@ -1,5 +1,4 @@
 Tutorials & Example Code
 ========================
 
-.. nbgallery::
-   demo/XAISuiteDemo
+demo/XAISuiteDemo
