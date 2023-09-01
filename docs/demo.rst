@@ -1,4 +1,4 @@
 Tutorials & Example Code
 ========================
 
-demo/XAISuiteDemo
+:ref: `demo/XAISuiteDemo.ipynb`
