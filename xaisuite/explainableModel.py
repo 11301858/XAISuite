@@ -73,11 +73,14 @@ class ModelTrainer:
     print("Generating explanations.")
 
     if isinstance(testIndex, list) and len(testIndex) == 0:
-        return self.explainer.explain(self.withData.processor.invert(self.withData.processedData.X_test))
+        self.requestedExplanations = self.explainer.explain(self.withData.processor.invert(self.withData.processedData.X_test))
+        return self.requestedExplanations
     elif isinstance(testIndex, list) and len(testIndex) >0:
-        return self.explainer.explain(self.withData.processor.invert(numpy.array([self.withData.processedData.X_test[i] for i in testIndex])))
+        self.requestedExplanations = self.explainer.explain(self.withData.processor.invert(numpy.array([self.withData.processedData.X_test[i] for i in testIndex])))
+        return self.requestedExplanations
     elif isinstance(testIndex, int):
-        return self.explainer.explain(self.withData.processor.invert(numpy.array(self.withData.processedData.X_test[testIndex])))
+        self.requestedExplanations = self.explainer.explain(self.withData.processor.invert(numpy.array(self.withData.processedData.X_test[testIndex])))
+        return self.requestedExplanations
 
   #By this point, we are aware that we are dealing with feature_values and testIndex must be None. 
 
@@ -92,7 +95,6 @@ class ModelTrainer:
         query.append("df['" + feature + "'] == " + value)
     queryString = " and ".join(query)
     self.requestedExplanations = self.explainer.explain(data.loc[eval(queryString)])
-    print(self.requestedExplanations)
     return self.requestedExplanations
 
   def getSummaryExplanations(self) -> dict:
