@@ -1,7 +1,7 @@
 GitPython
 ipykernel
-nbsphinx==0.8.6
-pandoc
+nbsphinx==0.8.7
+pandoc==2.14.2
 sphinx==6.2.1
 sphinx_autodoc_typehints
 sphinx_rtd_theme
