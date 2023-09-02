@@ -2,5 +2,5 @@ Tutorials & Example Code
 =========================
 
 .. raw:: html
-   :file: XAISuiteGeneralDemo.html
+   :file: demo/XAISuiteGeneralDemo.html
 
