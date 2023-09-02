@@ -1,7 +1,7 @@
 Tutorials & Example Code
 =========================
 
-:ref:`my-figure`
+:ref:_demo1
 
 
 
