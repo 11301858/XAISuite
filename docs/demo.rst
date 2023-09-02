@@ -1,7 +1,10 @@
 Tutorials & Example Code
 =========================
 
-:ref:`demo1`
+.. toctree::
+   :maxdepth: 2
+
+   demo/XAISuiteGeneralDemo
 
 
 
