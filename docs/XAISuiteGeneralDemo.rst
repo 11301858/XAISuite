@@ -1,5 +1,7 @@
-XAISuiteGeneralDemo
-====================
+.. _demo1:
+
+XAISuite General Demo
+======================
   
 .. container:: cell markdown
    :name: 3798025c
