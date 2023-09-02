@@ -1,7 +1,7 @@
 Tutorials & Example Code
 =========================
 
-:ref: `_demo1`
+:ref:`demo1`
 
 
 
