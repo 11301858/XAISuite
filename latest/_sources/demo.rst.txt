@@ -1,9 +1,6 @@
 Tutorials & Example Code
-========================
+=========================
 
-.. automodule:: demo
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. raw:: html
+   :file: demo/XAISuiteGeneralDemo.html
 
-   XAISuiteDemo
