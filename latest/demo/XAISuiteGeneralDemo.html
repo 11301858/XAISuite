@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XAISuite General Demo &mdash; XAISuite  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Tutorials &amp; Example Code" href="../demo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            XAISuite
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../xaisuite.html">XAISuite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../xaisuitegui.html">XAISuite GUI</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../demo.html">Tutorials &amp; Example Code</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">XAISuite General Demo</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">XAISuite</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../demo.html">Tutorials &amp; Example Code</a></li>
+      <li class="breadcrumb-item active">XAISuite General Demo</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/demo/XAISuiteGeneralDemo.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="xaisuite-general-demo">
+<h1>XAISuite General Demo<a class="headerlink" href="#xaisuite-general-demo" title="Link to this heading"></a></h1>
+<div class="cell markdown docutils container" id="c">
+<p class="rubric" id="id1">XAISuite General Demo</p>
+</div>
+<div class="cell markdown docutils container" id="ab6d88">
+<p>Welcome to the XAISuite General Demo. Here you’ll find countless
+examples about how to use XAISuite for easier machine learning model
+training, explanation, and explanation comparison.</p>
+<p>First, start by installing the XAISuite library.</p>
+<p><code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">XAISuite==2.8.3</span></code></p>
+<p>Then, import the library. You may need to restart runtime for this to
+work correctly.</p>
+</div>
+<div class="cell code docutils container" id="d895f93f">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">xaisuite</span> <span class="kn">import</span><span class="o">*</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="f9">
+<p>Run the following code to see a mini doc of XAISuite classes and
+functions.</p>
+</div>
+<div class="cell code docutils container" id="c71">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">DataLoader</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">DataProcessor</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">ModelTrainer</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">InsightGenerator</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="a236c1c7">
+<p>Let’s first start with Data Loading. The
+<code class="docutils literal notranslate"><span class="pre">xaisuite.dataHandler.DataLoader</span></code>class allows loading of data
+from different sources.</p>
+</div>
+<div class="cell code docutils container" id="bdc4">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DataLoader</span><span class="p">(</span><span class="n">make_classification</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell code docutils container" id="a296246d">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DataLoader</span><span class="p">(</span><span class="n">load_diabetes</span><span class="p">,</span> <span class="n">return_X_y</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell code docutils container" id="e7d58">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">DataLoader</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell code docutils container" id="ec98712">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+<span class="n">DataLoader</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="e43005e3">
+<p>Another option: <code class="docutils literal notranslate"><span class="pre">DataLoader('path/to/local/file')</span></code></p>
+</div>
+<div class="cell markdown docutils container" id="a7c1c655">
+<p>DataLoader also has options to specify the variable names, target
+name, categorical variables, etc. If not specified, these values are
+inferred.</p>
+<p>Visualize variables loaded by <code class="docutils literal notranslate"><span class="pre">DataLoader</span></code></p>
+</div>
+<div class="cell code docutils container" id="a3c2f">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">load_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">make_classification</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">load_data</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="df9867d9">
+<p>XAISuiteGeneralDemoOutput1</p>
+</div>
+<div class="cell markdown docutils container" id="a5335">
+<p>For optimal model training, additional processing must be done to the
+data. This is where <code class="docutils literal notranslate"><span class="pre">xaisuite.dataHandler.DataProcessor</span></code> comes into
+play. You can process data with default parameters or pass in your
+own transforms (like from the <code class="docutils literal notranslate"><span class="pre">sklearn.preprocessing</span></code> library).</p>
+</div>
+<div class="cell code docutils container" id="ce8091ca">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">load_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">make_classification</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">DataProcessor</span><span class="p">(</span><span class="n">load_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell code docutils container" id="b1d7ee4b">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">load_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">load_diabetes</span><span class="p">,</span> <span class="n">return_X_y</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">DataProcessor</span><span class="p">(</span><span class="n">load_data</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="e5eb2063">
+<p>You can also use transform components, a short example of which is
+given below with placeholders:</p>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">sklearn.preprocessing</span> <span class="pre">import</span> <span class="pre">StandardScaler</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">load_data</span> <span class="pre">=</span> <span class="pre">DataLoader(load_diabetes,</span> <span class="pre">return_X_y</span> <span class="pre">=</span> <span class="pre">True)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">DataProcessor(load_data,</span> <span class="pre">test_size</span> <span class="pre">=</span> <span class="pre">0.1,</span> <span class="pre">target_transform</span> <span class="pre">=</span> <span class="pre">&quot;component:</span> <span class="pre">TargetTransform()&quot;)</span></code></p>
+</div>
+<div class="cell markdown docutils container" id="eca">
+<p>To train a model, simply do:</p>
+</div>
+<div class="cell code docutils container" id="ea3c1">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">load_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">load_diabetes</span><span class="p">,</span> <span class="n">return_X_y</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">process_data</span> <span class="o">=</span> <span class="n">DataProcessor</span><span class="p">(</span><span class="n">load_data</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">ModelTrainer</span><span class="p">(</span><span class="s2">&quot;SVR&quot;</span><span class="p">,</span> <span class="n">process_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="afcb63c5">
+<p>You can also pass in a model directly without using a String
+representation.</p>
+</div>
+<div class="cell code docutils container" id="f59">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+<span class="n">load_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">load_diabetes</span><span class="p">,</span> <span class="n">return_X_y</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">process_data</span> <span class="o">=</span> <span class="n">DataProcessor</span><span class="p">(</span><span class="n">load_data</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">ModelTrainer</span><span class="p">(</span><span class="n">SVR</span><span class="p">,</span> <span class="n">process_data</span><span class="p">,</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="b54716">
+<p>For explaining, simply list the desired explanations.</p>
+</div>
+<div class="cell code docutils container" id="afcbb5">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+<span class="n">load_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">load_diabetes</span><span class="p">,</span> <span class="n">return_X_y</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">process_data</span> <span class="o">=</span> <span class="n">DataProcessor</span><span class="p">(</span><span class="n">load_data</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">ModelTrainer</span><span class="p">(</span><span class="n">SVR</span><span class="p">,</span> <span class="n">process_data</span><span class="p">,</span> <span class="n">explainers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lime&quot;</span><span class="p">,</span> <span class="s2">&quot;shap&quot;</span><span class="p">],</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="c84fb6">
+<p>You can pass in arguments to the explainers:</p>
+</div>
+<div class="cell code docutils container" id="d9ef2df0">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+<span class="n">load_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">load_diabetes</span><span class="p">,</span> <span class="n">return_X_y</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">process_data</span> <span class="o">=</span> <span class="n">DataProcessor</span><span class="p">(</span><span class="n">load_data</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">ModelTrainer</span><span class="p">(</span><span class="n">SVR</span><span class="p">,</span> <span class="n">process_data</span><span class="p">,</span> <span class="n">explainers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lime&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;feature_selection&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">},</span> <span class="s2">&quot;shap&quot;</span><span class="p">:</span> <span class="p">{}},</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="ab7">
+<p>To access the explanations, use the <code class="docutils literal notranslate"><span class="pre">getExplanationsFor</span></code>,
+<code class="docutils literal notranslate"><span class="pre">getAllExplanations</span></code>, or <code class="docutils literal notranslate"><span class="pre">getSummaryExplanations</span></code> functions. Use
+<code class="docutils literal notranslate"><span class="pre">plotExplanations</span></code> for explanation visualization.</p>
+</div>
+<div class="cell code docutils container" id="ecb9599">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+<span class="n">load_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">load_diabetes</span><span class="p">,</span> <span class="n">return_X_y</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">process_data</span> <span class="o">=</span> <span class="n">DataProcessor</span><span class="p">(</span><span class="n">load_data</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">train_model</span> <span class="o">=</span> <span class="n">ModelTrainer</span><span class="p">(</span><span class="n">SVR</span><span class="p">,</span> <span class="n">process_data</span><span class="p">,</span> <span class="n">explainers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lime&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;feature_selection&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">},</span> <span class="s2">&quot;shap&quot;</span><span class="p">:</span> <span class="p">{}},</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+
+<span class="n">explanations</span> <span class="o">=</span> <span class="n">train_model</span><span class="o">.</span><span class="n">getExplanationsFor</span><span class="p">([])</span> <span class="c1"># Gets all explanations. You can also request explanations for a specific instance</span>
+<span class="n">train_model</span><span class="o">.</span><span class="n">plotExplanations</span><span class="p">(</span><span class="s2">&quot;lime&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">#Display the lime explainer results for the 2nd instance returned by getExplanationsFor()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="ef5b80c0">
+<p><code class="docutils literal notranslate"><span class="pre">Model</span> <span class="pre">score</span> <span class="pre">is</span> <span class="pre">0.22886080630718109</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">explanations.</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">0%|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">0/45</span> <span class="pre">[00:00&lt;?,</span> <span class="pre">?it/s]</span></code></p>
+</div>
+<div class="cell markdown docutils container" id="fc20ae">
+<p>XAISuiteGeneralDemoOutput2</p>
+</div>
+<div class="cell markdown docutils container" id="e5c7a3d">
+<p>Calculate similarity between explainers using the Shreyan Distance</p>
+</div>
+<div class="cell code docutils container" id="e18456e">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+<span class="n">load_data</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">load_diabetes</span><span class="p">,</span> <span class="n">return_X_y</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">process_data</span> <span class="o">=</span> <span class="n">DataProcessor</span><span class="p">(</span><span class="n">load_data</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">train_model</span> <span class="o">=</span> <span class="n">ModelTrainer</span><span class="p">(</span><span class="n">SVR</span><span class="p">,</span> <span class="n">process_data</span><span class="p">,</span> <span class="n">explainers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;lime&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;feature_selection&quot;</span><span class="p">:</span> <span class="s2">&quot;none&quot;</span><span class="p">},</span> <span class="s2">&quot;shap&quot;</span><span class="p">:</span> <span class="p">{}},</span> <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">explanations</span> <span class="o">=</span> <span class="n">train_model</span><span class="o">.</span><span class="n">getExplanationsFor</span><span class="p">([])</span>
+
+<span class="n">insights</span> <span class="o">=</span> <span class="n">InsightGenerator</span><span class="p">(</span><span class="n">explanations</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">insights</span><span class="o">.</span><span class="n">calculateExplainerSimilarity</span><span class="p">(</span><span class="s2">&quot;lime&quot;</span><span class="p">,</span> <span class="s2">&quot;shap&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell markdown docutils container" id="db5fab4e">
+<p><code class="docutils literal notranslate"><span class="pre">Model</span> <span class="pre">score</span> <span class="pre">is</span> <span class="pre">0.14626289816154203</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Generating</span> <span class="pre">explanations.</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">0%|</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">|</span> <span class="pre">0/45</span> <span class="pre">[00:00&lt;?,</span> <span class="pre">?it/s]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">0.8081355932203389</span></code></p>
+</div>
+<div class="cell markdown docutils container" id="a975e760">
+<p><em>NOTE</em>: For examples using tensorflow or pytorch models, check out
+our other demos.</p>
+</div>
+<div class="cell code docutils container" id="a584">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../demo.html" class="btn btn-neutral float-left" title="Tutorials &amp; Example Code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Shreyan Mitra.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Versions</span>
+      latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Versions</dt>
+        
+           <strong> 
+          <dd><a href="">latest</a></dd>
+           </strong> 
+        
+          
+          <dd><a href="">v2.8.6</a></dd>
+          
+        
+          
+          <dd><a href="">v2.8.5</a></dd>
+          
+        
+          
+          <dd><a href="">v2.8.4</a></dd>
+          
+        
+          
+          <dd><a href="">v2.8.3</a></dd>
+          
+        
+          
+          <dd><a href="">v2.8.2</a></dd>
+          
+        
+          
+          <dd><a href="">v2.8.1</a></dd>
+          
+        
+          
+          <dd><a href="">v2.8</a></dd>
+          
+        
+          
+          <dd><a href="">v2.7.2</a></dd>
+          
+        
+          
+          <dd><a href="">v2.7.1</a></dd>
+          
+        
+          
+          <dd><a href="">v2.7</a></dd>
+          
+        
+          
+          <dd><a href="">v2.6.2</a></dd>
+          
+        
+          
+          <dd><a href="">v2.6.1</a></dd>
+          
+        
+          
+          <dd><a href="">v2.6</a></dd>
+          
+        
+          
+          <dd><a href="">v2.5.2</a></dd>
+          
+        
+          
+          <dd><a href="">v2.5.1</a></dd>
+          
+        
+          
+          <dd><a href="">v2.5.0</a></dd>
+          
+        
+          
+          <dd><a href="">v2.1.4</a></dd>
+          
+        
+          
+          <dd><a href="">v2.1.3</a></dd>
+          
+        
+          
+          <dd><a href="">v2.1.2</a></dd>
+          
+        
+          
+          <dd><a href="">v2.1.1</a></dd>
+          
+        
+          
+          <dd><a href="">v2.1</a></dd>
+          
+        
+          
+          <dd><a href="">v2.0.2</a></dd>
+          
+        
+          
+          <dd><a href="">v2.0.1</a></dd>
+          
+        
+          
+          <dd><a href="">v2.0.0-beta2</a></dd>
+          
+        
+          
+          <dd><a href="">v2</a></dd>
+          
+        
+          
+          <dd><a href="">v1.0A</a></dd>
+          
+        
+          
+          <dd><a href="">v1.0.8</a></dd>
+          
+        
+          
+          <dd><a href="">v1.0.7</a></dd>
+          
+        
+          
+          <dd><a href="">v1.0.6.5</a></dd>
+          
+        
+          
+          <dd><a href="">v1.0.6</a></dd>
+          
+        
+          
+          <dd><a href="">v1.0.5</a></dd>
+          
+        
+          
+          <dd><a href="">v1.0.4</a></dd>
+          
+        
+          
+          <dd><a href="">v1.0.3.5</a></dd>
+          
+        
+          
+          <dd><a href="">v1.0.3</a></dd>
+          
+        
+          
+          <dd><a href="">v1.0.2</a></dd>
+          
+        
+          
+          <dd><a href="">v0.9.3-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.9.1-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.9-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.8-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.7-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.6-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.5-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.4-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.3.3-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.3.2-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.3.1-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.3-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.2-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.1-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.8.0-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.9-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.8-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.7.1-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.7-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.6-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.5-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.4-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.3-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.2-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.1-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.7.0-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.6.9-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.6.7-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.6.5-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.6.3-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.6.1-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.6.0-beta</a></dd>
+          
+        
+          
+          <dd><a href="">v0.3.0-alpha</a></dd>
+          
+        
+      </dl>
+      
+    </div>
+  </div>
+<script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
