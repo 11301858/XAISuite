@@ -207,6 +207,9 @@ class DataLoader:
     return
 
   def plot(self):
+    '''
+    Plots loaded data.
+    '''
     fig, axes = plt.subplots(ncols=4, nrows=int(len(self.content.columns)/4) + 1, figsize=(20, 10))
     
     for i, ax in zip(range(len(self.content.columns)), axes.flat):
