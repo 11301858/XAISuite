@@ -78,6 +78,7 @@ from omnixai.explainers.nlp import*
 
 #For documentation
 from typing import*
+del globals()["Text"]
 
 #For calculations
 from math import*
