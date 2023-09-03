@@ -110,6 +110,12 @@ class ModelTrainer:
     return self.getExplanationsFor([])
 
   def plotExplanations(self, explainer:str = None, index:int = 0):
+    '''
+    Plot explanations
+
+    :param str explainer: The explainer for which to plot explanations
+    :param int index: The instance for which to plot explanations, in the numerical order returned by the explanation retrieval function. By default, 0. 
+    '''
     try:
       self.requestedExplanations[explainer].ipython_plot(index)
     except Exception as e:
