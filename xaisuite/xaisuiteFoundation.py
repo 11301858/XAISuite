@@ -1,5 +1,9 @@
 #Needed Libraries
 
+#For documentation
+from typing import*
+del globals()["Text"]
+
 #Data Storage, Export, and Access
 import pandas as pd
 import csv
@@ -75,10 +79,6 @@ linkModels = {"SVC": "sklearn.svm", "NuSVC": "sklearn.svm", "LinearSVC": "sklear
 from omnixai.explainers.tabular import*
 from omnixai.explainers.vision import*
 from omnixai.explainers.nlp import*
-
-#For documentation
-from typing import*
-del globals()["Text"]
 
 #For calculations
 from math import*
