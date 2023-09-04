@@ -270,12 +270,16 @@ class DataProcessor:
         processorArgs.pop("target_transform")
         target_transform.fit(forDataLoader.y)
         self.processedy = target_transform.transform(forDataLoader.y)
+    else if forDataLoader.type != "Tabular" and processorArgs.get("target_transform") is None:
+        self.processedy = target_transform.transform(forDataLoader.y)
       
         
     if isinstance(processor, str):
         self.processor = eval(processor + "(**processorArgs)") if processorArgs is not None else eval(processor + "()")
     elif isinstance(processor, Callable):
         self.processor = processor(**processorArgs) if processorArgs is not None else processor()
+    else:
+      self.processor = processor
 
     self.processor.fit(forDataLoader.wrappedData)
     processedData = self.processor.transform(forDataLoader.wrappedData)
