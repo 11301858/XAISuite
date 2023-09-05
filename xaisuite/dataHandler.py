@@ -270,7 +270,7 @@ class DataProcessor:
         processorArgs.pop("target_transform")
         target_transform.fit(forDataLoader.y)
         self.processedy = target_transform.transform(forDataLoader.y)
-    else if forDataLoader.type != "Tabular" and processorArgs.get("target_transform") is None:
+    elif forDataLoader.type != "Tabular" and processorArgs.get("target_transform") is None:
         self.processedy = target_transform.transform(forDataLoader.y)
       
         
