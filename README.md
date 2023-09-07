@@ -160,4 +160,4 @@ For XAISuite v2.0:
 If you have any questions, comments or suggestions, please do not hesitate to contact us at xaisuite@gmail.com 
 
 ***
-This work is licensed under the [Shreyan 5-Clause License](LICENSE.md)
+This work is licensed under the [Open Source 5-Clause License](LICENSE.md)
