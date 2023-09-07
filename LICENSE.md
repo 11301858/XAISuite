@@ -1,4 +1,4 @@
-The Shreyan 5-Clause License
+The Open-Source 5-Clause License
 
 Copyright (c) 2023 Shreyan Mitra
 
