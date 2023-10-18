@@ -60,6 +60,7 @@ class InsightGenerator:
     shreyan_distance /= (x**2)
     shreyan_distance /= max
     shreyan_distance = 1 - shreyan_distance
+    print(shreyan_distance)
     return shreyan_distance    
 
   def __sigma(self, start, end, expression):
