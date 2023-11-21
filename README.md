@@ -145,11 +145,11 @@ For XAISuite v1.0.8:
 ```
 For XAISuite v2.0:
 ```
-@misc{mitra2023xaisuite,
-      title={Paper pending}, 
+@misc{mitra2023novel,
+      title={A novel post-hoc explanation comparison metric and applications}, 
       author={Shreyan Mitra and Leilani Gilpin},
       year={2023},
-      eprint={},
+      eprint={2311.10811},
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
