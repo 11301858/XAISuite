@@ -1,5 +1,6 @@
 from .xaisuiteFoundation import*
 import collections
+import math
 
 class InsightGenerator:
   '''
@@ -27,19 +28,30 @@ class InsightGenerator:
     return sum / self.num_instances
     
 
-  def getShreyanDistance(self, vec1:list, vec2:list) -> float:
+  def getShreyanDistance(self, vec1:list, vec2:list, weighting:str="linear") -> float:
     '''
     Calculate the distance between two ordered vectors. 1 is the max distance, 0 is no distance
 
     :param list vec1: The pattern vector
     :param list vec2: The disorder vector
+    :param str weighting: The weighting function to use. Either "linear", "hyperbolic", or "exponential". By default, "linear".
     :returns float shreyan_distance: The Shreyan distance between the two ordered vectors
     '''
+
+    #Nested Function
+    def getWeighting(indexVar:str = "i") -> str:
+      if(weighting=="linear"):
+        return "(x - " + indexVar + " + 1)"
+      if(weighting=="hyperbolic"):
+        return "(x / " + indexVar + ")"
+      return "x * math.exp(1-" + indexVar + ")"
+    
+      
 
     assert (len(vec1) == len(vec2)), "Cannot find the Shreyan distance when ordered vectors are of different lengths."
 
     x = len(vec1)
-    max = self.__sigma(1, int((x/2)), lambda i: ((x - i + 1) * (x - 2*i + 1) / (x**2))) + self.__sigma(int((x/2)) + 1, x,  lambda i: ((x - i + 1) * int((x/2)) / (x**2)))
+    max = self.__sigma(1, int((x/2)), lambda i: ((eval(getWeighting("i")) * (x - 2*i + 1) / (x**2))) + self.__sigma(int((x/2)) + 1, x,  lambda i: ((eval(getWeighting("i")) * int((x/2)) / (x**2)))
     #This is the maximum possible Shreyan distance between two ordered vectors of size x
 
     enumerated_elements = {index + 1:value for index, value in enumerate(vec1)}
@@ -55,7 +67,7 @@ class InsightGenerator:
     shreyan_distance = 0.0
 
     for j in range(1, x+1):
-      shreyan_distance += (x - j + 1) * abs(j - enumerated_vec2[j-1])
+      shreyan_distance += (eval(getWeighting("j")) * abs(j - enumerated_vec2[j-1])
     
     shreyan_distance /= (x**2)
     shreyan_distance /= max
